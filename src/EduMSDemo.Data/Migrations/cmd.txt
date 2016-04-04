@@ -1,0 +1,33 @@
+﻿#########################################
+# Reset Migrations[sửa]
+#########################################
+
+
+Khi lập trình với Entity Framework Code First, sau khi sửa đổi model ta phải
+chạy lệnh Add-Migration để tạo một data snapshot. Dựa vào snapshot này mà hệ
+thống biết được model hiện tại khác gì so mới bản trước đó. Như vậy, khái
+niệm data snapshot có thể hiểu như một commit trong git
+
+Mỗi lần chạy lệnh Add-Migration hệ thống sẽ tạo ra một file .cs trong thư
+mục ProjectName.Data/Migrations, đây chính là snapshot hệ thống lưu lại các
+thay đổi để roll-up hay roll-down khi cần.
+
+Như vậy nếu hệ thống đang trong quá trình phát triển, nhất là khi xây dựng
+Data Model thường sẽ có rất nhiều file snapshot được sinh ra. Một nhu cầu
+sinh ra là thu gọn các file này, ta gọi là Reset Migrations.
+
+Các bước thực hiện như sau:
+-----------------------------------------
+
+1. Xóa tất cả các file *.cs trong thư mục ProjectName.Data/Migrations
+
+2. Xóa table __MigrationHistory trong database
+
+3. Trong Package Manager Console, chạy lệnh sau trên project ProjectName.Data:
+Enable-Migrations -Force
+
+4. Chạy lệnh sau để tạo snapshot đầu tiên:
+Add-Migration Initial
+
+5. Cuối cùng chạy lệnh sau để update vào BDMS:
+Update-Database

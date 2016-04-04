@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+    <siteMapNode icon="fa fa-home" controller="Home" action="Index">
+        <siteMapNode icon="fa fa-ban" controller="Home" action="Error" />
+        <siteMapNode icon="fa fa-search" controller="Home" action="NotFound" />
+        <siteMapNode icon="fa fa-lock" controller="Home" action="Unauthorized" />
+
+        <siteMapNode controller="Profile" action="Edit" />
+        <siteMapNode controller="Profile" action="Delete" />
+
+        <siteMapNode menu="true" icon="fa fa-gears" area="Administration">
+            <siteMapNode menu="true" icon="fa fa-user" area="Administration" controller="Accounts" action="Index">
+                <siteMapNode icon="fa fa-file-o" area="Administration" controller="Accounts" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Administration" controller="Accounts" action="Details" />
+                <siteMapNode icon="fa fa-pencil" area="Administration" controller="Accounts" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Administration" controller="Accounts" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-users" area="Administration" controller="Roles" action="Index">
+                <siteMapNode icon="fa fa-file-o" area="Administration" controller="Roles" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Administration" controller="Roles" action="Details" />
+                <siteMapNode icon="fa fa-pencil" area="Administration" controller="Roles" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Administration" controller="Roles" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-wrench" area="Administration" controller="SystemSettings" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Administration" controller="SystemSettings" action="Create" />
+              <siteMapNode icon="fa fa-info" area="Administration" controller="SystemSettings" action="Details" />
+              <siteMapNode icon="fa fa-pencil" area="Administration" controller="SystemSettings" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Administration" controller="RolesSystemSettings" action="Delete" />
+            </siteMapNode>
+        </siteMapNode>
+
+        <siteMapNode menu="true" icon="fa fa-bar-chart" area="Manage">
+
+          <!-- Products -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Products">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="Products" action="Index">
+				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="Products" action="Create" />
+				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="Products" action="Edit" />
+				      <siteMapNode icon="fa fa-times" area="Manage" controller="Products" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="ProductGroups" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="ProductGroups" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="ProductGroups" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="ProductGroups" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Products -->
+
+
+
+        </siteMapNode>
+
+    </siteMapNode>
+
+
+</siteMap>

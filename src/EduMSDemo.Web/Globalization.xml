@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<globalization>
+    <language name="English" culture="en-GB" abbreviation="en" flag="us" default="true" />
+    <language name="Tiếng Việt" culture="vi-VN" abbreviation="vi" flag="vn" />
+</globalization>
