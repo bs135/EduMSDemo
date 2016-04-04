@@ -1,6 +1,6 @@
 ﻿@font-face {
   src: url("../Fonts/PTSans.woff") format("woff");
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
 }
@@ -10,12 +10,24 @@
   font-style: normal;
   font-weight: 700;
 }
+@font-face {
+  src: url("../Fonts/OpenSans-Regular.woff") format("woff");
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  src: url("../Fonts/OpenSans-Bold.woff") format("woff");
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+}
 * {
   text-decoration: none !important;
   outline: none !important;
 }
 body {
-  font-family: "PT Sans", consolas;
+  font-family: "Open Sans", "PT Sans", consolas;
   color: #555555;
 }
 body.private {

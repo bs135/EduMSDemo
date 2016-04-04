@@ -140,18 +140,6 @@
     <Content Include="Content\JQueryUI\jquery-ui.css" />
     <Content Include="Content\FontAwesome\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\MvcGrid\mvc-grid.css" />
-    <Content Include="Content\Shared\content.min.css">
-      <DependentUpon>content.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Shared\overrides.min.css">
-      <DependentUpon>overrides.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Shared\table.min.css">
-      <DependentUpon>table.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Shared\widget-box.min.css">
-      <DependentUpon>widget-box.css</DependentUpon>
-    </Content>
     <Content Include="Images\Flags\en.gif" />
     <Content Include="Images\Flags\vn.gif" />
     <Content Include="Images\JQueryUI\ui-icons_ffffff_256x240.png" />
@@ -180,6 +168,8 @@
     <Content Include="Scripts\JQueryUI\Cultures\datepicker.culture.vi-VN.js" />
     <Content Include="Scripts\JQuery\Cultures\globalize.culture.vi-VN.js" />
     <Content Include="Scripts\MvcGrid\Cultures\mvc-grid.culture.vi-VN.js" />
+    <Content Include="Content\Fonts\OpenSans-Bold.woff" />
+    <Content Include="Content\Fonts\OpenSans-Regular.woff" />
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\JQueryUI\Cultures\datepicker.culture.en-GB.js" />
     <Content Include="Scripts\JQueryUI\jquery-ui.no-conflict.js" />
