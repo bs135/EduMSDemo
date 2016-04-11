@@ -61,6 +61,33 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Account?.
+        /// </summary>
+        public static string AdministratorAccountDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("AdministratorAccountDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Role?.
+        /// </summary>
+        public static string AdministratorRoleDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("AdministratorRoleDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this setting?.
+        /// </summary>
+        public static string AdministratorSystemSettingDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("AdministratorSystemSettingDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure to delete this product?.
         /// </summary>
         public static string ManageProductDeleteConfirmMessage {

@@ -67,11 +67,11 @@ namespace EduMSDemo.Data.Migrations
                 new Permission { Id = 19, Area = "Manage", Controller = "Products", Action = "Edit" },
                 new Permission { Id = 20, Area = "Manage", Controller = "Products", Action = "Delete" },
                 //5
-                new Permission { Id = 21, Area = "Manage", Controller = "Units", Action = "Index" },
-                new Permission { Id = 22, Area = "Manage", Controller = "Units", Action = "Create" },
-                new Permission { Id = 23, Area = "Manage", Controller = "Units", Action = "Details" },
-                new Permission { Id = 24, Area = "Manage", Controller = "Units", Action = "Edit" },
-                new Permission { Id = 25, Area = "Manage", Controller = "Units", Action = "Delete" },
+                new Permission { Id = 21, Area = "Manage", Controller = "ProductGroups", Action = "Index" },
+                new Permission { Id = 22, Area = "Manage", Controller = "ProductGroups", Action = "Create" },
+                new Permission { Id = 23, Area = "Manage", Controller = "ProductGroups", Action = "Details" },
+                new Permission { Id = 24, Area = "Manage", Controller = "ProductGroups", Action = "Edit" },
+                new Permission { Id = 25, Area = "Manage", Controller = "ProductGroups", Action = "Delete" },
 
                 #endregion Products
 
@@ -138,12 +138,9 @@ namespace EduMSDemo.Data.Migrations
             {
                 new Account
                 {
-                    Name = "Administrator",
                     Username = "admin",
                     Passhash = "$2a$13$yTgLCqGqgH.oHmfboFCjyuVUy5SJ2nlyckPFEZRJQrMTZWN.f1Afq", // Admin123?
                     Email = "admin@admins.com",
-                    Position = "Administrator",
-                    Phone = "0123456789",
                     IsLocked = false,
 
                     RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Admin").Id

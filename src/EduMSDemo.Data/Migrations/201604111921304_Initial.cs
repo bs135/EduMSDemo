@@ -12,9 +12,6 @@ namespace EduMSDemo.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 128),
-                        Position = c.String(maxLength: 128),
-                        Phone = c.String(maxLength: 32),
                         Username = c.String(nullable: false, maxLength: 32),
                         Passhash = c.String(nullable: false, maxLength: 64),
                         Email = c.String(nullable: false, maxLength: 256),
@@ -117,13 +114,13 @@ namespace EduMSDemo.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        ValueString = c.String(maxLength: 64),
-                        ValueType = c.Int(nullable: false),
-                        ValueFloat = c.Double(nullable: false),
-                        ValueInt = c.Int(nullable: false),
+                        Key = c.String(nullable: false, maxLength: 64),
+                        ValueString = c.String(maxLength: 256),
+                        ValueDouble = c.Double(nullable: false),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .Index(t => t.Key, unique: true);
             
         }
         
@@ -133,6 +130,7 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.Account", "RoleId", "dbo.Role");
             DropForeignKey("dbo.RolePermission", "RoleId", "dbo.Role");
             DropForeignKey("dbo.RolePermission", "PermissionId", "dbo.Permission");
+            DropIndex("dbo.SystemSetting", new[] { "Key" });
             DropIndex("dbo.Product", new[] { "ProductGroupId" });
             DropIndex("dbo.Product", new[] { "Name" });
             DropIndex("dbo.Product", new[] { "SKU" });

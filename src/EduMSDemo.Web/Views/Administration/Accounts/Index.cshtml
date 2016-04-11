@@ -19,8 +19,8 @@
                 .Grid(Model)
                 .Build(columns =>
                 {
-                    columns.AddActionLink("Details", "fa fa-info");
                     columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.AdministratorAccountDeleteConfirmMessage);
 
                     columns.AddProperty(model => model.Username);
                     columns.AddProperty(model => model.Email);

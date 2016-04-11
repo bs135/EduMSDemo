@@ -63,16 +63,8 @@ namespace EduMSDemo.Controllers.Administration
             return RedirectIfAuthorized("Index");
         }
 
-        [HttpGet]
-        public ActionResult Delete(Int32 id)
-        {
-            return NotEmptyView(Service.Get<SystemSettingView>(id));
-        }
-
         [HttpPost]
-        [ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public RedirectToRouteResult DeleteConfirmed(Int32 id)
+        public RedirectToRouteResult Delete(Int32 id)
         {
             Service.Delete(id);
 

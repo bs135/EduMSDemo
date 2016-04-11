@@ -17,29 +17,29 @@ namespace EduMSDemo.Validators
 
         public Boolean CanCreate(SystemSettingView view)
         {
-            Boolean isValid = IsUniqueName(view.Id, view.ValueString);
+            Boolean isValid = IsUniqueKey(view.Id, view.Key);
             isValid &= ModelState.IsValid;
 
             return isValid;
         }
         public Boolean CanEdit(SystemSettingView view)
         {
-            Boolean isValid = IsUniqueName(view.Id, view.ValueString);
+            Boolean isValid = IsUniqueKey(view.Id, view.Key);
             isValid &= ModelState.IsValid;
 
             return isValid;
         }
 
-        private Boolean IsUniqueName(Int32 systemSettingID, String name)
+        private Boolean IsUniqueKey(Int32 systemSettingID, String key)
         {
             Boolean isUnique = !UnitOfWork
                 .Select<SystemSetting>()
                 .Any(systemSetting =>
                     systemSetting.Id != systemSettingID &&
-                    systemSetting.ValueString.ToLower() == name.ToLower());
+                    systemSetting.Key.ToLower() == key.ToLower());
 
             if (!isUnique)
-                ModelState.AddModelError<SystemSettingView>(model => model.ValueString, Validations.UniqueName);
+                ModelState.AddModelError<SystemSettingView>(model => model.Key, Validations.UniqueKey);
 
             return isUnique;
         }

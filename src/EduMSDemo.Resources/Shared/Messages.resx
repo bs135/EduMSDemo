@@ -123,4 +123,13 @@
   <data name="ManageProductGroupDeleteConfirmMessage" xml:space="preserve">
     <value>Are you sure to delete this product group?</value>
   </data>
+  <data name="AdministratorSystemSettingDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this setting?</value>
+  </data>
+  <data name="AdministratorAccountDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Account?</value>
+  </data>
+  <data name="AdministratorRoleDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Role?</value>
+  </data>
 </root>

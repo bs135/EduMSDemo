@@ -138,12 +138,9 @@ namespace EduMSDemo.Data.Migrations
             {
                 new Account
                 {
-                    Name = "Administrator",
                     Username = "admin",
                     Passhash = "$2a$13$yTgLCqGqgH.oHmfboFCjyuVUy5SJ2nlyckPFEZRJQrMTZWN.f1Afq", // Admin123?
                     Email = "admin@admins.com",
-                    Position = "Administrator",
-                    Phone = "0123456789",
                     IsLocked = false,
 
                     RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Admin").Id

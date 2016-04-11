@@ -5,7 +5,7 @@
         <div class="widget-title">
             <span class="widget-title-icon fa fa-th-list"></span>
             <h5>@Headers.AdministrationRoles</h5>
-            <div class="widget-title-buttons">
+            @*<div class="widget-title-buttons">
                 @if (Html.IsAuthorizedFor("Details"))
                 {
                     <a class="btn" href="@Url.Action("Details", new { Model.Id })">
@@ -18,7 +18,7 @@
                         <i class="fa fa-times"></i><span class="text">@Actions.Delete</span>
                     </a>
                 }
-            </div>
+            </div>*@
         </div>
         <div class="widget-content">
             @using (Html.BeginForm())

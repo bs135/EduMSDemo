@@ -40,12 +40,6 @@ namespace EduMSDemo.Controllers.Administration
         }
 
         [HttpGet]
-        public ActionResult Details(Int32 id)
-        {
-            return NotEmptyView(Service.Get<AccountView>(id));
-        }
-
-        [HttpGet]
         public ActionResult Edit(Int32 id)
         {
             return NotEmptyView(Service.Get<AccountEditView>(id));
@@ -63,16 +57,8 @@ namespace EduMSDemo.Controllers.Administration
             return RedirectIfAuthorized("Index");
         }
 
-        [HttpGet]
-        public ActionResult Delete(Int32 id)
-        {
-            return NotEmptyView(Service.Get<AccountDeleteView>(id));
-        }
-
         [HttpPost]
-        [ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public RedirectToRouteResult DeleteConfirmed(Int32 id)
+        public RedirectToRouteResult Delete(Int32 id)
         {
             Service.Delete(id);
 

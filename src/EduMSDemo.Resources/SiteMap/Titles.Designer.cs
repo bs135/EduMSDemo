@@ -160,7 +160,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to System Settings.
+        ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string AdministrationSystemSettings {
             get {
@@ -205,7 +205,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to System Settings.
+        ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string AdministrationSystemSettingsIndex {
             get {

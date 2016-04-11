@@ -38,10 +38,9 @@ namespace EduMSDemo.Services
         public void Edit(SystemSettingView view)
         {
             SystemSetting SystemSetting = UnitOfWork.Get<SystemSetting>(view.Id);
-            SystemSetting.ValueType = view.ValueType;
-            SystemSetting.ValueInt = view.ValueInt;
-            SystemSetting.ValueFloat = view.ValueFloat;
-            SystemSetting.ValueString = view.ValueString; 
+            SystemSetting.Key = view.Key;
+            SystemSetting.ValueDouble = view.ValueDouble;
+            SystemSetting.ValueString = view.ValueString;
 
             UnitOfWork.Update(SystemSetting);
             UnitOfWork.Commit();

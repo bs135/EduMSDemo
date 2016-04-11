@@ -62,11 +62,11 @@ namespace EduMSDemo.Resources.Views.Administration.SystemSettings.SystemSettingV
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SystemSetting is already existed..
+        ///   Looks up a localized string similar to Setting is already existed..
         /// </summary>
-        public static string UniqueName {
+        public static string UniqueKey {
             get {
-                return ResourceManager.GetString("UniqueName", resourceCulture);
+                return ResourceManager.GetString("UniqueKey", resourceCulture);
             }
         }
     }

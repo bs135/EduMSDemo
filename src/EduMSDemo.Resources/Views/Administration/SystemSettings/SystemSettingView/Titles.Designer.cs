@@ -61,7 +61,7 @@ namespace EduMSDemo.Resources.Views.Administration.SystemSettings.SystemSettingV
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #.
+        ///   Looks up a localized string similar to Setting.
         /// </summary>
         public static string Id {
             get {
@@ -70,20 +70,20 @@ namespace EduMSDemo.Resources.Views.Administration.SystemSettings.SystemSettingV
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FloatValue.
+        ///   Looks up a localized string similar to Key.
         /// </summary>
-        public static string ValueFloat {
+        public static string Key {
             get {
-                return ResourceManager.GetString("ValueFloat", resourceCulture);
+                return ResourceManager.GetString("Key", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Int Value.
+        ///   Looks up a localized string similar to Double Value.
         /// </summary>
-        public static string ValueInt {
+        public static string ValueDouble {
             get {
-                return ResourceManager.GetString("ValueInt", resourceCulture);
+                return ResourceManager.GetString("ValueDouble", resourceCulture);
             }
         }
         
@@ -93,15 +93,6 @@ namespace EduMSDemo.Resources.Views.Administration.SystemSettings.SystemSettingV
         public static string ValueString {
             get {
                 return ResourceManager.GetString("ValueString", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Type Value.
-        /// </summary>
-        public static string ValueType {
-            get {
-                return ResourceManager.GetString("ValueType", resourceCulture);
             }
         }
     }

@@ -148,9 +148,9 @@
     <value>Product Group</value>
   </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
-    <value>System Settings</value>
+    <value>Settings</value>
   </data>
   <data name="AdministrationSystemSettingsIndex" xml:space="preserve">
-    <value>System Settings</value>
+    <value>Settings</value>
   </data>
 </root>

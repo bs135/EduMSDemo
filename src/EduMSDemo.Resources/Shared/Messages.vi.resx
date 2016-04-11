@@ -123,4 +123,13 @@
   <data name="ManageProductGroupDeleteConfirmMessage" xml:space="preserve">
     <value>Bạn có chắc là muốn xóa nhóm sản phẩm này?</value>
   </data>
+  <data name="AdministratorSystemSettingDeleteConfirmMessage" xml:space="preserve">
+    <value>Bạn có chắc là muốn xóa cấu hình này?</value>
+  </data>
+  <data name="AdministratorAccountDeleteConfirmMessage" xml:space="preserve">
+    <value>Bạn có chắc là muốn xóa tài khoản này?</value>
+  </data>
+  <data name="AdministratorRoleDeleteConfirmMessage" xml:space="preserve">
+    <value>Bạn có chắc là muốn xóa vai trò này?</value>
+  </data>
 </root>

@@ -1,17 +1,19 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EduMSDemo.Objects
 {
     public class SystemSetting : BaseModel
     {
+        [Required]
         [StringLength(64)]
-        public String ValueString { get; set; }
-         
-        public Int32 ValueType { get; set; }
-         
-        public Double ValueFloat { get; set; }
+        [Index(IsUnique = true)]
+        public String Key { get; set; }
 
-        public Int32 ValueInt { get; set; }
+        [StringLength(256)]
+        public String ValueString { get; set; }
+
+        public Double ValueDouble { get; set; }
     }
 }

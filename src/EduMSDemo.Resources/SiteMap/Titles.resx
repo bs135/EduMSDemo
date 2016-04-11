@@ -151,7 +151,7 @@
     <value>Roles</value>
   </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
-    <value>System Settings</value>
+    <value>Settings</value>
   </data>
   <data name="AdministrationSystemSettingsCreate" xml:space="preserve">
     <value>Create</value>
@@ -166,7 +166,7 @@
     <value>Edit</value>
   </data>
   <data name="AdministrationSystemSettingsIndex" xml:space="preserve">
-    <value>System Settings</value>
+    <value>Settings</value>
   </data>
   <data name="HomeError" xml:space="preserve">
     <value>Error</value>

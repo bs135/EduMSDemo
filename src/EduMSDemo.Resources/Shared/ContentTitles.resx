@@ -217,7 +217,7 @@
     <value>Product Group</value>
   </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
-    <value>System Settings</value>
+    <value>Settings</value>
   </data>
   <data name="AdministrationSystemSettingsCreate" xml:space="preserve">
     <value>Create</value>
@@ -232,7 +232,7 @@
     <value>Edit</value>
   </data>
   <data name="AdministrationSystemSettingsIndex" xml:space="preserve">
-    <value>System Settings</value>
+    <value>Settings</value>
   </data>
   <data name="AdministrationAccountsDelete" xml:space="preserve">
     <value>Account delete</value>

@@ -1,96 +1,33 @@
 ﻿@model IQueryable<SystemSettingView>
 
-<!-- MAIN CONTENT -->
-<div id="content">
-    <!-- widget grid -->
-    <section id="widget-grid" class="">
-
-        <!-- row -->
-        <div class="row">
-
-            <!-- NEW WIDGET START -->
-            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                <!-- Widget ID (each widget will need unique ID)-->
-                <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
-                    <!-- widget options:
-                    usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-                    data-widget-colorbutton="false"
-                    data-widget-editbutton="false"
-                    data-widget-togglebutton="false"
-                    data-widget-deletebutton="false"
-                    data-widget-fullscreenbutton="false"
-                    data-widget-custombutton="false"
-                    data-widget-collapsed="true"
-                    data-widget-sortable="false"
-
-                    -->
-                    <header>
-                        <span class="widget-icon"> <i class="fa fa-table"></i> </span>
-                        <h2>@Headers.AdministrationSystemSettingsIndex </h2>
-                        @if (Html.IsAuthorizedFor("Create"))
-                        {
-                            <div class="widget-toolbar">
-                                <a class="btn btn-xs btn-default" href="@Url.Action("Create")">
-                                    <i class="fa fa-file-o"></i><span class="text"> @Actions.Create</span>
-                                </a>
-                            </div>
-                        }
-                    </header>
-
-                    <!-- widget div-->
-                    <div>
-
-                        <!-- widget edit box -->
-                        <div class="jarviswidget-editbox">
-                            <!-- This area used as dropdown edit box -->
-
-                        </div>
-                        <!-- end widget edit box -->
-                        <!-- widget content -->
-                        <div class="widget-body no-padding">
-                            @*<div class="widget-action">
-                                    @if (Html.IsAuthorizedFor("Create"))
-                                    {
-                                        <a class="btn" href="@Url.Action("Create")">
-                                            <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
-                                        </a>
-                                    }
-                                </div>*@
-                            @(Html
-                                .Grid(Model)
-                                .Build(columns =>
-                                { 
-                                    columns.AddActionLink("Edit", "fa fa-pencil");
-                                    columns.AddActionLink("Delete", "fa fa-times");
-
-                                    columns.AddProperty(model => model.ValueType);
-                                    columns.AddProperty(model => model.ValueString);
-                                    columns.AddProperty(model => model.ValueInt);
-                                    columns.AddProperty(model => model.ValueFloat); 
-                                })
-                                .ApplyDefaults()
-                            )
-
-
-                        </div>
-                        <!-- end widget content -->
-
-                    </div>
-                    <!-- end widget div -->
-
-                </div>
-                <!-- end widget -->
-
-            </article>
-            <!-- WIDGET END -->
-
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.AdministrationSystemSettingsIndex</h5>
+            <div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Create"))
+                {
+                    <a class="btn" href="@Url.Action("Create")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    </a>
+                }
+            </div>
         </div>
+        <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.AdministratorSystemSettingDeleteConfirmMessage);
 
-        <!-- end row -->
-        <!-- end row -->
-
-    </section>
-    <!-- end widget grid -->
+                    columns.AddProperty(model => model.Key);
+                    columns.AddProperty(model => model.ValueString);
+                    columns.AddProperty(model => model.ValueDouble);
+                })
+                .ApplyDefaults()
+            )
+        </div>
+    </div>
 </div>

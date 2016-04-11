@@ -7,13 +7,14 @@ namespace EduMSDemo.Objects
 {
     public class SystemSettingView : BaseView
     {
+        [Required]
         [StringLength(64)]
+        //[Index(IsUnique = true)]
+        public String Key { get; set; }
+
+        [StringLength(256)]
         public String ValueString { get; set; }
 
-        public Int32 ValueType { get; set; }
-
-        public Double ValueFloat { get; set; }
-
-        public Int32 ValueInt { get; set; }
+        public Double ValueDouble { get; set; }
     }
 }

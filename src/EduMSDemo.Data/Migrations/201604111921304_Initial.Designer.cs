@@ -13,7 +13,7 @@ namespace EduMSDemo.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201604040129195_Initial"; }
+            get { return "201604111921304_Initial"; }
         }
         
         string IMigrationMetadata.Source

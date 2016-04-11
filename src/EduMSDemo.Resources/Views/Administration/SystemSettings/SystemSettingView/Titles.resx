@@ -118,18 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Id" xml:space="preserve">
-    <value>#</value>
+    <value>Setting</value>
   </data>
   <data name="ValueString" xml:space="preserve">
     <value>String Value</value>
   </data>
-  <data name="ValueInt" xml:space="preserve">
-    <value>Int Value</value>
+  <data name="ValueDouble" xml:space="preserve">
+    <value>Double Value</value>
   </data>
-  <data name="ValueFloat" xml:space="preserve">
-    <value>FloatValue</value>
-  </data>
-  <data name="ValueType" xml:space="preserve">
-    <value>Type Value</value>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
   </data>
 </root>
