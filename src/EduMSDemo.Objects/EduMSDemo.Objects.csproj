@@ -61,8 +61,8 @@
     <Compile Include="Models\Administration\Roles\RolePermission.cs" />
     <Compile Include="Models\Administration\System Settings\SystemSetting.cs" />
     <Compile Include="Models\BaseModel.cs" />
-    <Compile Include="Models\Manage\Building\ClassRoom.cs" />
-    <Compile Include="Models\Manage\Building\Building.cs" />
+    <Compile Include="Models\Manage\Buildings\ClassRoom.cs" />
+    <Compile Include="Models\Manage\Buildings\Building.cs" />
     <Compile Include="Models\Manage\Curriculums\CurriculumType.cs" />
     <Compile Include="Models\Manage\Curriculums\CurriculumDetail.cs" />
     <Compile Include="Models\Manage\Curriculums\Curriculum.cs" />
@@ -98,8 +98,28 @@
     <Compile Include="Views\Administration\Roles\RoleView.cs" />
     <Compile Include="Views\Administration\SystemSettings\SystemSettingView.cs" />
     <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\Manage\Buildings\Buildings\BuildingView.cs" />
+    <Compile Include="Views\Manage\Buildings\ClassRooms\ClassRoomView.cs" />
+    <Compile Include="Views\Manage\Curriculums\Curriculums\CurriculumView.cs" />
+    <Compile Include="Views\Manage\Curriculums\CurriculumDetails\CurriculumDetailView.cs" />
+    <Compile Include="Views\Manage\Curriculums\CurriculumTypes\CurriculumTypeView.cs" />
     <Compile Include="Views\Manage\Products\ProductGroups\ProductGroupView.cs" />
     <Compile Include="Views\Manage\Products\Products\ProductView.cs" />
+    <Compile Include="Views\Manage\Scores\BonusScores\BonusScoreView.cs" />
+    <Compile Include="Views\Manage\Scores\ScoreRecords\ScoreRecordView.cs" />
+    <Compile Include="Views\Manage\Scores\ScoreRecordDetails\ScoreRecordDetailView.cs" />
+    <Compile Include="Views\Manage\Students\Courses\CourseView.cs" />
+    <Compile Include="Views\Manage\Students\Students\StudentView.cs" />
+    <Compile Include="Views\Manage\Students\StudentClasses\StudentClassView.cs" />
+    <Compile Include="Views\Manage\Studies\Semesters\SemesterView.cs" />
+    <Compile Include="Views\Manage\Studies\SubjectClasses\SubjectClassView.cs" />
+    <Compile Include="Views\Manage\Studies\SubjectClassTeachers\SubjectClassTeacherView.cs" />
+    <Compile Include="Views\Manage\Subjects\PreSubjects\PreSubjectView.cs" />
+    <Compile Include="Views\Manage\Subjects\Subjects\SubjectView.cs" />
+    <Compile Include="Views\Manage\Teachers\Departments\DepartmentView.cs" />
+    <Compile Include="Views\Manage\Teachers\Faculties\FacultyView.cs" />
+    <Compile Include="Views\Manage\Teachers\FacultyManageBoards\FacultyManageBoardView.cs" />
+    <Compile Include="Views\Manage\Teachers\Staffs\StaffView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EduMSDemo.Components\EduMSDemo.Components.csproj">

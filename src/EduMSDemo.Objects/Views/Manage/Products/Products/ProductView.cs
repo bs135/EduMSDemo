@@ -2,6 +2,7 @@
 using EduMSDemo.Components.Extensions.Html;
 using System;
 using System.ComponentModel.DataAnnotations;
+
 namespace EduMSDemo.Objects
 {
     public class ProductView : BaseView
