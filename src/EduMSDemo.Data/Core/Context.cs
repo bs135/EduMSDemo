@@ -29,6 +29,49 @@ namespace EduMSDemo.Data.Core
         protected DbSet<ProductGroup> ProductGroups { get; set; }
         #endregion
 
+        #region Building
+        protected DbSet<Building> Buildings { get; set; }
+        protected DbSet<ClassRoom> ClassRooms { get; set; }
+        #endregion
+
+        #region Curriculum
+        protected DbSet<Curriculum> Curriculums { get; set; }
+        protected DbSet<CurriculumDetail> CurriculumDetails { get; set; }
+        protected DbSet<CurriculumType> CurriculumTypes { get; set; }
+        #endregion
+
+        #region Scores
+        protected DbSet<BonusScore> BonusScores { get; set; }
+        protected DbSet<ScoreRecord> ScoreRecords { get; set; }
+        protected DbSet<ScoreRecordDetail> ScoreRecordDetails { get; set; }
+        #endregion
+
+        #region Students
+        protected DbSet<Course> Courses { get; set; }
+        protected DbSet<Student> Students { get; set; }
+        protected DbSet<StudentClass> StudentClasses { get; set; }
+        #endregion
+
+        #region Studies
+        protected DbSet<Semester> Semesters { get; set; }
+        protected DbSet<SubjectClass> SubjectClasses { get; set; }
+        protected DbSet<SubjectClassTeacher> SubjectClassTeachers { get; set; }
+        #endregion
+
+        #region Subjects
+        protected DbSet<PreSubject> PreSubjects { get; set; }
+        protected DbSet<Subject> Subjects { get; set; }
+        #endregion
+
+        #region Teacher
+
+        protected DbSet<Staff> Staffs { get; set; }
+        protected DbSet<Faculty> Faculties { get; set; }
+        protected DbSet<FacultyManageBoard> FacultyManageBoards { get; set; }
+        protected DbSet<Department> Departments { get; set; }
+
+        #endregion
+
         static Context()
         {
             ObjectMapper.MapObjects();

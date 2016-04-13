@@ -64,6 +64,9 @@ namespace EduMSDemo.Data.Mapping
         }
         #endregion
 
+        #region Teacher
 
+
+        #endregion
     }
 }

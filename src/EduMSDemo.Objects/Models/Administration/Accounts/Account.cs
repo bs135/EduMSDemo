@@ -30,5 +30,7 @@ namespace EduMSDemo.Objects
         public Int32? RoleId { get; set; }
         public virtual Role Role { get; set; }
 
+        public virtual IList<Staff> Staffs { get; set; }
+        public virtual IList<Student> Students { get; set; }
     }
 }
