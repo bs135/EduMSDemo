@@ -68,5 +68,14 @@ namespace EduMSDemo.Resources.Permission.Area {
                 return ResourceManager.GetString("Administration", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage.
+        /// </summary>
+        public static string Manage {
+            get {
+                return ResourceManager.GetString("Manage", resourceCulture);
+            }
+        }
     }
 }

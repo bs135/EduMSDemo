@@ -120,4 +120,7 @@
   <data name="Administration" xml:space="preserve">
     <value>Quản trị</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
 </root>

@@ -51,6 +51,8 @@
     <Compile Include="Administration\Roles\RoleValidator.cs" />
     <Compile Include="BaseValidator.cs" />
     <Compile Include="IValidator.cs" />
+    <Compile Include="Manage\Buildings\Building\IBuildingValidator.cs" />
+    <Compile Include="Manage\Buildings\Building\BuildingValidator.cs" />
     <Compile Include="Manage\Products\ProductGroup\IProductGroupValidator.cs" />
     <Compile Include="Manage\Products\ProductGroup\ProductGroupValidator.cs" />
     <Compile Include="Manage\Products\Product\IProductValidator.cs" />
