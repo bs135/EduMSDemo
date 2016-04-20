@@ -62,7 +62,7 @@ namespace EduMSDemo.Resources.Views.Manage.Products.ProductGroup.ProductGroupVie
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product Name is already existed..
+        ///   Looks up a localized string similar to Name is already existed..
         /// </summary>
         public static string UniqueName {
             get {

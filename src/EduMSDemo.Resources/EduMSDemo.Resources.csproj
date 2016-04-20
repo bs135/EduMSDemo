@@ -309,6 +309,106 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Validations.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\BuildingView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\BuildingView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\BuildingView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\BuildingView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\ClassRoomView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\ClassRoomView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\ClassRoomView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Buildings\Building\ClassRoomView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Views\Manage\Products\ProductGroup\ProductGroupView\Titles.Designer.cs">
       <DependentUpon>Titles.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -345,6 +445,306 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Views\Manage\Products\Product\ProductView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\BonusScore\BonusScoreView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\BonusScore\BonusScoreView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\BonusScore\BonusScoreView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\BonusScore\BonusScoreView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Course\CourseView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Course\CourseView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Course\CourseView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Course\CourseView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\StudentClass\StudentClassView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\StudentClass\StudentClassView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\StudentClass\StudentClassView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\StudentClass\StudentClassView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Student\StudentView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Student\StudentView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Student\StudentView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Students\Student\StudentView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\Semester\SemesterView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\Semester\SemesterView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\Semester\SemesterView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\Semester\SemesterView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\Subject\SubjectView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\Subject\SubjectView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\Subject\SubjectView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Subjects\Subject\SubjectView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Department\DepartmentView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Department\DepartmentView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Department\DepartmentView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Department\DepartmentView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Faculty\FacultyView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Faculty\FacultyView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Faculty\FacultyView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Faculty\FacultyView\Validations.vi.Designer.cs">
+      <DependentUpon>Validations.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Staff\StaffView\Titles.Designer.cs">
+      <DependentUpon>Titles.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Staff\StaffView\Titles.vi.Designer.cs">
+      <DependentUpon>Titles.vi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Staff\StaffView\Validations.Designer.cs">
+      <DependentUpon>Validations.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\Teachers\Staff\StaffView\Validations.vi.Designer.cs">
       <DependentUpon>Validations.vi.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -601,6 +1001,86 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Validations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\BuildingView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\BuildingView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\BuildingView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\BuildingView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\ClassRoomView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\ClassRoomView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\ClassRoomView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Buildings\Building\ClassRoomView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumDetail\CurriculumDetailView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\CurriculumType\CurriculumTypeView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Manage\Products\ProductGroup\ProductGroupView\Titles.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Titles.Designer.cs</LastGenOutput>
@@ -630,6 +1110,246 @@
       <LastGenOutput>Validations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Manage\Products\Product\ProductView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\BonusScore\BonusScoreView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\BonusScore\BonusScoreView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\BonusScore\BonusScoreView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\BonusScore\BonusScoreView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Course\CourseView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Course\CourseView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Course\CourseView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Course\CourseView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\StudentClass\StudentClassView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\StudentClass\StudentClassView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\StudentClass\StudentClassView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\StudentClass\StudentClassView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Student\StudentView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Student\StudentView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Student\StudentView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Students\Student\StudentView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\Semester\SemesterView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\Semester\SemesterView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\Semester\SemesterView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\Semester\SemesterView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\PreSubject\PreSubjectView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\Subject\SubjectView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\Subject\SubjectView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\Subject\SubjectView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Subjects\Subject\SubjectView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Department\DepartmentView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Department\DepartmentView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Department\DepartmentView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Department\DepartmentView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\FacultyManageBoard\FacultyManageBoardView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Faculty\FacultyView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Faculty\FacultyView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Faculty\FacultyView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Faculty\FacultyView\Validations.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Staff\StaffView\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Staff\StaffView\Titles.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Staff\StaffView\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\Teachers\Staff\StaffView\Validations.vi.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
     </EmbeddedResource>

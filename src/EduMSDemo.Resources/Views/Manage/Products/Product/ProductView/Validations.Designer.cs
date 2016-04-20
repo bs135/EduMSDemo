@@ -61,7 +61,7 @@ namespace EduMSDemo.Resources.Views.Manage.Products.Product.ProductView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product Name is already existed..
+        ///   Looks up a localized string similar to Name is already existed..
         /// </summary>
         public static string UniqueName {
             get {
@@ -70,7 +70,7 @@ namespace EduMSDemo.Resources.Views.Manage.Products.Product.ProductView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product SKU is already existed..
+        ///   Looks up a localized string similar to SKU is already existed..
         /// </summary>
         public static string UniqueSKU {
             get {
