@@ -132,8 +132,8 @@
   <data name="PlaceOfBirth" xml:space="preserve">
     <value>Place Of Birth</value>
   </data>
-  <data name="Sex" xml:space="preserve">
-    <value>Sex</value>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
   </data>
   <data name="Address" xml:space="preserve">
     <value>Address</value>

@@ -132,7 +132,7 @@
   <data name="PlaceOfBirth" xml:space="preserve">
     <value>Nơi sinh</value>
   </data>
-  <data name="Sex" xml:space="preserve">
+  <data name="Gender" xml:space="preserve">
     <value>Giới tính</value>
   </data>
   <data name="Address" xml:space="preserve">

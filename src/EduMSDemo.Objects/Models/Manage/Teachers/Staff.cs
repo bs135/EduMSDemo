@@ -21,7 +21,7 @@ namespace EduMSDemo.Objects
 
         public String PlaceOfBirth { get; set; }
 
-        public String Sex { get; set; }
+        public String Gender { get; set; }
 
         [StringLength(512)]
         public String Address { get; set; }

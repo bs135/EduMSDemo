@@ -97,6 +97,15 @@ namespace EduMSDemo.Resources.Views.Manage.Students.Student.StudentView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        public static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Student.
         /// </summary>
         public static string Id {
@@ -129,15 +138,6 @@ namespace EduMSDemo.Resources.Views.Manage.Students.Student.StudentView {
         public static string PlaceOfBirth {
             get {
                 return ResourceManager.GetString("PlaceOfBirth", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sex.
-        /// </summary>
-        public static string Sex {
-            get {
-                return ResourceManager.GetString("Sex", resourceCulture);
             }
         }
         
