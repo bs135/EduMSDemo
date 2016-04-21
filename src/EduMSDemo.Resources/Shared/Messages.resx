@@ -127,9 +127,69 @@
     <value>Are you sure to delete this setting?</value>
   </data>
   <data name="AdministratorAccountDeleteConfirmMessage" xml:space="preserve">
-    <value>Are you sure to delete this Account?</value>
+    <value>Are you sure to delete this account?</value>
   </data>
   <data name="AdministratorRoleDeleteConfirmMessage" xml:space="preserve">
-    <value>Are you sure to delete this Role?</value>
+    <value>Are you sure to delete this role?</value>
+  </data>
+  <data name="ManageBuildingDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Building?</value>
+  </data>
+  <data name="ManageClassRoomDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this ClassRoom?</value>
+  </data>
+  <data name="ManageCurriculumDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Curriculum?</value>
+  </data>
+  <data name="ManageCurriculumDetailDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this CurriculumDetail?</value>
+  </data>
+  <data name="ManageCurriculumTypeDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this CurriculumType?</value>
+  </data>
+  <data name="ManageBonusScoreDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this BonusScore?</value>
+  </data>
+  <data name="ManageScoreRecordDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this ScoreRecord?</value>
+  </data>
+  <data name="ManageScoreRecordDetailDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this ScoreRecordDetail?</value>
+  </data>
+  <data name="ManageCourseDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Course?</value>
+  </data>
+  <data name="ManageStudentDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Student?</value>
+  </data>
+  <data name="ManageStudentClassDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this StudentClass?</value>
+  </data>
+  <data name="ManageSemesterDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Semester?</value>
+  </data>
+  <data name="ManageSubjectClassDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this SubjectClass?</value>
+  </data>
+  <data name="ManageSubjectClassTeacherDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this SubjectClassTeacher?</value>
+  </data>
+  <data name="ManagePreSubjectDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this PreSubject?</value>
+  </data>
+  <data name="ManageSubjectDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Subject?</value>
+  </data>
+  <data name="ManageDepartmentDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Department?</value>
+  </data>
+  <data name="ManageFacultyDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Faculty?</value>
+  </data>
+  <data name="ManageFacultyManageBoardDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this FacultyManageBoard?</value>
+  </data>
+  <data name="ManageStaffDeleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure to delete this Staff?</value>
   </data>
 </root>

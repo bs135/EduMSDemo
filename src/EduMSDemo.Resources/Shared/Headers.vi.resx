@@ -153,4 +153,124 @@
   <data name="AdministrationSystemSettingsIndex" xml:space="preserve">
     <value>Danh sách cấu hình</value>
   </data>
+  <data name="ManageBuildings" xml:space="preserve">
+    <value>Tòa nhà</value>
+  </data>
+  <data name="ManageBuildingsIndex" xml:space="preserve">
+    <value>Danh sách tòa nhà</value>
+  </data>
+  <data name="ManageClassRooms" xml:space="preserve">
+    <value>Phòng học</value>
+  </data>
+  <data name="ManageClassRoomsIndex" xml:space="preserve">
+    <value>Danh sách phòng học</value>
+  </data>
+  <data name="ManageCurriculums" xml:space="preserve">
+    <value>Chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumsIndex" xml:space="preserve">
+    <value>Danh sách chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumDetails" xml:space="preserve">
+    <value>Chi tiết chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumDetailsIndex" xml:space="preserve">
+    <value>Danh sách chi tiết chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumTypes" xml:space="preserve">
+    <value>Loại chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumTypesIndex" xml:space="preserve">
+    <value>Danh sách loại chương trình đào tạo</value>
+  </data>
+  <data name="ManageBonusScores" xml:space="preserve">
+    <value>Điểm thưởng</value>
+  </data>
+  <data name="ManageBonusScoresIndex" xml:space="preserve">
+    <value>Danh sách điểm thưởng</value>
+  </data>
+  <data name="ManageScoreRecords" xml:space="preserve">
+    <value>Bảng điểm</value>
+  </data>
+  <data name="ManageScoreRecordsIndex" xml:space="preserve">
+    <value>Danh sách bảng điểm</value>
+  </data>
+  <data name="ManageScoreRecordDetails" xml:space="preserve">
+    <value>Chi tiết bảng điểm</value>
+  </data>
+  <data name="ManageScoreRecordDetailsIndex" xml:space="preserve">
+    <value>Danh sách chi tiết bảng điểm</value>
+  </data>
+  <data name="ManageCourses" xml:space="preserve">
+    <value>Khóa</value>
+  </data>
+  <data name="ManageCoursesIndex" xml:space="preserve">
+    <value>Danh sách khóa</value>
+  </data>
+  <data name="ManageStudents" xml:space="preserve">
+    <value>Sinh viên</value>
+  </data>
+  <data name="ManageStudentsIndex" xml:space="preserve">
+    <value>Danh sách sinh viên</value>
+  </data>
+  <data name="ManageStudentClasses" xml:space="preserve">
+    <value>Lớp quản lý sinh viên</value>
+  </data>
+  <data name="ManageStudentClassesIndex" xml:space="preserve">
+    <value>Danh sách lớp quản lý sinh viên</value>
+  </data>
+  <data name="ManageSemesters" xml:space="preserve">
+    <value>Học kỳ</value>
+  </data>
+  <data name="ManageSemestersIndex" xml:space="preserve">
+    <value>Danh sách học kỳ</value>
+  </data>
+  <data name="ManageSubjectClasses" xml:space="preserve">
+    <value>Lớp môn học</value>
+  </data>
+  <data name="ManageSubjectClassesIndex" xml:space="preserve">
+    <value>Danh sách lớp môn học</value>
+  </data>
+  <data name="ManageSubjectClassTeachers" xml:space="preserve">
+    <value>Giáo viên phụ trách lớp môn học</value>
+  </data>
+  <data name="ManageSubjectClassTeachersIndex" xml:space="preserve">
+    <value>Danh sách giáo viên phụ trách lớp môn học</value>
+  </data>
+  <data name="ManagePreSubjects" xml:space="preserve">
+    <value>Môn học tiên quyết</value>
+  </data>
+  <data name="ManagePreSubjectsIndex" xml:space="preserve">
+    <value>Danh sách môn học tiên quyết</value>
+  </data>
+  <data name="ManageSubjects" xml:space="preserve">
+    <value>Môn học</value>
+  </data>
+  <data name="ManageSubjectsIndex" xml:space="preserve">
+    <value>Danh sách môn học</value>
+  </data>
+  <data name="ManageDepartments" xml:space="preserve">
+    <value>Bộ môn</value>
+  </data>
+  <data name="ManageDepartmentsIndex" xml:space="preserve">
+    <value>Danh sách bộ môn</value>
+  </data>
+  <data name="ManageFaculties" xml:space="preserve">
+    <value>Khoa</value>
+  </data>
+  <data name="ManageFacultiesIndex" xml:space="preserve">
+    <value>Danh sách khoa</value>
+  </data>
+  <data name="ManageFacultyManageBoards" xml:space="preserve">
+    <value>Ban lãnh đạo khoa</value>
+  </data>
+  <data name="ManageFacultyManageBoardsIndex" xml:space="preserve">
+    <value>Danh sách ban lãnh đạo khoa</value>
+  </data>
+  <data name="ManageStaffs" xml:space="preserve">
+    <value>Cán bộ</value>
+  </data>
+  <data name="ManageStaffsIndex" xml:space="preserve">
+    <value>Danh sách cán bộ</value>
+  </data>
 </root>

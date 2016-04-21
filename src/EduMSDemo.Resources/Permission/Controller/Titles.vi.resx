@@ -123,4 +123,73 @@
   <data name="AdministrationRoles" xml:space="preserve">
     <value>Vai trò</value>
   </data>
+  <data name="ManageProducts" xml:space="preserve">
+    <value>Sản phẩm</value>
+  </data>
+  <data name="ManageProductGroups" xml:space="preserve">
+    <value>Nhóm sản phẩm</value>
+  </data>
+  <data name="AdministrationSystemSettings" xml:space="preserve">
+    <value>Cấu hình</value>
+  </data>
+  <data name="ManageBuildings" xml:space="preserve">
+    <value>Tòa nhà</value>
+  </data>
+  <data name="ManageClassRooms" xml:space="preserve">
+    <value>Phòng học</value>
+  </data>
+  <data name="ManageCurriculums" xml:space="preserve">
+    <value>Chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumDetails" xml:space="preserve">
+    <value>Chi tiết chương trình đào tạo</value>
+  </data>
+  <data name="ManageCurriculumTypes" xml:space="preserve">
+    <value>Loại chương trình đào tạo</value>
+  </data>
+  <data name="ManageBonusScores" xml:space="preserve">
+    <value>Điểm thưởng</value>
+  </data>
+  <data name="ManageScoreRecords" xml:space="preserve">
+    <value>Bảng điểm</value>
+  </data>
+  <data name="ManageScoreRecordDetails" xml:space="preserve">
+    <value>Chi tiết bảng điểm</value>
+  </data>
+  <data name="ManageCourses" xml:space="preserve">
+    <value>Khóa</value>
+  </data>
+  <data name="ManageStudents" xml:space="preserve">
+    <value>Sinh viên</value>
+  </data>
+  <data name="ManageStudentClasses" xml:space="preserve">
+    <value>Lớp quản lý sinh viên</value>
+  </data>
+  <data name="ManageSemesters" xml:space="preserve">
+    <value>Học kỳ</value>
+  </data>
+  <data name="ManageSubjectClasses" xml:space="preserve">
+    <value>Lớp môn học</value>
+  </data>
+  <data name="ManageSubjectClassTeachers" xml:space="preserve">
+    <value>Giáo viên phụ trách lớp môn học</value>
+  </data>
+  <data name="ManagePreSubjects" xml:space="preserve">
+    <value>Môn học tiên quyết</value>
+  </data>
+  <data name="ManageSubjects" xml:space="preserve">
+    <value>Môn học</value>
+  </data>
+  <data name="ManageDepartments" xml:space="preserve">
+    <value>Bộ môn</value>
+  </data>
+  <data name="ManageFaculties" xml:space="preserve">
+    <value>Khoa</value>
+  </data>
+  <data name="ManageFacultyManageBoards" xml:space="preserve">
+    <value>Ban lãnh đạo khoa</value>
+  </data>
+  <data name="ManageStaffs" xml:space="preserve">
+    <value>Cán bộ</value>
+  </data>
 </root>

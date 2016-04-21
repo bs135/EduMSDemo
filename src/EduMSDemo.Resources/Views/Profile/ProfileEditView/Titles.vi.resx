@@ -129,13 +129,4 @@
   <data name="Username" xml:space="preserve">
     <value>Tên đăng nhập</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Họ tên</value>
-  </data>
-  <data name="Phone" xml:space="preserve">
-    <value>Số điện thoại</value>
-  </data>
-  <data name="Position" xml:space="preserve">
-    <value>Chức vụ</value>
-  </data>
 </root>

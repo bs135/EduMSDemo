@@ -59,7 +59,7 @@
     <Compile Include="Models\Administration\Roles\Permission.cs" />
     <Compile Include="Models\Administration\Roles\Role.cs" />
     <Compile Include="Models\Administration\Roles\RolePermission.cs" />
-    <Compile Include="Models\Administration\System Settings\SystemSetting.cs" />
+    <Compile Include="Models\Administration\SystemSettings\SystemSetting.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Manage\Buildings\ClassRoom.cs" />
     <Compile Include="Models\Manage\Buildings\Building.cs" />

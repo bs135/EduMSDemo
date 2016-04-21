@@ -61,6 +61,15 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Accounts.
+        /// </summary>
+        public static string AdministrationAccounts {
+            get {
+                return ResourceManager.GetString("AdministrationAccounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account creation.
         /// </summary>
         public static string AdministrationAccountsCreate {
@@ -102,6 +111,15 @@ namespace EduMSDemo.Resources.Shared {
         public static string AdministrationAccountsIndex {
             get {
                 return ResourceManager.GetString("AdministrationAccountsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roles.
+        /// </summary>
+        public static string AdministrationRoles {
+            get {
+                return ResourceManager.GetString("AdministrationRoles", resourceCulture);
             }
         }
         
@@ -286,11 +304,605 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BonusScores.
+        /// </summary>
+        public static string ManageBonusScores {
+            get {
+                return ResourceManager.GetString("ManageBonusScores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageBonusScoresCreate {
+            get {
+                return ResourceManager.GetString("ManageBonusScoresCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageBonusScoresDelete {
+            get {
+                return ResourceManager.GetString("ManageBonusScoresDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageBonusScoresDetails {
+            get {
+                return ResourceManager.GetString("ManageBonusScoresDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageBonusScoresEdit {
+            get {
+                return ResourceManager.GetString("ManageBonusScoresEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageBonusScoresIndex {
+            get {
+                return ResourceManager.GetString("ManageBonusScoresIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buildings.
+        /// </summary>
+        public static string ManageBuildings {
+            get {
+                return ResourceManager.GetString("ManageBuildings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageBuildingsCreate {
+            get {
+                return ResourceManager.GetString("ManageBuildingsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageBuildingsDelete {
+            get {
+                return ResourceManager.GetString("ManageBuildingsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageBuildingsDetails {
+            get {
+                return ResourceManager.GetString("ManageBuildingsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageBuildingsEdit {
+            get {
+                return ResourceManager.GetString("ManageBuildingsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageBuildingsIndex {
+            get {
+                return ResourceManager.GetString("ManageBuildingsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ClassRooms.
+        /// </summary>
+        public static string ManageClassRooms {
+            get {
+                return ResourceManager.GetString("ManageClassRooms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageClassRoomsCreate {
+            get {
+                return ResourceManager.GetString("ManageClassRoomsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageClassRoomsDelete {
+            get {
+                return ResourceManager.GetString("ManageClassRoomsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageClassRoomsDetails {
+            get {
+                return ResourceManager.GetString("ManageClassRoomsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageClassRoomsEdit {
+            get {
+                return ResourceManager.GetString("ManageClassRoomsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageClassRoomsIndex {
+            get {
+                return ResourceManager.GetString("ManageClassRoomsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Courses.
+        /// </summary>
+        public static string ManageCourses {
+            get {
+                return ResourceManager.GetString("ManageCourses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageCoursesCreate {
+            get {
+                return ResourceManager.GetString("ManageCoursesCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageCoursesDelete {
+            get {
+                return ResourceManager.GetString("ManageCoursesDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageCoursesDetails {
+            get {
+                return ResourceManager.GetString("ManageCoursesDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageCoursesEdit {
+            get {
+                return ResourceManager.GetString("ManageCoursesEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageCoursesIndex {
+            get {
+                return ResourceManager.GetString("ManageCoursesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CurriculumDetails.
+        /// </summary>
+        public static string ManageCurriculumDetails {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageCurriculumDetailsCreate {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetailsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageCurriculumDetailsDelete {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetailsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageCurriculumDetailsDetails {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetailsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageCurriculumDetailsEdit {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetailsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageCurriculumDetailsIndex {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetailsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curriculums.
+        /// </summary>
+        public static string ManageCurriculums {
+            get {
+                return ResourceManager.GetString("ManageCurriculums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageCurriculumsCreate {
+            get {
+                return ResourceManager.GetString("ManageCurriculumsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageCurriculumsDelete {
+            get {
+                return ResourceManager.GetString("ManageCurriculumsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageCurriculumsDetails {
+            get {
+                return ResourceManager.GetString("ManageCurriculumsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageCurriculumsEdit {
+            get {
+                return ResourceManager.GetString("ManageCurriculumsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageCurriculumsIndex {
+            get {
+                return ResourceManager.GetString("ManageCurriculumsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CurriculumTypes.
+        /// </summary>
+        public static string ManageCurriculumTypes {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageCurriculumTypesCreate {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypesCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageCurriculumTypesDelete {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypesDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageCurriculumTypesDetails {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypesDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageCurriculumTypesEdit {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypesEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageCurriculumTypesIndex {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Departments.
+        /// </summary>
+        public static string ManageDepartments {
+            get {
+                return ResourceManager.GetString("ManageDepartments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageDepartmentsCreate {
+            get {
+                return ResourceManager.GetString("ManageDepartmentsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageDepartmentsDelete {
+            get {
+                return ResourceManager.GetString("ManageDepartmentsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageDepartmentsDetails {
+            get {
+                return ResourceManager.GetString("ManageDepartmentsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageDepartmentsEdit {
+            get {
+                return ResourceManager.GetString("ManageDepartmentsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageDepartmentsIndex {
+            get {
+                return ResourceManager.GetString("ManageDepartmentsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faculties.
+        /// </summary>
+        public static string ManageFaculties {
+            get {
+                return ResourceManager.GetString("ManageFaculties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageFacultiesCreate {
+            get {
+                return ResourceManager.GetString("ManageFacultiesCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageFacultiesDelete {
+            get {
+                return ResourceManager.GetString("ManageFacultiesDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageFacultiesDetails {
+            get {
+                return ResourceManager.GetString("ManageFacultiesDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageFacultiesEdit {
+            get {
+                return ResourceManager.GetString("ManageFacultiesEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageFacultiesIndex {
+            get {
+                return ResourceManager.GetString("ManageFacultiesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FacultyManageBoards.
+        /// </summary>
+        public static string ManageFacultyManageBoards {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageFacultyManageBoardsCreate {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoardsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageFacultyManageBoardsDelete {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoardsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageFacultyManageBoardsDetails {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoardsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageFacultyManageBoardsEdit {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoardsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageFacultyManageBoardsIndex {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoardsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string ManagePartNoesDelete {
             get {
                 return ResourceManager.GetString("ManagePartNoesDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PreSubjects.
+        /// </summary>
+        public static string ManagePreSubjects {
+            get {
+                return ResourceManager.GetString("ManagePreSubjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManagePreSubjectsCreate {
+            get {
+                return ResourceManager.GetString("ManagePreSubjectsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManagePreSubjectsDelete {
+            get {
+                return ResourceManager.GetString("ManagePreSubjectsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManagePreSubjectsDetails {
+            get {
+                return ResourceManager.GetString("ManagePreSubjectsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManagePreSubjectsEdit {
+            get {
+                return ResourceManager.GetString("ManagePreSubjectsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManagePreSubjectsIndex {
+            get {
+                return ResourceManager.GetString("ManagePreSubjectsIndex", resourceCulture);
             }
         }
         
@@ -399,6 +1011,492 @@ namespace EduMSDemo.Resources.Shared {
         public static string ManageProductsIndex {
             get {
                 return ResourceManager.GetString("ManageProductsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ScoreRecordDetails.
+        /// </summary>
+        public static string ManageScoreRecordDetails {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageScoreRecordDetailsCreate {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetailsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageScoreRecordDetailsDelete {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetailsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageScoreRecordDetailsDetails {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetailsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageScoreRecordDetailsEdit {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetailsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageScoreRecordDetailsIndex {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetailsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ScoreRecords.
+        /// </summary>
+        public static string ManageScoreRecords {
+            get {
+                return ResourceManager.GetString("ManageScoreRecords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageScoreRecordsCreate {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageScoreRecordsDelete {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageScoreRecordsDetails {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageScoreRecordsEdit {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageScoreRecordsIndex {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semesters.
+        /// </summary>
+        public static string ManageSemesters {
+            get {
+                return ResourceManager.GetString("ManageSemesters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageSemestersCreate {
+            get {
+                return ResourceManager.GetString("ManageSemestersCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageSemestersDelete {
+            get {
+                return ResourceManager.GetString("ManageSemestersDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageSemestersDetails {
+            get {
+                return ResourceManager.GetString("ManageSemestersDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageSemestersEdit {
+            get {
+                return ResourceManager.GetString("ManageSemestersEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageSemestersIndex {
+            get {
+                return ResourceManager.GetString("ManageSemestersIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Staffs.
+        /// </summary>
+        public static string ManageStaffs {
+            get {
+                return ResourceManager.GetString("ManageStaffs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageStaffsCreate {
+            get {
+                return ResourceManager.GetString("ManageStaffsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageStaffsDelete {
+            get {
+                return ResourceManager.GetString("ManageStaffsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageStaffsDetails {
+            get {
+                return ResourceManager.GetString("ManageStaffsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageStaffsEdit {
+            get {
+                return ResourceManager.GetString("ManageStaffsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageStaffsIndex {
+            get {
+                return ResourceManager.GetString("ManageStaffsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StudentClasses.
+        /// </summary>
+        public static string ManageStudentClasses {
+            get {
+                return ResourceManager.GetString("ManageStudentClasses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageStudentClassesCreate {
+            get {
+                return ResourceManager.GetString("ManageStudentClassesCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageStudentClassesDelete {
+            get {
+                return ResourceManager.GetString("ManageStudentClassesDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageStudentClassesDetails {
+            get {
+                return ResourceManager.GetString("ManageStudentClassesDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageStudentClassesEdit {
+            get {
+                return ResourceManager.GetString("ManageStudentClassesEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageStudentClassesIndex {
+            get {
+                return ResourceManager.GetString("ManageStudentClassesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Students.
+        /// </summary>
+        public static string ManageStudents {
+            get {
+                return ResourceManager.GetString("ManageStudents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageStudentsCreate {
+            get {
+                return ResourceManager.GetString("ManageStudentsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageStudentsDelete {
+            get {
+                return ResourceManager.GetString("ManageStudentsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageStudentsDetails {
+            get {
+                return ResourceManager.GetString("ManageStudentsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageStudentsEdit {
+            get {
+                return ResourceManager.GetString("ManageStudentsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageStudentsIndex {
+            get {
+                return ResourceManager.GetString("ManageStudentsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubjectClasses.
+        /// </summary>
+        public static string ManageSubjectClasses {
+            get {
+                return ResourceManager.GetString("ManageSubjectClasses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageSubjectClassesCreate {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassesCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageSubjectClassesDelete {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassesDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageSubjectClassesDetails {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassesDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageSubjectClassesEdit {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassesEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageSubjectClassesIndex {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubjectClassTeachers.
+        /// </summary>
+        public static string ManageSubjectClassTeachers {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageSubjectClassTeachersCreate {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachersCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageSubjectClassTeachersDelete {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachersDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageSubjectClassTeachersDetails {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachersDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageSubjectClassTeachersEdit {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachersEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageSubjectClassTeachersIndex {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachersIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subjects.
+        /// </summary>
+        public static string ManageSubjects {
+            get {
+                return ResourceManager.GetString("ManageSubjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ManageSubjectsCreate {
+            get {
+                return ResourceManager.GetString("ManageSubjectsCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ManageSubjectsDelete {
+            get {
+                return ResourceManager.GetString("ManageSubjectsDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string ManageSubjectsDetails {
+            get {
+                return ResourceManager.GetString("ManageSubjectsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string ManageSubjectsEdit {
+            get {
+                return ResourceManager.GetString("ManageSubjectsEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageSubjectsIndex {
+            get {
+                return ResourceManager.GetString("ManageSubjectsIndex", resourceCulture);
             }
         }
         

@@ -61,7 +61,7 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure to delete this Account?.
+        ///   Looks up a localized string similar to Are you sure to delete this account?.
         /// </summary>
         public static string AdministratorAccountDeleteConfirmMessage {
             get {
@@ -70,7 +70,7 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure to delete this Role?.
+        ///   Looks up a localized string similar to Are you sure to delete this role?.
         /// </summary>
         public static string AdministratorRoleDeleteConfirmMessage {
             get {
@@ -84,6 +84,105 @@ namespace EduMSDemo.Resources.Shared {
         public static string AdministratorSystemSettingDeleteConfirmMessage {
             get {
                 return ResourceManager.GetString("AdministratorSystemSettingDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this BonusScore?.
+        /// </summary>
+        public static string ManageBonusScoreDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageBonusScoreDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Building?.
+        /// </summary>
+        public static string ManageBuildingDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageBuildingDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this ClassRoom?.
+        /// </summary>
+        public static string ManageClassRoomDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageClassRoomDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Course?.
+        /// </summary>
+        public static string ManageCourseDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageCourseDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Curriculum?.
+        /// </summary>
+        public static string ManageCurriculumDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this CurriculumDetail?.
+        /// </summary>
+        public static string ManageCurriculumDetailDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetailDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this CurriculumType?.
+        /// </summary>
+        public static string ManageCurriculumTypeDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypeDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Department?.
+        /// </summary>
+        public static string ManageDepartmentDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageDepartmentDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Faculty?.
+        /// </summary>
+        public static string ManageFacultyDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageFacultyDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this FacultyManageBoard?.
+        /// </summary>
+        public static string ManageFacultyManageBoardDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoardDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this PreSubject?.
+        /// </summary>
+        public static string ManagePreSubjectDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManagePreSubjectDeleteConfirmMessage", resourceCulture);
             }
         }
         
@@ -102,6 +201,87 @@ namespace EduMSDemo.Resources.Shared {
         public static string ManageProductGroupDeleteConfirmMessage {
             get {
                 return ResourceManager.GetString("ManageProductGroupDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this ScoreRecord?.
+        /// </summary>
+        public static string ManageScoreRecordDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this ScoreRecordDetail?.
+        /// </summary>
+        public static string ManageScoreRecordDetailDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetailDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Semester?.
+        /// </summary>
+        public static string ManageSemesterDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageSemesterDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Staff?.
+        /// </summary>
+        public static string ManageStaffDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageStaffDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this StudentClass?.
+        /// </summary>
+        public static string ManageStudentClassDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageStudentClassDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Student?.
+        /// </summary>
+        public static string ManageStudentDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageStudentDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this SubjectClass?.
+        /// </summary>
+        public static string ManageSubjectClassDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this SubjectClassTeacher?.
+        /// </summary>
+        public static string ManageSubjectClassTeacherDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeacherDeleteConfirmMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Subject?.
+        /// </summary>
+        public static string ManageSubjectDeleteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ManageSubjectDeleteConfirmMessage", resourceCulture);
             }
         }
     }

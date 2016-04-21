@@ -77,5 +77,212 @@ namespace EduMSDemo.Resources.Permission.Controller {
                 return ResourceManager.GetString("AdministrationRoles", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SystemSettings.
+        /// </summary>
+        public static string AdministrationSystemSettings {
+            get {
+                return ResourceManager.GetString("AdministrationSystemSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BonusScores.
+        /// </summary>
+        public static string ManageBonusScores {
+            get {
+                return ResourceManager.GetString("ManageBonusScores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buildings.
+        /// </summary>
+        public static string ManageBuildings {
+            get {
+                return ResourceManager.GetString("ManageBuildings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ClassRooms.
+        /// </summary>
+        public static string ManageClassRooms {
+            get {
+                return ResourceManager.GetString("ManageClassRooms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Courses.
+        /// </summary>
+        public static string ManageCourses {
+            get {
+                return ResourceManager.GetString("ManageCourses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CurriculumDetails.
+        /// </summary>
+        public static string ManageCurriculumDetails {
+            get {
+                return ResourceManager.GetString("ManageCurriculumDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curriculums.
+        /// </summary>
+        public static string ManageCurriculums {
+            get {
+                return ResourceManager.GetString("ManageCurriculums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CurriculumTypes.
+        /// </summary>
+        public static string ManageCurriculumTypes {
+            get {
+                return ResourceManager.GetString("ManageCurriculumTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Departments.
+        /// </summary>
+        public static string ManageDepartments {
+            get {
+                return ResourceManager.GetString("ManageDepartments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faculties.
+        /// </summary>
+        public static string ManageFaculties {
+            get {
+                return ResourceManager.GetString("ManageFaculties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FacultyManageBoards.
+        /// </summary>
+        public static string ManageFacultyManageBoards {
+            get {
+                return ResourceManager.GetString("ManageFacultyManageBoards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PreSubjects.
+        /// </summary>
+        public static string ManagePreSubjects {
+            get {
+                return ResourceManager.GetString("ManagePreSubjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Group.
+        /// </summary>
+        public static string ManageProductGroups {
+            get {
+                return ResourceManager.GetString("ManageProductGroups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        public static string ManageProducts {
+            get {
+                return ResourceManager.GetString("ManageProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ScoreRecordDetails.
+        /// </summary>
+        public static string ManageScoreRecordDetails {
+            get {
+                return ResourceManager.GetString("ManageScoreRecordDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ScoreRecords.
+        /// </summary>
+        public static string ManageScoreRecords {
+            get {
+                return ResourceManager.GetString("ManageScoreRecords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semesters.
+        /// </summary>
+        public static string ManageSemesters {
+            get {
+                return ResourceManager.GetString("ManageSemesters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Staffs.
+        /// </summary>
+        public static string ManageStaffs {
+            get {
+                return ResourceManager.GetString("ManageStaffs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StudentClasses.
+        /// </summary>
+        public static string ManageStudentClasses {
+            get {
+                return ResourceManager.GetString("ManageStudentClasses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Students.
+        /// </summary>
+        public static string ManageStudents {
+            get {
+                return ResourceManager.GetString("ManageStudents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubjectClasses.
+        /// </summary>
+        public static string ManageSubjectClasses {
+            get {
+                return ResourceManager.GetString("ManageSubjectClasses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubjectClassTeachers.
+        /// </summary>
+        public static string ManageSubjectClassTeachers {
+            get {
+                return ResourceManager.GetString("ManageSubjectClassTeachers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subjects.
+        /// </summary>
+        public static string ManageSubjects {
+            get {
+                return ResourceManager.GetString("ManageSubjects", resourceCulture);
+            }
+        }
     }
 }

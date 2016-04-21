@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AdministrationAccountsCreate" xml:space="preserve">
-    <value>Thêm mới</value>
+    <value>Thêm</value>
   </data>
   <data name="AdministrationAccountsDetails" xml:space="preserve">
     <value>Chi tiết</value>
@@ -130,7 +130,7 @@
     <value>Danh sách</value>
   </data>
   <data name="AdministrationRolesCreate" xml:space="preserve">
-    <value>Thêm mới</value>
+    <value>Thêm</value>
   </data>
   <data name="AdministrationRolesDelete" xml:space="preserve">
     <value>Xóa</value>
@@ -142,6 +142,354 @@
     <value>Sửa</value>
   </data>
   <data name="AdministrationRolesIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="AdministrationAccountsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="AdministrationSystemSettingsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="AdministrationSystemSettingsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="AdministrationSystemSettingsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="AdministrationSystemSettingsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="AdministrationSystemSettingsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageBuildingsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageBuildingsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageBuildingsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageBuildingsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageBuildingsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageClassRoomsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageClassRoomsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageClassRoomsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageClassRoomsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageClassRoomsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageCurriculumsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageCurriculumsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageCurriculumsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageCurriculumsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageCurriculumsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageCurriculumDetailsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageCurriculumDetailsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageCurriculumDetailsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageCurriculumDetailsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageCurriculumDetailsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageCurriculumTypesCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageCurriculumTypesDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageCurriculumTypesDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageCurriculumTypesEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageCurriculumTypesIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageProductsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageProductsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageProductsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageProductsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageProductsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageProductGroupsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageProductGroupsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageProductGroupsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageProductGroupsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageProductGroupsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageBonusScoresCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageBonusScoresDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageBonusScoresDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageBonusScoresEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageBonusScoresIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageScoreRecordsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageScoreRecordsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageScoreRecordsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageScoreRecordsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageScoreRecordsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageScoreRecordDetailsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageScoreRecordDetailsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageScoreRecordDetailsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageScoreRecordDetailsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageScoreRecordDetailsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageCoursesCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageCoursesDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageCoursesDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageCoursesEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageCoursesIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageStudentsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageStudentsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageStudentsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageStudentsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageStudentsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageStudentClassesCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageStudentClassesDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageStudentClassesDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageStudentClassesEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageStudentClassesIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageSemestersCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageSemestersDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageSemestersDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageSemestersEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageSemestersIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageSubjectClassesCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageSubjectClassesDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageSubjectClassesDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageSubjectClassesEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageSubjectClassesIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageSubjectClassTeachersCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageSubjectClassTeachersDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageSubjectClassTeachersDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageSubjectClassTeachersEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageSubjectClassTeachersIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManagePreSubjectsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManagePreSubjectsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManagePreSubjectsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManagePreSubjectsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManagePreSubjectsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageSubjectsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageSubjectsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageSubjectsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageSubjectsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageSubjectsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageDepartmentsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageDepartmentsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageDepartmentsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageDepartmentsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageDepartmentsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageFacultiesCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageFacultiesDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageFacultiesDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageFacultiesEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageFacultiesIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageFacultyManageBoardsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageFacultyManageBoardsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageFacultyManageBoardsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageFacultyManageBoardsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageFacultyManageBoardsIndex" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
+  <data name="ManageStaffsCreate" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="ManageStaffsDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ManageStaffsDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="ManageStaffsEdit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ManageStaffsIndex" xml:space="preserve">
     <value>Danh sách</value>
   </data>
 </root>
