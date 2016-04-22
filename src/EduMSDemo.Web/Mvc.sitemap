@@ -48,6 +48,161 @@
 
           </siteMapNode>
           <!-- End Products -->
+          <!-- Buildings -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Buildings">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="Buildings" action="Index">
+				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="Buildings" action="Create" />
+				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="Buildings" action="Edit" />
+				      <siteMapNode icon="fa fa-times" area="Manage" controller="Buildings" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="ClassRooms" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="ClassRooms" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="ClassRooms" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="ClassRooms" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Buildings -->
+          <!-- Curriculums -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Curriculums">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="Curriculums" action="Index">
+				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="Curriculums" action="Create" />
+				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="Curriculums" action="Edit" />
+				      <siteMapNode icon="fa fa-times" area="Manage" controller="Curriculums" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="CurriculumDetails" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="CurriculumDetails" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="CurriculumDetails" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="CurriculumDetails" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="CurriculumTypes" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="CurriculumTypes" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="CurriculumTypes" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="CurriculumTypes" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Curriculums -->
+          <!-- Scores -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Scores">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="BonusScores" action="Index">
+				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="BonusScores" action="Create" />
+				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="BonusScores" action="Edit" />
+				      <siteMapNode icon="fa fa-times" area="Manage" controller="BonusScores" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="ScoreRecords" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="ScoreRecords" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="ScoreRecords" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="ScoreRecords" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="ScoreRecordDetails" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="ScoreRecordDetails" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="ScoreRecordDetails" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="ScoreRecordDetails" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Scores -->
+          <!-- Students -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Students">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="Courses" action="Index">
+				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="Courses" action="Create" />
+				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="Courses" action="Edit" />
+				      <siteMapNode icon="fa fa-times" area="Manage" controller="Courses" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="Students" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="Students" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="Students" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="Students" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="StudentClasses" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="StudentClasses" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="StudentClasses" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="StudentClasses" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Students -->
+          <!-- Studies -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Studies">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="Semesters" action="Index">
+				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="Semesters" action="Create" />
+				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="Semesters" action="Edit" />
+				      <siteMapNode icon="fa fa-times" area="Manage" controller="Semesters" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="SubjectClasses" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="SubjectClasses" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="SubjectClasses" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="SubjectClasses" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="SubjectClassTeachers" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="SubjectClassTeachers" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="SubjectClassTeachers" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="SubjectClassTeachers" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Studies -->
+          <!-- Studies -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Subjects">
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="Subjects" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="Subjects" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="Subjects" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="Subjects" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="PreSubjects" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="PreSubjects" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="PreSubjects" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="PreSubjects" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Studies -->
+          <!-- Teachers -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Teachers">
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="Departments" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="Departments" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="Departments" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="Departments" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="Faculties" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="Faculties" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="Faculties" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="Faculties" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="FacultyManageBoards" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="FacultyManageBoards" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="FacultyManageBoards" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="FacultyManageBoards" action="Delete" />
+            </siteMapNode>
+
+            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="Staffs" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Manage" controller="Staffs" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Manage" controller="Staffs" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Manage" controller="Staffs" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Teachers -->
 
 
 

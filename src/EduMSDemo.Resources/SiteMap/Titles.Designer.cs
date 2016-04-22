@@ -304,7 +304,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Bonus Score.
         /// </summary>
         public static string ManageBonusScoresIndex {
             get {
@@ -358,7 +358,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Building.
         /// </summary>
         public static string ManageBuildingsIndex {
             get {
@@ -412,7 +412,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Class Room.
         /// </summary>
         public static string ManageClassRoomsIndex {
             get {
@@ -466,7 +466,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Course.
         /// </summary>
         public static string ManageCoursesIndex {
             get {
@@ -520,7 +520,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Curriculum Details.
         /// </summary>
         public static string ManageCurriculumDetailsIndex {
             get {
@@ -574,7 +574,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Curriculum.
         /// </summary>
         public static string ManageCurriculumsIndex {
             get {
@@ -628,7 +628,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Curriculum Type.
         /// </summary>
         public static string ManageCurriculumTypesIndex {
             get {
@@ -682,7 +682,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Department.
         /// </summary>
         public static string ManageDepartmentsIndex {
             get {
@@ -736,7 +736,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Faculty.
         /// </summary>
         public static string ManageFacultiesIndex {
             get {
@@ -790,7 +790,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Faculty Manage Board.
         /// </summary>
         public static string ManageFacultyManageBoardsIndex {
             get {
@@ -853,7 +853,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Pre Subject.
         /// </summary>
         public static string ManagePreSubjectsIndex {
             get {
@@ -1015,7 +1015,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Score Record Details.
         /// </summary>
         public static string ManageScoreRecordDetailsIndex {
             get {
@@ -1069,11 +1069,29 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to ScoreRecord.
         /// </summary>
         public static string ManageScoreRecordsIndex {
             get {
                 return ResourceManager.GetString("ManageScoreRecordsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string ManageScores {
+            get {
+                return ResourceManager.GetString("ManageScores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string ManageScoresIndex {
+            get {
+                return ResourceManager.GetString("ManageScoresIndex", resourceCulture);
             }
         }
         
@@ -1123,7 +1141,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Semester.
         /// </summary>
         public static string ManageSemestersIndex {
             get {
@@ -1177,7 +1195,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Staff.
         /// </summary>
         public static string ManageStaffsIndex {
             get {
@@ -1231,7 +1249,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to StudentClass.
         /// </summary>
         public static string ManageStudentClassesIndex {
             get {
@@ -1285,7 +1303,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Student.
         /// </summary>
         public static string ManageStudentsIndex {
             get {
@@ -1294,7 +1312,25 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SubjectClasses.
+        ///   Looks up a localized string similar to Study.
+        /// </summary>
+        public static string ManageStudies {
+            get {
+                return ResourceManager.GetString("ManageStudies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Study.
+        /// </summary>
+        public static string ManageStudiesIndex {
+            get {
+                return ResourceManager.GetString("ManageStudiesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject Class.
         /// </summary>
         public static string ManageSubjectClasses {
             get {
@@ -1339,7 +1375,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Subject Class.
         /// </summary>
         public static string ManageSubjectClassesIndex {
             get {
@@ -1393,7 +1429,7 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Subject Class Teacher.
         /// </summary>
         public static string ManageSubjectClassTeachersIndex {
             get {
@@ -1447,11 +1483,29 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Index.
+        ///   Looks up a localized string similar to Subject.
         /// </summary>
         public static string ManageSubjectsIndex {
             get {
                 return ResourceManager.GetString("ManageSubjectsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher.
+        /// </summary>
+        public static string ManageTeachers {
+            get {
+                return ResourceManager.GetString("ManageTeachers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher.
+        /// </summary>
+        public static string ManageTeachersIndex {
+            get {
+                return ResourceManager.GetString("ManageTeachersIndex", resourceCulture);
             }
         }
         
