@@ -492,4 +492,13 @@
   <data name="ManageStaffsIndex" xml:space="preserve">
     <value>Index</value>
   </data>
+  <data name="ManageScoresIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="ManageTeachersIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="ManageStudiesIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
 </root>

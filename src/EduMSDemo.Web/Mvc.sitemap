@@ -157,7 +157,7 @@
 
           </siteMapNode>
           <!-- End Studies -->
-          <!-- Studies -->
+          <!-- Subjects -->
           <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Subjects">
 
             <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="Subjects" action="Index">
@@ -173,7 +173,7 @@
             </siteMapNode>
 
           </siteMapNode>
-          <!-- End Studies -->
+          <!-- End Subjects -->
           <!-- Teachers -->
           <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Teachers">
 

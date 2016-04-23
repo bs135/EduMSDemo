@@ -223,6 +223,15 @@ namespace EduMSDemo.Resources.Permission.Controller {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scores.
+        /// </summary>
+        public static string ManageScores {
+            get {
+                return ResourceManager.GetString("ManageScores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Semesters.
         /// </summary>
         public static string ManageSemesters {
@@ -259,6 +268,15 @@ namespace EduMSDemo.Resources.Permission.Controller {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Studies.
+        /// </summary>
+        public static string ManageStudies {
+            get {
+                return ResourceManager.GetString("ManageStudies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SubjectClasses.
         /// </summary>
         public static string ManageSubjectClasses {
@@ -282,6 +300,15 @@ namespace EduMSDemo.Resources.Permission.Controller {
         public static string ManageSubjects {
             get {
                 return ResourceManager.GetString("ManageSubjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teachers.
+        /// </summary>
+        public static string ManageTeachers {
+            get {
+                return ResourceManager.GetString("ManageTeachers", resourceCulture);
             }
         }
     }

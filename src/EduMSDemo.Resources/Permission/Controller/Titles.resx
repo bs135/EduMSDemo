@@ -192,4 +192,13 @@
   <data name="ManageStaffs" xml:space="preserve">
     <value>Staffs</value>
   </data>
+  <data name="ManageScores" xml:space="preserve">
+    <value>Scores</value>
+  </data>
+  <data name="ManageTeachers" xml:space="preserve">
+    <value>Teachers</value>
+  </data>
+  <data name="ManageStudies" xml:space="preserve">
+    <value>Studies</value>
+  </data>
 </root>

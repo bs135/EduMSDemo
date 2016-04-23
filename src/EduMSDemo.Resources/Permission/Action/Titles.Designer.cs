@@ -871,6 +871,15 @@ namespace EduMSDemo.Resources.Permission.Action {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageScoresIndex {
+            get {
+                return ResourceManager.GetString("ManageScoresIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
         public static string ManageSemestersCreate {
@@ -1051,6 +1060,15 @@ namespace EduMSDemo.Resources.Permission.Action {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageStudiesIndex {
+            get {
+                return ResourceManager.GetString("ManageStudiesIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
         public static string ManageSubjectClassesCreate {
@@ -1182,6 +1200,15 @@ namespace EduMSDemo.Resources.Permission.Action {
         public static string ManageSubjectsIndex {
             get {
                 return ResourceManager.GetString("ManageSubjectsIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string ManageTeachersIndex {
+            get {
+                return ResourceManager.GetString("ManageTeachersIndex", resourceCulture);
             }
         }
     }

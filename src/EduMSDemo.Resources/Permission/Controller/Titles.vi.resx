@@ -192,4 +192,13 @@
   <data name="ManageStaffs" xml:space="preserve">
     <value>Cán bộ</value>
   </data>
+  <data name="ManageScores" xml:space="preserve">
+    <value>Điểm</value>
+  </data>
+  <data name="ManageTeachers" xml:space="preserve">
+    <value>Giáo viên</value>
+  </data>
+  <data name="ManageStudies" xml:space="preserve">
+    <value>Học hành</value>
+  </data>
 </root>
