@@ -61,9 +61,12 @@
     <Compile Include="Datalist\DatalistController.cs" />
     <Compile Include="Home\HomeController.cs" />
     <Compile Include="IRouteConfig.cs" />
+    <Compile Include="Manage\Curriculums\CurriculumDetail\CurriculumDetailsController.cs" />
+    <Compile Include="Manage\Curriculums\Curriculum\CurriculumsController.cs" />
+    <Compile Include="Manage\Curriculums\CurriculumType\CurriculumTypesController.cs" />
     <Compile Include="Manage\ManageAreaRegistration.cs" />
-    <Compile Include="Manage\Buildings\BuildingsController.cs" />
-    <Compile Include="Manage\ClassRooms\ClassRoomsController.cs" />
+    <Compile Include="Manage\Buildings\Building\BuildingsController.cs" />
+    <Compile Include="Manage\Buildings\ClassRoom\ClassRoomsController.cs" />
     <Compile Include="Profile\ProfileController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteConfig.cs" />
