@@ -2,20 +2,20 @@
 using EduMSDemo.Components.Security;
 using EduMSDemo.Data.Core;
 using EduMSDemo.Objects;
-using EduMSDemo.Resources.Views.Manage.Buildings.Building.BuildingView;
+using EduMSDemo.Resources.Views.Manage.Subjects.Subject.SubjectView;
 using System;
 using System.Linq;
 
 namespace EduMSDemo.Validators
 {
-    public class BuildingValidator : BaseValidator, IBuildingValidator
+    public class SubjectValidator : BaseValidator, ISubjectValidator
     {
-        public BuildingValidator(IUnitOfWork unitOfWork)
+        public SubjectValidator(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
-        public Boolean CanCreate(BuildingView view)
+        public Boolean CanCreate(SubjectView view)
         {
             Boolean isValid = IsUniqueName(view.Id, view.Name);
             isValid &= IsUniqueCode(view.Id, view.Code);
@@ -23,7 +23,7 @@ namespace EduMSDemo.Validators
 
             return isValid;
         }
-        public Boolean CanEdit(BuildingView view)
+        public Boolean CanEdit(SubjectView view)
         {
             Boolean isValid = IsUniqueName(view.Id, view.Name);
             isValid &= IsUniqueCode(view.Id, view.Code);
@@ -35,26 +35,26 @@ namespace EduMSDemo.Validators
         private Boolean IsUniqueName(Int32 id, String name)
         {
             Boolean isUnique = !UnitOfWork
-                .Select<Building>()
-                .Any(Building =>
-                    Building.Id != id &&
-                    Building.Name.ToLower() == name.ToLower());
+                .Select<Subject>()
+                .Any(Subject =>
+                    Subject.Id != id &&
+                    Subject.Name.ToLower() == name.ToLower());
 
             if (!isUnique)
-                ModelState.AddModelError<BuildingView>(model => model.Name, Validations.UniqueName);
+                ModelState.AddModelError<SubjectView>(model => model.Name, Validations.UniqueName);
 
             return isUnique;
         }
         private Boolean IsUniqueCode(Int32 id, String code)
         {
             Boolean isUnique = !UnitOfWork
-                .Select<Building>()
-                .Any(Building =>
-                    Building.Id != id &&
-                    Building.Code.ToString().ToLower() == code.ToLower());
+                .Select<Subject>()
+                .Any(Subject =>
+                    Subject.Id != id &&
+                    Subject.Code.ToString().ToLower() == code.ToLower());
 
             if (!isUnique)
-                ModelState.AddModelError<BuildingView>(Building => Building.Code, Validations.UniqueCode);
+                ModelState.AddModelError<SubjectView>(Subject => Subject.Code, Validations.UniqueCode);
 
             return isUnique;
         }

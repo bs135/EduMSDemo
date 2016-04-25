@@ -68,14 +68,5 @@ namespace EduMSDemo.Resources.Views.Manage.Students.Student.StudentView {
                 return ResourceManager.GetString("UniqueCode", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Name is already existed..
-        /// </summary>
-        public static string UniqueName {
-            get {
-                return ResourceManager.GetString("UniqueName", resourceCulture);
-            }
-        }
     }
 }

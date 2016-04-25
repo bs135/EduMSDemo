@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="UniqueName" xml:space="preserve">
-    <value>Tên này đã có trong hệ thống.</value>
-  </data>
   <data name="UniqueCode" xml:space="preserve">
     <value>Mã này đã có trong hệ thống.</value>
   </data>

@@ -14,7 +14,6 @@ namespace EduMSDemo.Objects
 
         [Required]
         [StringLength(128)]
-        [Index(IsUnique = true)]
         public String Name { get; set; }
 
         public DateTime DateOfBirth { get; set; }
