@@ -8,38 +8,37 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductGroupService : BaseService, IProductGroupService
+    public class CurriculumTypeService : BaseService, ICurriculumTypeService
     {
-        public ProductGroupService(IUnitOfWork unitOfWork)
+        public CurriculumTypeService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<ProductGroup, TView>(id);
+            return UnitOfWork.GetAs<CurriculumType, TView>(id);
         }
 
-        public IQueryable<ProductGroupView> GetViews()
+        public IQueryable<CurriculumTypeView> GetViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<CurriculumType>()
+                .To<CurriculumTypeView>()
                 .OrderByDescending(o => o.Id);
         }
 
-        public void Create(ProductGroupView view)
+        public void Create(CurriculumTypeView view)
         {
-            ProductGroup o = UnitOfWork.To<ProductGroup>(view);
+            CurriculumType o = UnitOfWork.To<CurriculumType>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductGroupView view)
+        public void Edit(CurriculumTypeView view)
         {
-            ProductGroup o = UnitOfWork.Get<ProductGroup>(view.Id);
+            CurriculumType o = UnitOfWork.Get<CurriculumType>(view.Id);
             o.Name = view.Name;
-            o.Description = view.Description;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -47,7 +46,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<ProductGroup>(id);
+            UnitOfWork.Delete<CurriculumType>(id);
             UnitOfWork.Commit();
         }
 

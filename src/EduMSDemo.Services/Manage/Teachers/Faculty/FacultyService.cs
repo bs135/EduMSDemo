@@ -8,38 +8,41 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductGroupService : BaseService, IProductGroupService
+    public class FacultyService : BaseService, IFacultyService
     {
-        public ProductGroupService(IUnitOfWork unitOfWork)
+        public FacultyService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<ProductGroup, TView>(id);
+            return UnitOfWork.GetAs<Faculty, TView>(id);
         }
 
-        public IQueryable<ProductGroupView> GetViews()
+        public IQueryable<FacultyView> GetViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<Faculty>()
+                .To<FacultyView>()
                 .OrderByDescending(o => o.Id);
         }
 
-        public void Create(ProductGroupView view)
+        public void Create(FacultyView view)
         {
-            ProductGroup o = UnitOfWork.To<ProductGroup>(view);
+            Faculty o = UnitOfWork.To<Faculty>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductGroupView view)
+        public void Edit(FacultyView view)
         {
-            ProductGroup o = UnitOfWork.Get<ProductGroup>(view.Id);
+            Faculty o = UnitOfWork.Get<Faculty>(view.Id);
             o.Name = view.Name;
-            o.Description = view.Description;
+            o.Abbreviation = view.Abbreviation;
+            o.Address = view.Address;
+            o.Email = view.Email;
+            o.PhoneNumber = view.PhoneNumber;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -47,7 +50,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<ProductGroup>(id);
+            UnitOfWork.Delete<Faculty>(id);
             UnitOfWork.Commit();
         }
 

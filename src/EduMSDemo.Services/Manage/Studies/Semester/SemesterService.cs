@@ -8,38 +8,40 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductGroupService : BaseService, IProductGroupService
+    public class SemesterService : BaseService, ISemesterService
     {
-        public ProductGroupService(IUnitOfWork unitOfWork)
+        public SemesterService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<ProductGroup, TView>(id);
+            return UnitOfWork.GetAs<Semester, TView>(id);
         }
 
-        public IQueryable<ProductGroupView> GetViews()
+        public IQueryable<SemesterView> GetViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<Semester>()
+                .To<SemesterView>()
                 .OrderByDescending(o => o.Id);
         }
 
-        public void Create(ProductGroupView view)
+        public void Create(SemesterView view)
         {
-            ProductGroup o = UnitOfWork.To<ProductGroup>(view);
+            Semester o = UnitOfWork.To<Semester>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductGroupView view)
+        public void Edit(SemesterView view)
         {
-            ProductGroup o = UnitOfWork.Get<ProductGroup>(view.Id);
+            Semester o = UnitOfWork.Get<Semester>(view.Id);
+            o.SchoolYear = view.SchoolYear;
             o.Name = view.Name;
-            o.Description = view.Description;
+            o.StartDate = view.StartDate;
+            o.EndDate = view.EndDate;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -47,7 +49,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<ProductGroup>(id);
+            UnitOfWork.Delete<Semester>(id);
             UnitOfWork.Commit();
         }
 

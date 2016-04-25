@@ -8,49 +8,49 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductService : BaseService, IProductService
+    public class SubjectService : BaseService, ISubjectService
     {
-        public ProductService(IUnitOfWork unitOfWork)
+        public SubjectService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<Product, TView>(id);
+            return UnitOfWork.GetAs<Subject, TView>(id);
         }
 
-        public IQueryable<ProductView> GetViews()
+        public IQueryable<SubjectView> GetViews()
         {
             return UnitOfWork
-                .Select<Product>()
-                .To<ProductView>()
+                .Select<Subject>()
+                .To<SubjectView>()
                 .OrderByDescending(o => o.Id);
         }
-
-        public IQueryable<ProductGroupView> GetGroupViews()
+        public IQueryable<DepartmentView> GetDepartmentViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<Department>()
+                .To<DepartmentView>()
                 .OrderByDescending(model => model.Id);
         }
 
-        public void Create(ProductView view)
+
+        public void Create(SubjectView view)
         {
-            Product o = UnitOfWork.To<Product>(view);
+            Subject o = UnitOfWork.To<Subject>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductView view)
+        public void Edit(SubjectView view)
         {
-            Product o = UnitOfWork.Get<Product>(view.Id);
+            Subject o = UnitOfWork.Get<Subject>(view.Id);
             o.Name = view.Name;
-            o.SKU = view.SKU;
-            o.StockQuanlity = view.StockQuanlity;
-            o.ProductGroupId = view.ProductGroupId;
-            o.IsActive = view.IsActive;
+            o.Code = view.Code;
+            o.Credits = view.Credits;
+            o.AcademicCredits = view.AcademicCredits;
+            o.DepartmentId = view.DepartmentId;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -58,7 +58,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<Product>(id);
+            UnitOfWork.Delete<Subject>(id);
             UnitOfWork.Commit();
         }
 

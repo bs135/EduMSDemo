@@ -8,38 +8,39 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductGroupService : BaseService, IProductGroupService
+    public class BuildingService : BaseService, IBuildingService
     {
-        public ProductGroupService(IUnitOfWork unitOfWork)
+        public BuildingService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<ProductGroup, TView>(id);
+            return UnitOfWork.GetAs<Building, TView>(id);
         }
 
-        public IQueryable<ProductGroupView> GetViews()
+        public IQueryable<BuildingView> GetViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<Building>()
+                .To<BuildingView>()
                 .OrderByDescending(o => o.Id);
         }
 
-        public void Create(ProductGroupView view)
+        public void Create(BuildingView view)
         {
-            ProductGroup o = UnitOfWork.To<ProductGroup>(view);
+            Building o = UnitOfWork.To<Building>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductGroupView view)
+        public void Edit(BuildingView view)
         {
-            ProductGroup o = UnitOfWork.Get<ProductGroup>(view.Id);
+            Building o = UnitOfWork.Get<Building>(view.Id);
             o.Name = view.Name;
-            o.Description = view.Description;
+            o.Code = view.Code;
+            o.RoomCount = view.RoomCount;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -47,7 +48,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<ProductGroup>(id);
+            UnitOfWork.Delete<Building>(id);
             UnitOfWork.Commit();
         }
 

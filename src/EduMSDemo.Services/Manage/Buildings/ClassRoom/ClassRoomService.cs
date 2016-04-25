@@ -8,49 +8,48 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductService : BaseService, IProductService
+    public class ClassRoomService : BaseService, IClassRoomService
     {
-        public ProductService(IUnitOfWork unitOfWork)
+        public ClassRoomService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<Product, TView>(id);
+            return UnitOfWork.GetAs<ClassRoom, TView>(id);
         }
 
-        public IQueryable<ProductView> GetViews()
+        public IQueryable<ClassRoomView> GetViews()
         {
             return UnitOfWork
-                .Select<Product>()
-                .To<ProductView>()
+                .Select<ClassRoom>()
+                .To<ClassRoomView>()
                 .OrderByDescending(o => o.Id);
         }
-
-        public IQueryable<ProductGroupView> GetGroupViews()
+        public IQueryable<BuildingView> GetBuildingViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<Building>()
+                .To<BuildingView>()
                 .OrderByDescending(model => model.Id);
         }
 
-        public void Create(ProductView view)
+
+        public void Create(ClassRoomView view)
         {
-            Product o = UnitOfWork.To<Product>(view);
+            ClassRoom o = UnitOfWork.To<ClassRoom>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductView view)
+        public void Edit(ClassRoomView view)
         {
-            Product o = UnitOfWork.Get<Product>(view.Id);
+            ClassRoom o = UnitOfWork.Get<ClassRoom>(view.Id);
             o.Name = view.Name;
-            o.SKU = view.SKU;
-            o.StockQuanlity = view.StockQuanlity;
-            o.ProductGroupId = view.ProductGroupId;
-            o.IsActive = view.IsActive;
+            o.Code = view.Code;
+            o.Capacity = view.Capacity;
+            o.BuildingId = view.BuildingId;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -58,7 +57,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<Product>(id);
+            UnitOfWork.Delete<ClassRoom>(id);
             UnitOfWork.Commit();
         }
 

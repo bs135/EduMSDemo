@@ -26,9 +26,9 @@ namespace EduMSDemo.Objects
         [StringLength(512)]
         public String Address { get; set; }
 
-        [StringLength(256)]
-        [EmailAddress]
-        public String Email { get; set; }
+        //[StringLength(256)]
+        //[EmailAddress]
+        //public String Email { get; set; }
 
         [StringLength(256)]
         [Phone]

@@ -8,49 +8,49 @@ using System.Web.Security;
 
 namespace EduMSDemo.Services
 {
-    public class ProductService : BaseService, IProductService
+    public class CourseService : BaseService, ICourseService
     {
-        public ProductService(IUnitOfWork unitOfWork)
+        public CourseService(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
-            return UnitOfWork.GetAs<Product, TView>(id);
+            return UnitOfWork.GetAs<Course, TView>(id);
         }
 
-        public IQueryable<ProductView> GetViews()
+        public IQueryable<CourseView> GetViews()
         {
             return UnitOfWork
-                .Select<Product>()
-                .To<ProductView>()
+                .Select<Course>()
+                .To<CourseView>()
                 .OrderByDescending(o => o.Id);
         }
 
-        public IQueryable<ProductGroupView> GetGroupViews()
+        public IQueryable<FacultyView> GetFacultyViews()
         {
             return UnitOfWork
-                .Select<ProductGroup>()
-                .To<ProductGroupView>()
+                .Select<Faculty>()
+                .To<FacultyView>()
                 .OrderByDescending(model => model.Id);
         }
 
-        public void Create(ProductView view)
+        public void Create(CourseView view)
         {
-            Product o = UnitOfWork.To<Product>(view);
+            Course o = UnitOfWork.To<Course>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
         }
 
-        public void Edit(ProductView view)
+        public void Edit(CourseView view)
         {
-            Product o = UnitOfWork.Get<Product>(view.Id);
+            Course o = UnitOfWork.Get<Course>(view.Id);
+            o.Code = view.Code;
             o.Name = view.Name;
-            o.SKU = view.SKU;
-            o.StockQuanlity = view.StockQuanlity;
-            o.ProductGroupId = view.ProductGroupId;
-            o.IsActive = view.IsActive;
+            o.StartDate = view.StartDate;
+            o.EndDate = view.EndDate;
+            o.FacultyId = view.FacultyId;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();
@@ -58,7 +58,7 @@ namespace EduMSDemo.Services
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<Product>(id);
+            UnitOfWork.Delete<Course>(id);
             UnitOfWork.Commit();
         }
 
