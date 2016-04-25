@@ -1,0 +1,38 @@
+﻿@model IQueryable<ClassRoomView>
+
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.ManageClassRoomsIndex</h5>
+            <div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Create"))
+                {
+                    <a class="btn" href="@Url.Action("Create")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageClassRoomDeleteConfirmMessage);
+
+                    columns.AddProperty(model => model.Name);
+                    columns.AddProperty(model => model.Code);
+                    columns.AddProperty(model => model.Capacity);
+                    columns.AddProperty(model => model.BuildingName);
+                    columns.AddProperty(model => model.BuildingCode);
+                })
+                .ApplyDefaults()
+            )
+        </div>
+    </div>
+</div>
+
+

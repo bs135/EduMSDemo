@@ -203,6 +203,14 @@
     <Content Include="Views\Administration\SystemSettings\Edit.cshtml" />
     <Content Include="Views\Administration\SystemSettings\Index.cshtml" />
     <Content Include="Views\Shared\_Datalist.cshtml" />
+    <Content Include="Views\Manage\Buildings\_Form.cshtml" />
+    <Content Include="Views\Manage\Buildings\Create.cshtml" />
+    <Content Include="Views\Manage\Buildings\Edit.cshtml" />
+    <Content Include="Views\Manage\Buildings\Index.cshtml" />
+    <Content Include="Views\Manage\ClassRooms\_Form.cshtml" />
+    <Content Include="Views\Manage\ClassRooms\Create.cshtml" />
+    <Content Include="Views\Manage\ClassRooms\Edit.cshtml" />
+    <Content Include="Views\Manage\ClassRooms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Shared\Auth\auth.css">

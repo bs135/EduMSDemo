@@ -62,6 +62,8 @@
     <Compile Include="Home\HomeController.cs" />
     <Compile Include="IRouteConfig.cs" />
     <Compile Include="Manage\ManageAreaRegistration.cs" />
+    <Compile Include="Manage\Buildings\BuildingsController.cs" />
+    <Compile Include="Manage\ClassRooms\ClassRoomsController.cs" />
     <Compile Include="Manage\Products\ProductsController.cs" />
     <Compile Include="Manage\ProductGroups\ProductGroupsController.cs" />
     <Compile Include="Profile\ProfileController.cs" />
