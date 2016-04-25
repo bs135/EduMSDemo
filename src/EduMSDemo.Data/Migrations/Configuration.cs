@@ -28,7 +28,7 @@ namespace EduMSDemo.Data.Migrations
             SeedRoles();
             SeedAccounts();
 
-            SeedProducts();
+            SeedBuildings();
         }
 
         #region Administration
@@ -59,22 +59,6 @@ namespace EduMSDemo.Data.Migrations
                 new Permission { Id = i++, Area = "Administration", Controller = "SystemSettings", Action = "Delete" },
 
                 #endregion Administration
-
-                #region Products
-
-                new Permission { Id = i++, Area = "Manage", Controller = "Products", Action = "Index" },
-                new Permission { Id = i++, Area = "Manage", Controller = "Products", Action = "Create" },
-                new Permission { Id = i++, Area = "Manage", Controller = "Products", Action = "Details" },
-                new Permission { Id = i++, Area = "Manage", Controller = "Products", Action = "Edit" },
-                new Permission { Id = i++, Area = "Manage", Controller = "Products", Action = "Delete" },
-
-                new Permission { Id = i++, Area = "Manage", Controller = "ProductGroups", Action = "Index" },
-                new Permission { Id = i++, Area = "Manage", Controller = "ProductGroups", Action = "Create" },
-                new Permission { Id = i++, Area = "Manage", Controller = "ProductGroups", Action = "Details" },
-                new Permission { Id = i++, Area = "Manage", Controller = "ProductGroups", Action = "Edit" },
-                new Permission { Id = i++, Area = "Manage", Controller = "ProductGroups", Action = "Delete" },
-
-                #endregion Products
 
                 #region Buildings
 
@@ -210,8 +194,6 @@ namespace EduMSDemo.Data.Migrations
 
                 #endregion Teachers
 
-
-
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();
@@ -330,51 +312,51 @@ namespace EduMSDemo.Data.Migrations
 
         #endregion
 
-        #region Product
+        #region Buildings
 
-        private void SeedProducts()
+        private void SeedBuildings()
         {
-            #region productGroups
-            ProductGroup[] productGroups =
+            #region Building
+            Building[] buildings =
             {
-                new ProductGroup { Id = 1, Name = "Điện tử", Description = "" },
-                new ProductGroup { Id = 2, Name = "May mặc", Description = "" },
-                new ProductGroup { Id = 3, Name = "Gia dụng", Description = "" }
+                new Building { Id = 1, Name = "Nhà A1", Code = "A1", RoomCount = 100 },
+                new Building { Id = 2, Name = "Nhà A2", Code = "A2", RoomCount = 48 },
+                new Building { Id = 3, Name = "Nhà A3", Code = "A3", RoomCount = 36 },
             };
 
-            foreach (ProductGroup productGroup in productGroups)
+            foreach (Building building in buildings)
             {
-                ProductGroup dbproductGroup = UnitOfWork.Select<ProductGroup>().FirstOrDefault(model => model.Name == productGroup.Name);
-                if (dbproductGroup == null)
+                Building dbbuilding = UnitOfWork.Select<Building>().FirstOrDefault(model => model.Code == building.Code);
+                if (dbbuilding == null)
                 {
-                    UnitOfWork.Insert(productGroup);
+                    UnitOfWork.Insert(building);
                 }
             }
 
             UnitOfWork.Commit();
             #endregion
 
-            #region products
-            Product[] products =
+            #region ClassRoom
+            ClassRoom[] classRooms =
             {
-                new Product { Id = 1, Name = "Máy tính 1", SKU = "H0001", StockQuanlity = 10, IsActive = true, ProductGroupId = 1 },
-                new Product { Id = 2, Name = "Máy tính 2", SKU = "H0002", StockQuanlity = 10, IsActive = true, ProductGroupId = 1 },
-                new Product { Id = 3, Name = "Máy tính 3", SKU = "H0003", StockQuanlity = 10, IsActive = true, ProductGroupId = 2 },
-                new Product { Id = 4, Name = "Máy tính 4", SKU = "H0004", StockQuanlity = 10, IsActive = true, ProductGroupId = 2 },
-                new Product { Id = 5, Name = "Máy tính 5", SKU = "H0005", StockQuanlity = 10, IsActive = true, ProductGroupId = 3 },
-                new Product { Id = 6, Name = "Máy tính 6", SKU = "H0006", StockQuanlity = 10, IsActive = true, ProductGroupId = 3 },
-                new Product { Id = 7, Name = "Máy tính 7", SKU = "H0007", StockQuanlity = 10, IsActive = true, ProductGroupId = 1 },
-                new Product { Id = 8, Name = "Máy tính 8", SKU = "H0008", StockQuanlity = 10, IsActive = true, ProductGroupId = 3 },
-                new Product { Id = 9, Name = "Máy tính 9", SKU = "H0009", StockQuanlity = 10, IsActive = true, ProductGroupId = 3 },
-                new Product { Id = 10, Name = "Máy tính 10", SKU = "H0010", StockQuanlity = 10, IsActive = true, ProductGroupId = 1 }
+                new ClassRoom { Id = 1, Name = "Phòng học 1", Code = "102A1", Capacity = 10, BuildingId = 1 },
+                new ClassRoom { Id = 2, Name = "Phòng học 2", Code = "103A1", Capacity = 20, BuildingId = 1 },
+                new ClassRoom { Id = 3, Name = "Phòng học 3", Code = "104A1", Capacity = 30, BuildingId = 1 },
+                new ClassRoom { Id = 4, Name = "Phòng học 4", Code = "101A2", Capacity = 40, BuildingId = 2 },
+                new ClassRoom { Id = 5, Name = "Phòng học 5", Code = "102A2", Capacity = 50, BuildingId = 2 },
+                new ClassRoom { Id = 6, Name = "Phòng học 6", Code = "101A3", Capacity = 60, BuildingId = 3 },
+                new ClassRoom { Id = 7, Name = "Phòng học 7", Code = "102A3", Capacity = 70, BuildingId = 3 },
+                new ClassRoom { Id = 8, Name = "Phòng học 8", Code = "103A3", Capacity = 80, BuildingId = 3 },
+                new ClassRoom { Id = 9, Name = "Phòng học 9", Code = "104A3", Capacity = 90, BuildingId = 3 },
+                new ClassRoom { Id = 10, Name = "Phòng học 10", Code = "105A3", Capacity = 100, BuildingId = 3 },
             };
 
-            foreach (Product product in products)
+            foreach (ClassRoom classRoom in classRooms)
             {
-                Product dbproduct = UnitOfWork.Select<Product>().FirstOrDefault(model => model.Name == product.Name);
-                if (dbproduct == null)
+                ClassRoom dbclassRoom = UnitOfWork.Select<ClassRoom>().FirstOrDefault(model => model.Code == classRoom.Code);
+                if (dbclassRoom == null)
                 {
-                    UnitOfWork.Insert(product);
+                    UnitOfWork.Insert(classRoom);
                 }
             }
 

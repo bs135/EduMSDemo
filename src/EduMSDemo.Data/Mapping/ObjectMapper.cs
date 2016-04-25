@@ -22,7 +22,6 @@ namespace EduMSDemo.Data.Mapping
         {
             MapRoles();
             MapAccounts();
-            MapProducts();
             MapBuildings();
             MapCurriculums();
             MapScores();
@@ -59,17 +58,6 @@ namespace EduMSDemo.Data.Mapping
             Configuration.CreateMap<SystemSettingView, SystemSetting>();
         }
 
-        #endregion
-
-        #region Products
-        private void MapProducts()
-        {
-            Configuration.CreateMap<Product, ProductView>();
-            Configuration.CreateMap<ProductView, Product>();
-
-            Configuration.CreateMap<ProductGroup, ProductGroupView>();
-            Configuration.CreateMap<ProductGroupView, ProductGroup>();
-        }
         #endregion
 
         #region Buildings

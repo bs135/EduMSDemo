@@ -183,42 +183,6 @@
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
   </data>
-  <data name="ManageProductGroups" xml:space="preserve">
-    <value>Nhóm sản phẩm</value>
-  </data>
-  <data name="ManageProductGroupsCreate" xml:space="preserve">
-    <value>Tạo mới</value>
-  </data>
-  <data name="ManageProductGroupsDelete" xml:space="preserve">
-    <value>Xóa</value>
-  </data>
-  <data name="ManageProductGroupsDetails" xml:space="preserve">
-    <value>Chi tiết</value>
-  </data>
-  <data name="ManageProductGroupsEdit" xml:space="preserve">
-    <value>Sửa</value>
-  </data>
-  <data name="ManageProductGroupsIndex" xml:space="preserve">
-    <value>Nhóm sản phẩm</value>
-  </data>
-  <data name="ManageProducts" xml:space="preserve">
-    <value>Sản phẩm</value>
-  </data>
-  <data name="ManageProductsCreate" xml:space="preserve">
-    <value>Tạo mới</value>
-  </data>
-  <data name="ManageProductsDelete" xml:space="preserve">
-    <value>Xóa</value>
-  </data>
-  <data name="ManageProductsDetails" xml:space="preserve">
-    <value>Chi tiết</value>
-  </data>
-  <data name="ManageProductsEdit" xml:space="preserve">
-    <value>Sửa</value>
-  </data>
-  <data name="ManageProductsIndex" xml:space="preserve">
-    <value>Danh sách</value>
-  </data>
   <data name="ProfileDelete" xml:space="preserve">
     <value>Hồ sơ</value>
   </data>

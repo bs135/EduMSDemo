@@ -120,7 +120,4 @@
   <data name="Role" xml:space="preserve">
     <value>Roles</value>
   </data>
-  <data name="Unit" xml:space="preserve">
-    <value>Units</value>
-  </data>
 </root>

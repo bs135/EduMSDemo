@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ManageProductDeleteConfirmMessage" xml:space="preserve">
-    <value>Bạn có chắc là muốn xóa sản phẩm này?</value>
-  </data>
-  <data name="ManageProductGroupDeleteConfirmMessage" xml:space="preserve">
-    <value>Bạn có chắc là muốn xóa nhóm sản phẩm này?</value>
-  </data>
   <data name="AdministratorSystemSettingDeleteConfirmMessage" xml:space="preserve">
     <value>Bạn có chắc là muốn xóa cấu hình này?</value>
   </data>

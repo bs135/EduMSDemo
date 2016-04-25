@@ -237,36 +237,6 @@
   <data name="ManageCurriculumTypesIndex" xml:space="preserve">
     <value>Index</value>
   </data>
-  <data name="ManageProductsCreate" xml:space="preserve">
-    <value>Create</value>
-  </data>
-  <data name="ManageProductsDelete" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="ManageProductsDetails" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="ManageProductsEdit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="ManageProductsIndex" xml:space="preserve">
-    <value>Index</value>
-  </data>
-  <data name="ManageProductGroupsCreate" xml:space="preserve">
-    <value>Create</value>
-  </data>
-  <data name="ManageProductGroupsDelete" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="ManageProductGroupsDetails" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="ManageProductGroupsEdit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="ManageProductGroupsIndex" xml:space="preserve">
-    <value>Index</value>
-  </data>
   <data name="ManageBonusScoresCreate" xml:space="preserve">
     <value>Create</value>
   </data>

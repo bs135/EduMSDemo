@@ -43,22 +43,6 @@ namespace EduMSDemo.Controllers
 
         #endregion
 
-        #region Product
-
-        [AjaxOnly]
-        public JsonResult ProductGroup(DatalistFilter filter)
-        {
-            return GetData(new Datalist<ProductGroup, ProductGroupView>(UnitOfWork), filter);
-        }
-
-        [AjaxOnly]
-        public JsonResult Product(DatalistFilter filter)
-        {
-            return GetData(new Datalist<Product, ProductView>(UnitOfWork), filter);
-        }
-
-        #endregion
-
         protected override void Dispose(Boolean disposing)
         {
             if (Disposed) return;

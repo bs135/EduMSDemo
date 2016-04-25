@@ -135,18 +135,6 @@
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
   </data>
-  <data name="ManageProducts" xml:space="preserve">
-    <value>Sản phẩm</value>
-  </data>
-  <data name="ManageProductsIndex" xml:space="preserve">
-    <value>Danh sách sản phẩm</value>
-  </data>
-  <data name="ManageProductGroups" xml:space="preserve">
-    <value>Nhóm sản phẩm</value>
-  </data>
-  <data name="ManageProductGroupsIndex" xml:space="preserve">
-    <value>Danh sách nhóm sản phẩm</value>
-  </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
     <value>Cấu hình</value>
   </data>

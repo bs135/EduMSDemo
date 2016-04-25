@@ -76,7 +76,6 @@ namespace EduMSDemo.Data.Migrations
                         PlaceOfBirth = c.String(),
                         Gender = c.String(),
                         Address = c.String(maxLength: 512),
-                        Email = c.String(maxLength: 256),
                         PhoneNumber = c.String(maxLength: 256),
                         AccountId = c.Int(nullable: false),
                         DepartmentId = c.Int(nullable: false),
@@ -86,7 +85,6 @@ namespace EduMSDemo.Data.Migrations
                 .ForeignKey("dbo.Account", t => t.AccountId)
                 .ForeignKey("dbo.Department", t => t.DepartmentId)
                 .Index(t => t.Code, unique: true)
-                .Index(t => t.Name, unique: true)
                 .Index(t => t.AccountId)
                 .Index(t => t.DepartmentId);
             
@@ -288,7 +286,6 @@ namespace EduMSDemo.Data.Migrations
                         PlaceOfBirth = c.String(),
                         Gender = c.String(),
                         Address = c.String(maxLength: 512),
-                        Email = c.String(maxLength: 256),
                         PhoneNumber = c.String(maxLength: 256),
                         AccountId = c.Int(nullable: false),
                         StudentClassId = c.Int(nullable: false),
@@ -298,7 +295,6 @@ namespace EduMSDemo.Data.Migrations
                 .ForeignKey("dbo.Account", t => t.AccountId)
                 .ForeignKey("dbo.StudentClass", t => t.StudentClassId)
                 .Index(t => t.Code, unique: true)
-                .Index(t => t.Name, unique: true)
                 .Index(t => t.AccountId)
                 .Index(t => t.StudentClassId);
             
@@ -432,36 +428,6 @@ namespace EduMSDemo.Data.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.ProductGroup",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 256),
-                        Description = c.String(maxLength: 512),
-                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                    })
-                .PrimaryKey(t => t.Id)
-                .Index(t => t.Name, unique: true);
-            
-            CreateTable(
-                "dbo.Product",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        SKU = c.String(nullable: false, maxLength: 256),
-                        Name = c.String(nullable: false, maxLength: 256),
-                        StockQuanlity = c.Int(nullable: false),
-                        IsActive = c.Boolean(nullable: false),
-                        ProductGroupId = c.Int(nullable: false),
-                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ProductGroup", t => t.ProductGroupId)
-                .Index(t => t.SKU, unique: true)
-                .Index(t => t.Name, unique: true)
-                .Index(t => t.ProductGroupId);
-            
-            CreateTable(
                 "dbo.SystemSetting",
                 c => new
                     {
@@ -478,7 +444,6 @@ namespace EduMSDemo.Data.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Product", "ProductGroupId", "dbo.ProductGroup");
             DropForeignKey("dbo.FacultyManageBoard", "ViceDean2Id", "dbo.Staff");
             DropForeignKey("dbo.FacultyManageBoard", "ViceDean1Id", "dbo.Staff");
             DropForeignKey("dbo.Staff", "DepartmentId", "dbo.Department");
@@ -514,10 +479,6 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.RolePermission", "RoleId", "dbo.Role");
             DropForeignKey("dbo.RolePermission", "PermissionId", "dbo.Permission");
             DropIndex("dbo.SystemSetting", new[] { "Key" });
-            DropIndex("dbo.Product", new[] { "ProductGroupId" });
-            DropIndex("dbo.Product", new[] { "Name" });
-            DropIndex("dbo.Product", new[] { "SKU" });
-            DropIndex("dbo.ProductGroup", new[] { "Name" });
             DropIndex("dbo.SubjectClassTeacher", new[] { "SubjectClassId" });
             DropIndex("dbo.SubjectClassTeacher", new[] { "StaffId" });
             DropIndex("dbo.Semester", new[] { "Name" });
@@ -537,7 +498,6 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.BonusScore", new[] { "StudentId" });
             DropIndex("dbo.Student", new[] { "StudentClassId" });
             DropIndex("dbo.Student", new[] { "AccountId" });
-            DropIndex("dbo.Student", new[] { "Name" });
             DropIndex("dbo.Student", new[] { "Code" });
             DropIndex("dbo.ScoreRecordDetail", new[] { "ScoreRecordId" });
             DropIndex("dbo.ScoreRecord", new[] { "SubjectId" });
@@ -568,7 +528,6 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.FacultyManageBoard", new[] { "DeanId" });
             DropIndex("dbo.Staff", new[] { "DepartmentId" });
             DropIndex("dbo.Staff", new[] { "AccountId" });
-            DropIndex("dbo.Staff", new[] { "Name" });
             DropIndex("dbo.Staff", new[] { "Code" });
             DropIndex("dbo.RolePermission", new[] { "PermissionId" });
             DropIndex("dbo.RolePermission", new[] { "RoleId" });
@@ -577,8 +536,6 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.Account", new[] { "Email" });
             DropIndex("dbo.Account", new[] { "Username" });
             DropTable("dbo.SystemSetting");
-            DropTable("dbo.Product");
-            DropTable("dbo.ProductGroup");
             DropTable("dbo.AuditLog");
             DropTable("dbo.SubjectClassTeacher");
             DropTable("dbo.Semester");

@@ -123,12 +123,6 @@
   <data name="AdministrationRoles" xml:space="preserve">
     <value>Vai trò</value>
   </data>
-  <data name="ManageProducts" xml:space="preserve">
-    <value>Sản phẩm</value>
-  </data>
-  <data name="ManageProductGroups" xml:space="preserve">
-    <value>Nhóm sản phẩm</value>
-  </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
     <value>Cấu hình</value>
   </data>

@@ -61,10 +61,6 @@
     <Compile Include="Manage\Curriculums\CurriculumDetail\ICurriculumDetailValidator.cs" />
     <Compile Include="Manage\Curriculums\Curriculum\CurriculumValidator.cs" />
     <Compile Include="Manage\Curriculums\Curriculum\ICurriculumValidator.cs" />
-    <Compile Include="Manage\Products\ProductGroup\IProductGroupValidator.cs" />
-    <Compile Include="Manage\Products\ProductGroup\ProductGroupValidator.cs" />
-    <Compile Include="Manage\Products\Product\IProductValidator.cs" />
-    <Compile Include="Manage\Products\Product\ProductValidator.cs" />
     <Compile Include="Manage\Scores\ScoreRecordDetail\IScoreRecordDetailValidator.cs" />
     <Compile Include="Manage\Scores\ScoreRecordDetail\ScoreRecordDetailValidator.cs" />
     <Compile Include="Manage\Scores\ScoreRecord\ScoreRecordValidator.cs" />

@@ -187,24 +187,6 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure to delete this product?.
-        /// </summary>
-        public static string ManageProductDeleteConfirmMessage {
-            get {
-                return ResourceManager.GetString("ManageProductDeleteConfirmMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure to delete this product group?.
-        /// </summary>
-        public static string ManageProductGroupDeleteConfirmMessage {
-            get {
-                return ResourceManager.GetString("ManageProductGroupDeleteConfirmMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Are you sure to delete this ScoreRecord?.
         /// </summary>
         public static string ManageScoreRecordDeleteConfirmMessage {

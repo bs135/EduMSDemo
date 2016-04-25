@@ -190,14 +190,6 @@
     <Content Include="Views\Administration\Accounts\Create.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Administration\Roles\_Form.cshtml" />
-    <Content Include="Views\Manage\Products\Create.cshtml" />
-    <Content Include="Views\Manage\Products\Edit.cshtml" />
-    <Content Include="Views\Manage\Products\Index.cshtml" />
-    <Content Include="Views\Manage\Products\_Form.cshtml" />
-    <Content Include="Views\Manage\ProductGroups\_Form.cshtml" />
-    <Content Include="Views\Manage\ProductGroups\Create.cshtml" />
-    <Content Include="Views\Manage\ProductGroups\Edit.cshtml" />
-    <Content Include="Views\Manage\ProductGroups\Index.cshtml" />
     <Content Include="Views\Administration\SystemSettings\_Form.cshtml" />
     <Content Include="Views\Administration\SystemSettings\Create.cshtml" />
     <Content Include="Views\Administration\SystemSettings\Edit.cshtml" />

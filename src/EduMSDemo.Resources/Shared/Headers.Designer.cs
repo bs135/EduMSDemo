@@ -322,42 +322,6 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product Group.
-        /// </summary>
-        public static string ManageProductGroups {
-            get {
-                return ResourceManager.GetString("ManageProductGroups", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Product Group.
-        /// </summary>
-        public static string ManageProductGroupsIndex {
-            get {
-                return ResourceManager.GetString("ManageProductGroupsIndex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products.
-        /// </summary>
-        public static string ManageProducts {
-            get {
-                return ResourceManager.GetString("ManageProducts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products.
-        /// </summary>
-        public static string ManageProductsIndex {
-            get {
-                return ResourceManager.GetString("ManageProductsIndex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ScoreRecordDetails.
         /// </summary>
         public static string ManageScoreRecordDetails {

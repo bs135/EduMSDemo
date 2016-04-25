@@ -47,11 +47,6 @@ namespace EduMSDemo.Web.DependencyInjection
             Register<ISystemSettingService, SystemSettingService>();
             #endregion
 
-            #region Product service
-            Register<IProductService, ProductService>();
-            Register<IProductGroupService, ProductGroupService>();
-            #endregion
-
             #region Buildings service
             Register<IBuildingService, BuildingService>();
             Register<IClassRoomService, ClassRoomService>();
@@ -99,11 +94,6 @@ namespace EduMSDemo.Web.DependencyInjection
             Register<IRoleValidator, RoleValidator>();
             Register<IAccountValidator, AccountValidator>();
             Register<ISystemSettingValidator, SystemSettingValidator>();
-            #endregion
-
-            #region Product validator
-            Register<IProductValidator, ProductValidator>();
-            Register<IProductGroupValidator, ProductGroupValidator>();
             #endregion
 
             #region Buildings validator

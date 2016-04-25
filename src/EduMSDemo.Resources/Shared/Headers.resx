@@ -135,18 +135,6 @@
   <data name="Manage" xml:space="preserve">
     <value>Manage</value>
   </data>
-  <data name="ManageProducts" xml:space="preserve">
-    <value>Products</value>
-  </data>
-  <data name="ManageProductsIndex" xml:space="preserve">
-    <value>Products</value>
-  </data>
-  <data name="ManageProductGroups" xml:space="preserve">
-    <value>Product Group</value>
-  </data>
-  <data name="ManageProductGroupsIndex" xml:space="preserve">
-    <value>Product Group</value>
-  </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
     <value>Settings</value>
   </data>

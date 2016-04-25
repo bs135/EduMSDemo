@@ -31,23 +31,6 @@
 
         <siteMapNode menu="true" icon="fa fa-bar-chart" area="Manage">
 
-          <!-- Products -->
-          <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Products">
-
-            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="Products" action="Index">
-				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="Products" action="Create" />
-				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="Products" action="Edit" />
-				      <siteMapNode icon="fa fa-times" area="Manage" controller="Products" action="Delete" />
-            </siteMapNode>
-
-            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="ProductGroups" action="Index">
-              <siteMapNode icon="fa fa-file-o" area="Manage" controller="ProductGroups" action="Create" />
-              <siteMapNode icon="fa fa-pencil" area="Manage" controller="ProductGroups" action="Edit" />
-              <siteMapNode icon="fa fa-times" area="Manage" controller="ProductGroups" action="Delete" />
-            </siteMapNode>
-
-          </siteMapNode>
-          <!-- End Products -->
           <!-- Buildings -->
           <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Buildings">
 

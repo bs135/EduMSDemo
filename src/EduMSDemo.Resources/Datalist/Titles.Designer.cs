@@ -68,14 +68,5 @@ namespace EduMSDemo.Resources.Datalist {
                 return ResourceManager.GetString("Role", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Units.
-        /// </summary>
-        public static string Unit {
-            get {
-                return ResourceManager.GetString("Unit", resourceCulture);
-            }
-        }
     }
 }

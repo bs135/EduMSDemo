@@ -24,11 +24,6 @@ namespace EduMSDemo.Data.Core
 
         #endregion
 
-        #region  Products
-        protected DbSet<Product> Products { get; set; }
-        protected DbSet<ProductGroup> ProductGroups { get; set; }
-        #endregion
-
         #region Building
         protected DbSet<Building> Buildings { get; set; }
         protected DbSet<ClassRoom> ClassRooms { get; set; }

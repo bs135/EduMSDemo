@@ -83,10 +83,6 @@
     <Compile Include="Manage\Curriculums\CurriculumType\CurriculumTypeService.cs" />
     <Compile Include="Manage\Curriculums\Curriculum\ICurriculumService.cs" />
     <Compile Include="Manage\Curriculums\Curriculum\CurriculumService.cs" />
-    <Compile Include="Manage\Products\ProductGroup\IProductGroupService.cs" />
-    <Compile Include="Manage\Products\ProductGroup\ProductGroupService.cs" />
-    <Compile Include="Manage\Products\Product\IProductService.cs" />
-    <Compile Include="Manage\Products\Product\ProductService.cs" />
     <Compile Include="Manage\Buildings\ClassRoom\IClassRoomService.cs" />
     <Compile Include="Manage\Buildings\Building\IBuildingService.cs" />
     <Compile Include="Manage\Buildings\ClassRoom\ClassRoomService.cs" />

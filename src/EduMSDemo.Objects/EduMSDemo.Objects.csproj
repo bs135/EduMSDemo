@@ -66,8 +66,6 @@
     <Compile Include="Models\Manage\Curriculums\CurriculumType.cs" />
     <Compile Include="Models\Manage\Curriculums\CurriculumDetail.cs" />
     <Compile Include="Models\Manage\Curriculums\Curriculum.cs" />
-    <Compile Include="Models\Manage\Products\Product.cs" />
-    <Compile Include="Models\Manage\Products\ProductGroup.cs" />
     <Compile Include="Models\Manage\Scores\ScoreRecordDetail.cs" />
     <Compile Include="Models\Manage\Scores\ScoreRecord.cs" />
     <Compile Include="Models\Manage\Scores\BonusScore.cs" />
@@ -103,8 +101,6 @@
     <Compile Include="Views\Manage\Curriculums\Curriculums\CurriculumView.cs" />
     <Compile Include="Views\Manage\Curriculums\CurriculumDetails\CurriculumDetailView.cs" />
     <Compile Include="Views\Manage\Curriculums\CurriculumTypes\CurriculumTypeView.cs" />
-    <Compile Include="Views\Manage\Products\ProductGroups\ProductGroupView.cs" />
-    <Compile Include="Views\Manage\Products\Products\ProductView.cs" />
     <Compile Include="Views\Manage\Scores\BonusScores\BonusScoreView.cs" />
     <Compile Include="Views\Manage\Scores\ScoreRecords\ScoreRecordView.cs" />
     <Compile Include="Views\Manage\Scores\ScoreRecordDetails\ScoreRecordDetailView.cs" />

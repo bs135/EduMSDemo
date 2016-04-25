@@ -123,12 +123,6 @@
   <data name="AdministrationRoles" xml:space="preserve">
     <value>Roles</value>
   </data>
-  <data name="ManageProducts" xml:space="preserve">
-    <value>Products</value>
-  </data>
-  <data name="ManageProductGroups" xml:space="preserve">
-    <value>Product Group</value>
-  </data>
   <data name="AdministrationSystemSettings" xml:space="preserve">
     <value>SystemSettings</value>
   </data>

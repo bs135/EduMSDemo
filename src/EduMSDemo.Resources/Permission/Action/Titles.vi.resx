@@ -237,36 +237,6 @@
   <data name="ManageCurriculumTypesIndex" xml:space="preserve">
     <value>Danh sách</value>
   </data>
-  <data name="ManageProductsCreate" xml:space="preserve">
-    <value>Thêm</value>
-  </data>
-  <data name="ManageProductsDelete" xml:space="preserve">
-    <value>Xóa</value>
-  </data>
-  <data name="ManageProductsDetails" xml:space="preserve">
-    <value>Chi tiết</value>
-  </data>
-  <data name="ManageProductsEdit" xml:space="preserve">
-    <value>Sửa</value>
-  </data>
-  <data name="ManageProductsIndex" xml:space="preserve">
-    <value>Danh sách</value>
-  </data>
-  <data name="ManageProductGroupsCreate" xml:space="preserve">
-    <value>Thêm</value>
-  </data>
-  <data name="ManageProductGroupsDelete" xml:space="preserve">
-    <value>Xóa</value>
-  </data>
-  <data name="ManageProductGroupsDetails" xml:space="preserve">
-    <value>Chi tiết</value>
-  </data>
-  <data name="ManageProductGroupsEdit" xml:space="preserve">
-    <value>Sửa</value>
-  </data>
-  <data name="ManageProductGroupsIndex" xml:space="preserve">
-    <value>Danh sách</value>
-  </data>
   <data name="ManageBonusScoresCreate" xml:space="preserve">
     <value>Thêm</value>
   </data>

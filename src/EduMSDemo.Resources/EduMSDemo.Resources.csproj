@@ -409,46 +409,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Views\Manage\Products\ProductGroup\ProductGroupView\Titles.Designer.cs">
-      <DependentUpon>Titles.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\ProductGroup\ProductGroupView\Titles.vi.Designer.cs">
-      <DependentUpon>Titles.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\ProductGroup\ProductGroupView\Validations.Designer.cs">
-      <DependentUpon>Validations.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\ProductGroup\ProductGroupView\Validations.vi.Designer.cs">
-      <DependentUpon>Validations.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\Product\ProductView\Titles.Designer.cs">
-      <DependentUpon>Titles.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\Product\ProductView\Titles.vi.Designer.cs">
-      <DependentUpon>Titles.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\Product\ProductView\Validations.Designer.cs">
-      <DependentUpon>Validations.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Products\Product\ProductView\Validations.vi.Designer.cs">
-      <DependentUpon>Validations.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Views\Manage\Scores\BonusScore\BonusScoreView\Titles.Designer.cs">
       <DependentUpon>Titles.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1078,38 +1038,6 @@
       <LastGenOutput>Validations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Manage\Curriculums\Curriculum\CurriculumView\Validations.vi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\ProductGroup\ProductGroupView\Titles.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\ProductGroup\ProductGroupView\Titles.vi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\ProductGroup\ProductGroupView\Validations.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\ProductGroup\ProductGroupView\Validations.vi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\Product\ProductView\Titles.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\Product\ProductView\Titles.vi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\Product\ProductView\Validations.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Products\Product\ProductView\Validations.vi.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
     </EmbeddedResource>

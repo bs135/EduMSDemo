@@ -69,17 +69,9 @@
     <Compile Include="Core\UnitOfWork.cs" />
     <Content Include="Migrations\Configuration.txt" />
     <Content Include="Migrations\cmd.txt" />
-    <Compile Include="Migrations\201604210930186_Initial.cs" />
-    <Compile Include="Migrations\201604210930186_Initial.Designer.cs">
-      <DependentUpon>201604210930186_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604250433217_Unique_Name.cs" />
-    <Compile Include="Migrations\201604250433217_Unique_Name.Designer.cs">
-      <DependentUpon>201604250433217_Unique_Name.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604250749209_Remove_Email.cs" />
-    <Compile Include="Migrations\201604250749209_Remove_Email.Designer.cs">
-      <DependentUpon>201604250749209_Remove_Email.cs</DependentUpon>
+    <Compile Include="Migrations\201604251010221_Initial.cs" />
+    <Compile Include="Migrations\201604251010221_Initial.Designer.cs">
+      <DependentUpon>201604251010221_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,14 +90,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604210930186_Initial.resx">
-      <DependentUpon>201604210930186_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604250433217_Unique_Name.resx">
-      <DependentUpon>201604250433217_Unique_Name.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604250749209_Remove_Email.resx">
-      <DependentUpon>201604250749209_Remove_Email.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604251010221_Initial.resx">
+      <DependentUpon>201604251010221_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

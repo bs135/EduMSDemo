@@ -120,7 +120,4 @@
   <data name="Role" xml:space="preserve">
     <value>Vai trò</value>
   </data>
-  <data name="Unit" xml:space="preserve">
-    <value>Đơn vị tính</value>
-  </data>
 </root>
