@@ -67,6 +67,9 @@
     <Compile Include="Manage\ManageAreaRegistration.cs" />
     <Compile Include="Manage\Buildings\Building\BuildingsController.cs" />
     <Compile Include="Manage\Buildings\ClassRoom\ClassRoomsController.cs" />
+    <Compile Include="Manage\Scores\ScoreRecordDetail\ScoreRecordDetailsController.cs" />
+    <Compile Include="Manage\Scores\ScoreRecord\ScoreRecordsController.cs" />
+    <Compile Include="Manage\Scores\BonusScore\BonusScoresController.cs" />
     <Compile Include="Profile\ProfileController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteConfig.cs" />

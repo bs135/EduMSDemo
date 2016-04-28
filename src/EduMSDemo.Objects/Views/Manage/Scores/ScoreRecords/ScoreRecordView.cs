@@ -19,6 +19,7 @@ namespace EduMSDemo.Objects
         // [ForeignKey("SubjectClass")]
         public Int32 SubjectClassId { get; set; }
         public virtual SubjectClass SubjectClass { get; set; }
+        public String SubjectClassName { get; set; }
 
         // [ForeignKey("Subject")]
         public Int32 SubjectId { get; set; }

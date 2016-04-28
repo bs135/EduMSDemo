@@ -7,6 +7,9 @@ namespace EduMSDemo.Objects
 {
     public class SubjectClass : BaseModel
     {
+        [Required]
+        [StringLength(128)]
+        public String Name { get; set; }
 
         [ForeignKey("RoomOfMidtermExam")]
         public Int32 RoomOfMidtermExamId { get; set; }

@@ -215,6 +215,18 @@
     <Content Include="Views\Manage\Curriculums\Create.cshtml" />
     <Content Include="Views\Manage\Curriculums\Edit.cshtml" />
     <Content Include="Views\Manage\Curriculums\Index.cshtml" />
+    <Content Include="Views\Manage\BonusScores\_Form.cshtml" />
+    <Content Include="Views\Manage\BonusScores\Create.cshtml" />
+    <Content Include="Views\Manage\BonusScores\Edit.cshtml" />
+    <Content Include="Views\Manage\BonusScores\Index.cshtml" />
+    <Content Include="Views\Manage\ScoreRecords\_Form.cshtml" />
+    <Content Include="Views\Manage\ScoreRecords\Create.cshtml" />
+    <Content Include="Views\Manage\ScoreRecords\Edit.cshtml" />
+    <Content Include="Views\Manage\ScoreRecords\Index.cshtml" />
+    <Content Include="Views\Manage\ScoreRecordDetails\_Form.cshtml" />
+    <Content Include="Views\Manage\ScoreRecordDetails\Create.cshtml" />
+    <Content Include="Views\Manage\ScoreRecordDetails\Edit.cshtml" />
+    <Content Include="Views\Manage\ScoreRecordDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Shared\Auth\auth.css">
