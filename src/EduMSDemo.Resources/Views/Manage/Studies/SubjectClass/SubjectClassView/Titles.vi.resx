@@ -132,4 +132,7 @@
   <data name="SemesterName" xml:space="preserve">
     <value>Học kỳ</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Tên</value>
+  </data>
 </root>

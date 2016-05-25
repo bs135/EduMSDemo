@@ -13,9 +13,9 @@ namespace EduMSDemo.Objects
         //[Index(IsUnique = true)]
         public String Name { get; set; }
 
-        [Required]
-        [StringLength(32)]
-        public String SchoolYear { get; set; }
+        //[Required]
+        //[StringLength(32)]
+        //public String SchoolYear { get; set; }
 
         public DateTime StartDate { get; set; }
 

@@ -60,5 +60,14 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date must be after Start Date.
+        /// </summary>
+        public static string EndAfterStart {
+            get {
+                return ResourceManager.GetString("EndAfterStart", resourceCulture);
+            }
+        }
     }
 }

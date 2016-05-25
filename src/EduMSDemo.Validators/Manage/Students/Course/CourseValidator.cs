@@ -19,6 +19,7 @@ namespace EduMSDemo.Validators
         {
             Boolean isValid = IsUniqueName(view.Id, view.Name);
             isValid &= IsUniqueCode(view.Id, view.Code);
+            isValid &= IsEndAfterStart(view.StartDate, view.EndDate);
             isValid &= ModelState.IsValid;
 
             return isValid;
@@ -27,6 +28,7 @@ namespace EduMSDemo.Validators
         {
             Boolean isValid = IsUniqueName(view.Id, view.Name);
             isValid &= IsUniqueCode(view.Id, view.Code);
+            isValid &= IsEndAfterStart(view.StartDate, view.EndDate);
             isValid &= ModelState.IsValid;
 
             return isValid;
@@ -59,6 +61,19 @@ namespace EduMSDemo.Validators
 
             return isUnique;
         }
+
+        private Boolean IsEndAfterStart(DateTime startDate, DateTime endDate)
+        {
+            if (startDate >= endDate)
+            {
+                ModelState.AddModelError<SemesterView>(model => model.EndDate, Validations.EndAfterStart);
+
+                return false;
+            }
+
+            return true;
+        }
+
 
     }
 }

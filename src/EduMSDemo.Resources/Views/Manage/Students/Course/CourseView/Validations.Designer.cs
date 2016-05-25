@@ -61,6 +61,15 @@ namespace EduMSDemo.Resources.Views.Manage.Students.Course.CourseView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End Date must be after End Date.
+        /// </summary>
+        public static string EndAfterStart {
+            get {
+                return ResourceManager.GetString("EndAfterStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code is already existed..
         /// </summary>
         public static string UniqueCode {

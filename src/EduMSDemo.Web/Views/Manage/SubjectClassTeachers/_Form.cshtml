@@ -1,0 +1,64 @@
+﻿@model SubjectClassTeacherView
+
+@{
+    //String query = Request.QueryString.Count > 0 ? "?" + Request.QueryString : "";
+    String controller = ViewContext.RouteData.Values["controller"] as String;
+    String action = ViewContext.RouteData.Values["action"] as String;
+    String id = ViewContext.RouteData.Values["id"] as String;
+}
+
+@using (Html.BeginForm(action, controller, new { area = "Manage", Id = id }, FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.Accountability)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.FormTextBoxFor(model => model.Accountability)
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.Accountability)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.StaffId)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.DropDownList("StaffId", null, new { @class = "form-control" })
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.StaffId)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.SubjectClassId)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.DropDownList("SubjectClassId", null, new { @class = "form-control" })
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.SubjectClassId)
+        </div>
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group">
+        <div class="form-actions col-sm-12 col-lg-7">
+            <button type="button" class="btn btn-default" onclick="window.history.back();">
+                <i class="fa fa-chevron-left"></i>
+                @Actions.Back
+            </button>
+            <button class="btn btn-primary" type="submit">
+                <i class="fa fa-save"></i>
+                @Actions.Submit
+            </button>
+        </div>
+    </div>
+}
+
+
+
+

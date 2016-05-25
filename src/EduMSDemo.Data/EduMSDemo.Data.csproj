@@ -69,9 +69,13 @@
     <Compile Include="Core\UnitOfWork.cs" />
     <Content Include="Migrations\Configuration.txt" />
     <Content Include="Migrations\cmd.txt" />
-    <Compile Include="Migrations\201605050208577_Initial.cs" />
-    <Compile Include="Migrations\201605050208577_Initial.Designer.cs">
-      <DependentUpon>201605050208577_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201605251528181_Initial.cs" />
+    <Compile Include="Migrations\201605251528181_Initial.Designer.cs">
+      <DependentUpon>201605251528181_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605251542376_remove_schoolyear.cs" />
+    <Compile Include="Migrations\201605251542376_remove_schoolyear.Designer.cs">
+      <DependentUpon>201605251542376_remove_schoolyear.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +94,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605050208577_Initial.resx">
-      <DependentUpon>201605050208577_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605251528181_Initial.resx">
+      <DependentUpon>201605251528181_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605251542376_remove_schoolyear.resx">
+      <DependentUpon>201605251542376_remove_schoolyear.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -120,4 +120,7 @@
   <data name="UniqueName" xml:space="preserve">
     <value>Tên này đã có trong hệ thống.</value>
   </data>
+  <data name="EndAfterStart" xml:space="preserve">
+    <value>Ngày kết thúc phải sau ngày bắt đầu</value>
+  </data>
 </root>

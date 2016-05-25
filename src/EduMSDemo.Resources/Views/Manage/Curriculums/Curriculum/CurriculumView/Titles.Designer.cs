@@ -88,7 +88,7 @@ namespace EduMSDemo.Resources.Views.Manage.Curriculums.Curriculum.CurriculumView
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name.
+        ///   Looks up a localized string similar to Curriculum Name.
         /// </summary>
         public static string Name {
             get {

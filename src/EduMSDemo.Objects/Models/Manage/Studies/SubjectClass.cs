@@ -7,9 +7,13 @@ namespace EduMSDemo.Objects
 {
     public class SubjectClass : BaseModel
     {
-        [Required]
-        [StringLength(128)]
-        public String Name { get; set; }
+        //[Required]
+        //[StringLength(128)]
+        //public String Name { get; set; }
+
+        //[ForeignKey("Subject")]
+        public Int32 SubjectId { get; set; }
+        public virtual Subject Subject { get; set; }
 
         [ForeignKey("RoomOfMidtermExam")]
         public Int32 RoomOfMidtermExamId { get; set; }

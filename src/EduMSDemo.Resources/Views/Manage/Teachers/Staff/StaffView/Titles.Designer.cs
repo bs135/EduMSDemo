@@ -70,7 +70,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.Staff.StaffView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Code.
+        ///   Looks up a localized string similar to Teacher Code.
         /// </summary>
         public static string Code {
             get {
@@ -115,7 +115,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.Staff.StaffView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Building.
+        ///   Looks up a localized string similar to Teacher.
         /// </summary>
         public static string Id {
             get {
@@ -124,7 +124,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.Staff.StaffView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name.
+        ///   Looks up a localized string similar to Teacher Name.
         /// </summary>
         public static string Name {
             get {

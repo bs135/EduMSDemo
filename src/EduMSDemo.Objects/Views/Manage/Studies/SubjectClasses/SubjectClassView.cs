@@ -8,9 +8,14 @@ namespace EduMSDemo.Objects
 {
     public class SubjectClassView : BaseView
     {
-        [Required]
-        [StringLength(128)]
-        public String Name { get; set; }
+        //[Required]
+        //[StringLength(128)]
+        //public String Name { get; set; }
+
+        //[ForeignKey("Subject")]
+        public Int32 SubjectId { get; set; }
+        public virtual Subject Subject { get; set; }
+        public virtual String SubjectName { get; set; }
 
         //[ForeignKey("RoomOfMidtermExam")]
         public Int32 RoomOfMidtermExamId { get; set; }

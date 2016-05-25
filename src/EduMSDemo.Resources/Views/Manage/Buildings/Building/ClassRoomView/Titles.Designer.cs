@@ -88,7 +88,7 @@ namespace EduMSDemo.Resources.Views.Manage.Buildings.Building.ClassRoomView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Code.
+        ///   Looks up a localized string similar to Room Code.
         /// </summary>
         public static string Code {
             get {
@@ -106,7 +106,7 @@ namespace EduMSDemo.Resources.Views.Manage.Buildings.Building.ClassRoomView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name.
+        ///   Looks up a localized string similar to Room Name.
         /// </summary>
         public static string Name {
             get {

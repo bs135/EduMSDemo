@@ -70,7 +70,7 @@ namespace EduMSDemo.Resources.Views.Manage.Subjects.Subject.SubjectView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Code.
+        ///   Looks up a localized string similar to Subject Code.
         /// </summary>
         public static string Code {
             get {
@@ -106,7 +106,7 @@ namespace EduMSDemo.Resources.Views.Manage.Subjects.Subject.SubjectView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name.
+        ///   Looks up a localized string similar to Subject Name.
         /// </summary>
         public static string Name {
             get {

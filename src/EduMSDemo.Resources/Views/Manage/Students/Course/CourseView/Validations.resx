@@ -123,4 +123,7 @@
   <data name="UniqueCode" xml:space="preserve">
     <value>Code is already existed.</value>
   </data>
+  <data name="EndAfterStart" xml:space="preserve">
+    <value>End Date must be after End Date</value>
+  </data>
 </root>

@@ -10,8 +10,8 @@
 
 namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyManageBoardView {
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Titles {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Titles() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -46,7 +46,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -60,16 +60,17 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dean.
         /// </summary>
-        public static string DeanName {
+        public static string DeanName
+        {
             get {
                 return ResourceManager.GetString("DeanName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to EndDate.
         /// </summary>
@@ -78,7 +79,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 return ResourceManager.GetString("EndDate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Faculty Manage Board.
         /// </summary>
@@ -87,7 +88,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 return ResourceManager.GetString("Id", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to StartDate.
         /// </summary>
@@ -96,7 +97,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 return ResourceManager.GetString("StartDate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Vice Dean 1.
         /// </summary>
@@ -105,7 +106,7 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.FacultyManageBoard.FacultyMa
                 return ResourceManager.GetString("ViceDean1Name", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Vice Dean 2.
         /// </summary>

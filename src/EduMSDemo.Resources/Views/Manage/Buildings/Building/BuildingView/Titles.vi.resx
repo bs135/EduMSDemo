@@ -121,10 +121,10 @@
     <value>Tòa nhà</value>
   </data>
   <data name="Code" xml:space="preserve">
-    <value>Mã</value>
+    <value>Mã tòa nhà</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Tên</value>
+    <value>Tên tòa nhà</value>
   </data>
   <data name="RoomCount" xml:space="preserve">
     <value>Số phòng</value>

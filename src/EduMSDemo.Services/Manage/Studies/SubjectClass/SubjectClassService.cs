@@ -41,6 +41,13 @@ namespace EduMSDemo.Services
                 .To<SemesterView>()
                 .OrderByDescending(o => o.Id);
         }
+        public IQueryable<SubjectView> GetSubjectViews()
+        {
+            return UnitOfWork
+                .Select<Subject>()
+                .To<SubjectView>()
+                .OrderByDescending(o => o.Id);
+        }
 
         public void Create(SubjectClassView view)
         {

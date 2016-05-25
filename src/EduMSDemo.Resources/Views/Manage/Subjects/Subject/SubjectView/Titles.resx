@@ -121,10 +121,10 @@
     <value>Subject</value>
   </data>
   <data name="Code" xml:space="preserve">
-    <value>Code</value>
+    <value>Subject Code</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Subject Name</value>
   </data>
   <data name="Credits" xml:space="preserve">
     <value>Credits</value>

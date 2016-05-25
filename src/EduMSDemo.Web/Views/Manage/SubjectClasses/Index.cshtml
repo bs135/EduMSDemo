@@ -1,0 +1,38 @@
+﻿@model IQueryable<SubjectClassView>
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.ManageSubjectClassesIndex</h5>
+            <div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Create"))
+                {
+                    <a class="btn" href="@Url.Action("Create")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageSubjectClassDeleteConfirmMessage);
+
+                    columns.AddProperty(model => model.SubjectName);
+                    columns.AddProperty(model => model.SemesterName);
+                    columns.AddProperty(model => model.RoomOfMidtermExamName);
+                    columns.AddProperty(model => model.RoomOfTermExamName);
+                    columns.AddProperty(model => model.RoomOfClassName);
+                })
+                .ApplyDefaults()
+            )
+        </div>
+    </div>
+</div>
+
+
+

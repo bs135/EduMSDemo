@@ -105,6 +105,7 @@
     <Compile Include="Views\Manage\Scores\ScoreRecords\ScoreRecordView.cs" />
     <Compile Include="Views\Manage\Scores\ScoreRecordDetails\ScoreRecordDetailView.cs" />
     <Compile Include="Views\Manage\Students\Courses\CourseView.cs" />
+    <Compile Include="Views\Manage\Students\Students\StudentCreateView.cs" />
     <Compile Include="Views\Manage\Students\Students\StudentView.cs" />
     <Compile Include="Views\Manage\Students\StudentClasses\StudentClassView.cs" />
     <Compile Include="Views\Manage\Studies\Semesters\SemesterView.cs" />

@@ -1,0 +1,37 @@
+﻿@model IQueryable<SemesterView>
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.ManageSemestersIndex</h5>
+            <div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Create"))
+                {
+                    <a class="btn" href="@Url.Action("Create")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageSemesterDeleteConfirmMessage);
+
+                    columns.AddProperty(model => model.Name);
+                    //columns.AddProperty(model => model.SchoolYear);
+                    columns.AddProperty(model => model.StartDate);
+                    columns.AddProperty(model => model.EndDate);
+                })
+                .ApplyDefaults()
+            )
+        </div>
+    </div>
+</div>
+
+
+

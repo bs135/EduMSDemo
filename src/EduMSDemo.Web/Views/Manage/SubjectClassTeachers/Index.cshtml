@@ -1,0 +1,37 @@
+﻿@model IQueryable<SubjectClassTeacherView>
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.ManageSubjectClassTeachersIndex</h5>
+            <div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Create"))
+                {
+                    <a class="btn" href="@Url.Action("Create")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageSubjectClassTeacherDeleteConfirmMessage);
+
+                    columns.AddProperty(model => model.Accountability);
+                    columns.AddProperty(model => model.StaffName);
+                    //columns.AddProperty(model => model.SubjectClass.Subject.Name);
+                    columns.AddProperty(model => model.SubjectClassSubjectName);
+                })
+                .ApplyDefaults()
+            )
+        </div>
+    </div>
+</div>
+
+
+

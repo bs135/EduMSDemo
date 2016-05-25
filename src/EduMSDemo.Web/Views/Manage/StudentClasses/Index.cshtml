@@ -1,0 +1,37 @@
+﻿@model IQueryable<StudentClassView>
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.ManageStudentClassesIndex</h5>
+            <div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Create"))
+                {
+                    <a class="btn" href="@Url.Action("Create")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageStudentClassDeleteConfirmMessage);
+
+                    columns.AddProperty(model => model.Name);
+                    columns.AddProperty(model => model.Abbreviation);
+                    columns.AddProperty(model => model.StaffName);
+                    columns.AddProperty(model => model.CourseName);
+                })
+                .ApplyDefaults()
+            )
+        </div>
+    </div>
+</div>
+
+
+

@@ -120,4 +120,7 @@
   <data name="UniqueName" xml:space="preserve">
     <value>Name is already existed.</value>
   </data>
+  <data name="EndAfterStart" xml:space="preserve">
+    <value>End Date must after Start Date</value>
+  </data>
 </root>

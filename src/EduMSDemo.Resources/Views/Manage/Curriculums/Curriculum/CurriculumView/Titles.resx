@@ -124,7 +124,7 @@
     <value>Faculty</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Curriculum Name</value>
   </data>
   <data name="CourseName" xml:space="preserve">
     <value>Course</value>
