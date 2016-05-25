@@ -5,7 +5,7 @@ namespace EduMSDemo.Validators
 {
     public interface IStaffValidator : IValidator
     {
-        Boolean CanCreate(StaffView view);
-        Boolean CanEdit(StaffView view);
+        Boolean CanCreate(StaffCreateView view);
+        Boolean CanEdit(StaffEditView view);
     }
 }

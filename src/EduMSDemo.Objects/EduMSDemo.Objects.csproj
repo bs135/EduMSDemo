@@ -117,6 +117,8 @@
     <Compile Include="Views\Manage\Teachers\Departments\DepartmentView.cs" />
     <Compile Include="Views\Manage\Teachers\Faculties\FacultyView.cs" />
     <Compile Include="Views\Manage\Teachers\FacultyManageBoards\FacultyManageBoardView.cs" />
+    <Compile Include="Views\Manage\Teachers\Staffs\StaffCreateView.cs" />
+    <Compile Include="Views\Manage\Teachers\Staffs\StaffEditView.cs" />
     <Compile Include="Views\Manage\Teachers\Staffs\StaffView.cs" />
   </ItemGroup>
   <ItemGroup>

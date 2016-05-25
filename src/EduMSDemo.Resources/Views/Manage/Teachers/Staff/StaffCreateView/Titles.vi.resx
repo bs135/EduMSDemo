@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Id" xml:space="preserve">
-    <value>Sinh viên</value>
+    <value>Giáo viên</value>
   </data>
   <data name="Code" xml:space="preserve">
-    <value>Mã</value>
+    <value>Mã cán bộ</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Tên</value>
+    <value>Tên cán bộ</value>
   </data>
   <data name="DateOfBirth" xml:space="preserve">
     <value>Ngày sinh</value>
@@ -141,19 +141,16 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="StudentClassName" xml:space="preserve">
-    <value>Lớp</value>
-  </data>
   <data name="PhoneNumber" xml:space="preserve">
     <value>Số điện thoại</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Bộ môn</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Tên đăng nhập</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
-  </data>
-  <data name="IsLocked" xml:space="preserve">
-    <value>Đã khóa</value>
   </data>
 </root>

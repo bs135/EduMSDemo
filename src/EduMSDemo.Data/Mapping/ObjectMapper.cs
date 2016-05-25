@@ -159,6 +159,14 @@ namespace EduMSDemo.Data.Mapping
 
             Configuration.CreateMap<Staff, StaffView>();
             Configuration.CreateMap<StaffView, Staff>();
+
+            Configuration.CreateMap<StaffCreateView, Staff>();
+            Configuration.CreateMap<StaffCreateView, AccountCreateView>();
+
+            Configuration.CreateMap<Staff, StaffEditView>();
+            Configuration.CreateMap<StaffEditView, AccountEditView>();
+            Configuration.CreateMap<Staff, AccountEditView>();
+
         }
         #endregion
     }

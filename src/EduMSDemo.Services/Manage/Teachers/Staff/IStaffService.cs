@@ -8,12 +8,12 @@ namespace EduMSDemo.Services
     public interface IStaffService : IService
     {
         TView Get<TView>(Int32 id) where TView : BaseView;
+        StaffEditView GetEditView(Int32 id);
         IQueryable<StaffView> GetViews();
-        IQueryable<DepartmentView> GetDepartmentViews();
         IQueryable<AccountView> GetAccountViews();
-
-        void Create(StaffView view);
-        void Edit(StaffView view);
+        IQueryable<DepartmentView> GetDepartmentViews();
+        void Create(StaffCreateView view);
+        void Edit(StaffEditView view);
         void Delete(Int32 id);
 
     }

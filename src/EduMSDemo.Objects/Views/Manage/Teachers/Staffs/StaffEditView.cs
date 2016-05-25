@@ -6,8 +6,20 @@ using EduMSDemo.Components.Extensions.Html;
 
 namespace EduMSDemo.Objects
 {
-    public class StaffView : BaseView
+    public class StaffEditView : BaseView
     {
+        [Required]
+        [Editable(false)]
+        public String Username { get; set; }
+
+        [Required]
+        [Editable(false)]
+        public String Email { get; set; }
+
+        public Boolean IsLocked { get; set; }
+
+        //######################################################
+
         [Required]
         [StringLength(32)]
         //[Index(IsUnique = true)]
@@ -37,8 +49,6 @@ namespace EduMSDemo.Objects
         //[ForeignKey("Account")]
         public Int32 AccountId { get; set; }
         public virtual Account Account { get; set; }
-        public virtual String AccountUsername { get; set; }
-        public virtual String AccountEmail { get; set; }
 
         // [ForeignKey("Department")]
         public Int32 DepartmentId { get; set; }

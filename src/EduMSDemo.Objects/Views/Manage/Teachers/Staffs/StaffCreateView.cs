@@ -3,11 +3,27 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using EduMSDemo.Components.Extensions.Html;
+using EduMSDemo.Components.Mvc;
 
 namespace EduMSDemo.Objects
 {
-    public class StaffView : BaseView
+    public class StaffCreateView : BaseView
     {
+        [Required]
+        [StringLength(32)]
+        public String Username { get; set; }
+
+        [Required]
+        [NotTrimmed]
+        [StringLength(32)]
+        public String Password { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [StringLength(256)]
+        public String Email { get; set; }
+
+        //######################################################
         [Required]
         [StringLength(32)]
         //[Index(IsUnique = true)]
@@ -37,8 +53,6 @@ namespace EduMSDemo.Objects
         //[ForeignKey("Account")]
         public Int32 AccountId { get; set; }
         public virtual Account Account { get; set; }
-        public virtual String AccountUsername { get; set; }
-        public virtual String AccountEmail { get; set; }
 
         // [ForeignKey("Department")]
         public Int32 DepartmentId { get; set; }

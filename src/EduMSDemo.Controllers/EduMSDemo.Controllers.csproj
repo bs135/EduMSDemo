@@ -81,6 +81,7 @@
     <Compile Include="Manage\Teachers\FacultyManageBoard\FacultyManageBoardsController.cs" />
     <Compile Include="Manage\Teachers\Faculty\FacultiesController.cs" />
     <Compile Include="Manage\Teachers\Department\DepartmentsController.cs" />
+    <Compile Include="Manage\Teachers\Staff\StaffsController.cs" />
     <Compile Include="Profile\ProfileController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteConfig.cs" />

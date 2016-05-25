@@ -83,14 +83,14 @@
     <Compile Include="Manage\Subjects\Subject\ISubjectValidator.cs" />
     <Compile Include="Manage\Subjects\PreSubject\PreSubjectValidator.cs" />
     <Compile Include="Manage\Subjects\PreSubject\IPreSubjectValidator.cs" />
-    <Compile Include="Manage\Teachers\Staff\StaffValidator.cs" />
-    <Compile Include="Manage\Teachers\Staff\IStaffValidator.cs" />
     <Compile Include="Manage\Teachers\FacultyManageBoard\FacultyManageBoardValidator.cs" />
     <Compile Include="Manage\Teachers\FacultyManageBoard\IFacultyManageBoardValidator.cs" />
     <Compile Include="Manage\Teachers\Faculty\FacultyValidator.cs" />
     <Compile Include="Manage\Teachers\Faculty\IFacultyValidator.cs" />
     <Compile Include="Manage\Teachers\Department\DepartmentValidator.cs" />
     <Compile Include="Manage\Teachers\Department\IDepartmentValidator.cs" />
+    <Compile Include="Manage\Teachers\Staff\IStaffValidator.cs" />
+    <Compile Include="Manage\Teachers\Staff\StaffValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

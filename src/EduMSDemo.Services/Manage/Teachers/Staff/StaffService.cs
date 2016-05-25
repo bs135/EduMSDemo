@@ -10,14 +10,36 @@ namespace EduMSDemo.Services
 {
     public class StaffService : BaseService, IStaffService
     {
-        public StaffService(IUnitOfWork unitOfWork)
+        private IHasher Hasher { get; set; }
+        private IAccountService AAccountService { get; set; }
+        public StaffService(IUnitOfWork unitOfWork, IHasher hasher)
             : base(unitOfWork)
         {
+            Hasher = hasher;
+            AAccountService = new AccountService(unitOfWork, hasher);
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
             return UnitOfWork.GetAs<Staff, TView>(id);
+        }
+
+        public StaffEditView GetEditView(Int32 id)
+        {
+            StaffEditView view = this.Get<StaffEditView>(id);
+
+            if (view != null)
+            {
+                AccountEditView accView = AAccountService.Get<AccountEditView>(view.AccountId);
+
+                if (accView != null)
+                {
+                    view.Username = accView.Username;
+                    view.Email = accView.Email;
+                    view.IsLocked = accView.IsLocked;
+                }
+            }
+            return view;
         }
 
         public IQueryable<StaffView> GetViews()
@@ -27,51 +49,81 @@ namespace EduMSDemo.Services
                 .To<StaffView>()
                 .OrderByDescending(o => o.Id);
         }
+        public IQueryable<AccountView> GetAccountViews()
+        {
+            return UnitOfWork
+                .Select<Account>()
+                .To<AccountView>()
+                .OrderByDescending(o => o.Id);
+        }
 
         public IQueryable<DepartmentView> GetDepartmentViews()
         {
             return UnitOfWork
                 .Select<Department>()
                 .To<DepartmentView>()
-                .OrderByDescending(model => model.Id);
+                .OrderByDescending(o => o.Id);
         }
 
-        public IQueryable<AccountView> GetAccountViews()
-        {
-            return UnitOfWork
-                .Select<Account>()
-                .To<AccountView>()
-                .OrderByDescending(model => model.Id);
-        }
 
-        public void Create(StaffView view)
+        public void Create(StaffCreateView view)
         {
-            Staff o = UnitOfWork.To<Staff>(view);
-            UnitOfWork.Insert(o);
+            AccountCreateView accView = UnitOfWork.To<AccountCreateView>(view);
+            Staff student = UnitOfWork.To<Staff>(view);
+
+            AAccountService.Create(accView);
+            UnitOfWork.Commit();
+
+            Account ra = UnitOfWork.Select<Account>().FirstOrDefault(acc => acc.Username == accView.Username);
+
+            if (ra != null)
+            {
+                student.AccountId = ra.Id;
+            }
+            UnitOfWork.Insert(student);
             UnitOfWork.Commit();
         }
 
-        public void Edit(StaffView view)
+        public void Edit(StaffEditView view)
         {
-            Staff o = UnitOfWork.Get<Staff>(view.Id);
-            o.Name = view.Name;
-            o.Code = view.Code;
-            o.DateOfBirth = view.DateOfBirth;
-            o.PlaceOfBirth = view.PlaceOfBirth;
-            o.Gender = view.Gender;
-            o.Address = view.Address;
-            o.PhoneNumber = view.PhoneNumber;
-            o.AccountId = view.AccountId;
-            o.DepartmentId = view.DepartmentId;
+            Staff student = UnitOfWork.Get<Staff>(view.Id);
+            if (student != null)
+            {
+                student.Code = view.Code;
+                student.Name = view.Name;
+                student.DateOfBirth = view.DateOfBirth;
+                student.PlaceOfBirth = view.PlaceOfBirth;
+                student.Gender = view.Gender;
+                student.Address = view.Address;
+                student.PhoneNumber = view.PhoneNumber;
+                //student.AccountId = view.AccountId;
+                student.DepartmentId = view.DepartmentId;
 
-            UnitOfWork.Update(o);
-            UnitOfWork.Commit();
+                UnitOfWork.Update(student);
+                UnitOfWork.Commit();
+
+                Account account = UnitOfWork.Get<Account>(student.AccountId);
+                if (account != null)
+                {
+                    account.IsLocked = view.IsLocked;
+                    UnitOfWork.Update(account);
+                    UnitOfWork.Commit();
+                }
+            }
         }
 
         public void Delete(Int32 id)
         {
-            UnitOfWork.Delete<Staff>(id);
-            UnitOfWork.Commit();
+            Staff student = UnitOfWork.Get<Staff>(id);
+            if (student != null)
+            {
+                Int32 accId = student.AccountId;
+                UnitOfWork.Delete<Staff>(id);
+                UnitOfWork.Commit();
+
+                UnitOfWork.Delete<Account>(accId);
+                UnitOfWork.Commit();
+            }
         }
 
     }

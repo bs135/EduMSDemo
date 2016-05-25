@@ -51,8 +51,6 @@
     <Compile Include="Manage\Teachers\Faculty\FacultyService.cs" />
     <Compile Include="Manage\Teachers\Department\IDepartmentService.cs" />
     <Compile Include="Manage\Teachers\Department\DepartmentService.cs" />
-    <Compile Include="Manage\Teachers\Staff\IStaffService.cs" />
-    <Compile Include="Manage\Teachers\Staff\StaffService.cs" />
     <Compile Include="Manage\Teachers\FacultyManageBoard\IFacultyManageBoardService.cs" />
     <Compile Include="Manage\Teachers\FacultyManageBoard\FacultyManageBoardService.cs" />
     <Compile Include="Manage\Subjects\PreSubject\PreSubjectService.cs" />
@@ -87,6 +85,8 @@
     <Compile Include="Manage\Buildings\Building\IBuildingService.cs" />
     <Compile Include="Manage\Buildings\ClassRoom\ClassRoomService.cs" />
     <Compile Include="Manage\Buildings\Building\BuildingService.cs" />
+    <Compile Include="Manage\Teachers\Staff\IStaffService.cs" />
+    <Compile Include="Manage\Teachers\Staff\StaffService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

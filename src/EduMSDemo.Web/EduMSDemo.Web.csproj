@@ -231,7 +231,6 @@
     <Content Include="Views\Manage\Courses\Create.cshtml" />
     <Content Include="Views\Manage\Courses\Edit.cshtml" />
     <Content Include="Views\Manage\Courses\Index.cshtml" />
-    <Content Include="Views\Manage\Students\_Form.cshtml" />
     <Content Include="Views\Manage\Students\Create.cshtml" />
     <Content Include="Views\Manage\Students\Edit.cshtml" />
     <Content Include="Views\Manage\Students\Index.cshtml" />
@@ -271,6 +270,9 @@
     <Content Include="Views\Manage\FacultyManageBoards\Create.cshtml" />
     <Content Include="Views\Manage\FacultyManageBoards\Edit.cshtml" />
     <Content Include="Views\Manage\FacultyManageBoards\Index.cshtml" />
+    <Content Include="Views\Manage\Staffs\Create.cshtml" />
+    <Content Include="Views\Manage\Staffs\Edit.cshtml" />
+    <Content Include="Views\Manage\Staffs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Shared\Auth\auth.css">
