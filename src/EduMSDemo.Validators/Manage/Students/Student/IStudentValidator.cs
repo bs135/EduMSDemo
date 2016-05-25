@@ -5,7 +5,7 @@ namespace EduMSDemo.Validators
 {
     public interface IStudentValidator : IValidator
     {
-        Boolean CanCreate(StudentView view);
-        Boolean CanEdit(StudentView view);
+        Boolean CanCreate(StudentCreateView view);
+        Boolean CanEdit(StudentEditView view);
     }
 }

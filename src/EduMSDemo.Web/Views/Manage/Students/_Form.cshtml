@@ -1,4 +1,4 @@
-﻿@model StudentView
+﻿@model StudentCreateView
 
 @{
     //String query = Request.QueryString.Count > 0 ? "?" + Request.QueryString : "";
@@ -10,6 +10,40 @@
 @using (Html.BeginForm(action, controller, new { area = "Manage", Id = id }, FormMethod.Post, new { @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.Username)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.FormTextBoxFor(model => model.Username)
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.Username)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.Password)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.FormPasswordFor(model => model.Password)
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.Email)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.FormTextBoxFor(model => model.Email)
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+    </div>
+
     <div class="form-group">
         <div class="control-label col-sm-12 col-md-3 col-lg-2">
             @Html.FormLabelFor(model => model.Name)

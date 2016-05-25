@@ -7,21 +7,17 @@ using EduMSDemo.Components.Mvc;
 
 namespace EduMSDemo.Objects
 {
-    public class StudentCreateView : BaseView
+    public class StudentEditView : BaseView
     {
         [Required]
-        [StringLength(32)]
+        [Editable(false)]
         public String Username { get; set; }
 
         [Required]
-        [NotTrimmed]
-        [StringLength(32)]
-        public String Password { get; set; }
-
-        [Required]
-        [EmailAddress]
-        [StringLength(256)]
+        [Editable(false)]
         public String Email { get; set; }
+
+        public Boolean IsLocked { get; set; }
 
         //######################################################
 

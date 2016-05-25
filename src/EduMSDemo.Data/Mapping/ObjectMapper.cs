@@ -110,6 +110,13 @@ namespace EduMSDemo.Data.Mapping
 
             Configuration.CreateMap<StudentClass, StudentClassView>();
             Configuration.CreateMap<StudentClassView, StudentClass>();
+
+            Configuration.CreateMap<StudentCreateView, Student>();
+            Configuration.CreateMap<StudentCreateView, AccountCreateView>();
+
+            Configuration.CreateMap<Student, StudentEditView>();
+            Configuration.CreateMap<StudentEditView, AccountEditView>();
+            Configuration.CreateMap<Student, AccountEditView>();
         }
         #endregion
 

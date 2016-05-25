@@ -10,14 +10,36 @@ namespace EduMSDemo.Services
 {
     public class StudentService : BaseService, IStudentService
     {
-        public StudentService(IUnitOfWork unitOfWork)
+        private IHasher Hasher { get; set; }
+        private IAccountService AAccountService { get; set; }
+        public StudentService(IUnitOfWork unitOfWork, IHasher hasher)
             : base(unitOfWork)
         {
+            Hasher = hasher;
+            AAccountService = new AccountService(unitOfWork, hasher);
         }
 
         public TView Get<TView>(Int32 id) where TView : BaseView
         {
             return UnitOfWork.GetAs<Student, TView>(id);
+        }
+
+        public StudentEditView GetEditView(Int32 id)
+        {
+            StudentEditView view = this.Get<StudentEditView>(id);
+
+            if (view != null)
+            {
+                AccountEditView accView = AAccountService.Get<AccountEditView>(view.AccountId);
+
+                if (accView != null)
+                {
+                    view.Username = accView.Username;
+                    view.Email = accView.Email;
+                    view.IsLocked = accView.IsLocked;
+                }
+            }
+            return view;
         }
 
         public IQueryable<StudentView> GetViews()
@@ -42,33 +64,60 @@ namespace EduMSDemo.Services
                 .OrderByDescending(o => o.Id);
         }
 
-        public void Create(StudentView view)
+        public void Create(StudentCreateView view)
         {
-            Student o = UnitOfWork.To<Student>(view);
-            UnitOfWork.Insert(o);
+            AccountCreateView accView = UnitOfWork.To<AccountCreateView>(view);
+            Student student = UnitOfWork.To<Student>(view);
+
+            AAccountService.Create(accView);
+            UnitOfWork.Commit();
+
+            Account ra = UnitOfWork.Select<Account>().FirstOrDefault(acc => acc.Username == accView.Username);
+
+            if (ra != null)
+            {
+                student.AccountId = ra.Id;
+            }
+            UnitOfWork.Insert(student);
             UnitOfWork.Commit();
         }
 
-        public void Edit(StudentView view)
+        public void Edit(StudentEditView view)
         {
-            Student o = UnitOfWork.Get<Student>(view.Id);
-            o.Code = view.Code;
-            o.Name = view.Name;
-            o.DateOfBirth = view.DateOfBirth;
-            o.PlaceOfBirth = view.PlaceOfBirth;
-            o.Gender = view.Gender;
-            o.Address = view.Address;
-            o.PhoneNumber = view.PhoneNumber;
-            o.AccountId = view.AccountId;
-            o.StudentClassId = view.StudentClassId;
+            Student student = UnitOfWork.Get<Student>(view.Id);
+            if (student != null)
+            {
+                student.Code = view.Code;
+                student.Name = view.Name;
+                student.DateOfBirth = view.DateOfBirth;
+                student.PlaceOfBirth = view.PlaceOfBirth;
+                student.Gender = view.Gender;
+                student.Address = view.Address;
+                student.PhoneNumber = view.PhoneNumber;
+                //student.AccountId = view.AccountId;
+                student.StudentClassId = view.StudentClassId;
 
-            UnitOfWork.Update(o);
-            UnitOfWork.Commit();
+                UnitOfWork.Update(student);
+                UnitOfWork.Commit();
+
+                Account account = UnitOfWork.Get<Account>(student.AccountId);
+                if (account != null)
+                {
+                    account.IsLocked = view.IsLocked;
+                    UnitOfWork.Update(account);
+                    UnitOfWork.Commit();
+                }
+            }
         }
 
         public void Delete(Int32 id)
         {
+            Student student = UnitOfWork.Get<Student>(id);
+            Int32 accId = student.AccountId;
             UnitOfWork.Delete<Student>(id);
+            UnitOfWork.Commit();
+
+            UnitOfWork.Delete<Account>(accId);
             UnitOfWork.Commit();
         }
 

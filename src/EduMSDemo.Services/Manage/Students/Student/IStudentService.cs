@@ -8,11 +8,12 @@ namespace EduMSDemo.Services
     public interface IStudentService : IService
     {
         TView Get<TView>(Int32 id) where TView : BaseView;
+        StudentEditView GetEditView(Int32 id);
         IQueryable<StudentView> GetViews();
         IQueryable<AccountView> GetAccountViews();
         IQueryable<StudentClassView> GetStudentClassViews();
-        void Create(StudentView view);
-        void Edit(StudentView view);
+        void Create(StudentCreateView view);
+        void Edit(StudentEditView view);
         void Delete(Int32 id);
 
     }

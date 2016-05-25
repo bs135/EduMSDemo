@@ -30,7 +30,7 @@ namespace EduMSDemo.Controllers.Manage
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Exclude = "Id")] StudentView model)
+        public ActionResult Create([Bind(Exclude = "Id")] StudentCreateView model)
         {
             if (!Validator.CanCreate(model))
             {
@@ -46,14 +46,15 @@ namespace EduMSDemo.Controllers.Manage
         [HttpGet]
         public ActionResult Edit(Int32 id)
         {
-            StudentView view = Service.Get<StudentView>(id);
+            StudentEditView view = Service.GetEditView(id);
+
             ViewBag.StudentClassId = new SelectList(Service.GetStudentClassViews(), "Id", "Name", view.StudentClassId);
             return NotEmptyView(view);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(StudentView model)
+        public ActionResult Edit(StudentEditView model)
         {
             if (!Validator.CanEdit(model))
             {

@@ -10,21 +10,39 @@ namespace EduMSDemo.Validators
 {
     public class StudentValidator : BaseValidator, IStudentValidator
     {
-        public StudentValidator(IUnitOfWork unitOfWork)
+        private IHasher Hasher { get; set; }
+        private IAccountValidator AAccountValidator { get; set; }
+        public StudentValidator(IUnitOfWork unitOfWork, IHasher hasher)
             : base(unitOfWork)
         {
+            Hasher = hasher;
+            AAccountValidator = new AccountValidator(unitOfWork, hasher);
         }
 
-        public Boolean CanCreate(StudentView view)
+        public Boolean CanCreate(StudentCreateView view)
         {
-            Boolean isValid = IsUniqueCode(view.Id, view.Code);
+            AccountCreateView accView = UnitOfWork.To<AccountCreateView>(view);
+            Boolean isValid = AAccountValidator.CanCreate(accView);
+            foreach (var item in AAccountValidator.ModelState)
+            {
+                ModelState.Add(item);
+            }
+
+            isValid &= IsUniqueCode(view.Id, view.Code);
             isValid &= ModelState.IsValid;
 
             return isValid;
         }
-        public Boolean CanEdit(StudentView view)
+        public Boolean CanEdit(StudentEditView view)
         {
-            Boolean isValid = IsUniqueCode(view.Id, view.Code);
+            AccountEditView accView = UnitOfWork.To<AccountEditView>(view);
+            Boolean isValid = AAccountValidator.CanEdit(accView);
+            foreach (var item in AAccountValidator.ModelState)
+            {
+                ModelState.Add(item);
+            }
+
+            isValid = IsUniqueCode(view.Id, view.Code);
             isValid &= ModelState.IsValid;
 
             return isValid;

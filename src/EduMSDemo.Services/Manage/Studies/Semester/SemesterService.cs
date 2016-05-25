@@ -38,7 +38,7 @@ namespace EduMSDemo.Services
         public void Edit(SemesterView view)
         {
             Semester o = UnitOfWork.Get<Semester>(view.Id);
-            //o.SchoolYear = view.SchoolYear;
+            //student.SchoolYear = view.SchoolYear;
             o.Name = view.Name;
             o.StartDate = view.StartDate;
             o.EndDate = view.EndDate;
