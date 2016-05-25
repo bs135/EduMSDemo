@@ -247,3 +247,5 @@ _Pvt_Extensions
 .idea/
 *.sln.iml
 
+# Log
+**/Logs/Log.txt
