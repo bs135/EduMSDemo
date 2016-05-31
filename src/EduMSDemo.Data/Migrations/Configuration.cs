@@ -60,6 +60,7 @@ namespace EduMSDemo.Data.Migrations
 
                 #endregion Administration
 
+                #region Manage
                 #region Buildings
 
                 new Permission { Id = i++, Area = "Manage", Controller = "Buildings", Action = "Index" },
@@ -193,7 +194,16 @@ namespace EduMSDemo.Data.Migrations
                 new Permission { Id = i++, Area = "Manage", Controller = "Staffs", Action = "Delete" },
 
                 #endregion Teachers
+                #endregion
 
+                #region Student
+
+                #region SubjectRegister
+
+                new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Index" },
+
+                #endregion Teachers
+                #endregion
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();
@@ -270,6 +280,30 @@ namespace EduMSDemo.Data.Migrations
                     UnitOfWork.Insert(new RolePermission
                     {
                         RoleId = manageRoleId,
+                        PermissionId = permission.Id
+                    });
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region Sys_Student
+            if (!UnitOfWork.Select<Role>().Any(role => role.Title == "Sys_Student"))
+            {
+                UnitOfWork.Insert(new Role { Title = "Sys_Student" });
+                UnitOfWork.Commit();
+            }
+
+            Int32 studentRoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id;
+            RolePermission[] studentPermissions = UnitOfWork
+                .Select<RolePermission>()
+                .Where(rolePermission => rolePermission.RoleId == studentRoleId)
+                .ToArray();
+
+            foreach (Permission permission in UnitOfWork.Select<Permission>().Where(p => p.Area == "Student"))
+                if (!studentPermissions.Any(rolePermission => rolePermission.PermissionId == permission.Id))
+                    UnitOfWork.Insert(new RolePermission
+                    {
+                        RoleId = studentRoleId,
                         PermissionId = permission.Id
                     });
 

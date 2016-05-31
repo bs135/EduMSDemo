@@ -273,6 +273,7 @@
     <Content Include="Views\Manage\Staffs\Create.cshtml" />
     <Content Include="Views\Manage\Staffs\Edit.cshtml" />
     <Content Include="Views\Manage\Staffs\Index.cshtml" />
+    <Content Include="Views\Student\SubjectRegister\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Shared\Auth\auth.css">
