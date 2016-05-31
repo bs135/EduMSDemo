@@ -567,4 +567,22 @@
   <data name="AdministrationRoles" xml:space="preserve">
     <value>Vai trò</value>
   </data>
+  <data name="StudentSubjectRegister" xml:space="preserve">
+    <value>Môn học</value>
+  </data>
+  <data name="StudentSubjectRegisterIndex" xml:space="preserve">
+    <value>Đăng ký</value>
+  </data>
+  <data name="TeacherTeaching" xml:space="preserve">
+    <value>Giảng dạy</value>
+  </data>
+  <data name="TeacherTeachingIndex" xml:space="preserve">
+    <value>Lớp</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Sinh viên</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Giáo viên</value>
+  </data>
 </root>

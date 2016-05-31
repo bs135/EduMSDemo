@@ -261,4 +261,22 @@
   <data name="ManageStaffsIndex" xml:space="preserve">
     <value>Danh sách cán bộ</value>
   </data>
+  <data name="Student" xml:space="preserve">
+    <value>Sinh viên</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Giáo viên</value>
+  </data>
+  <data name="StudentSubjectRegister" xml:space="preserve">
+    <value>Môn học</value>
+  </data>
+  <data name="StudentSubjectRegisterIndex" xml:space="preserve">
+    <value>Đăng ký</value>
+  </data>
+  <data name="TeacherTeaching" xml:space="preserve">
+    <value>Giảng dạy</value>
+  </data>
+  <data name="TeacherTeachingIndex" xml:space="preserve">
+    <value>Lớp</value>
+  </data>
 </root>

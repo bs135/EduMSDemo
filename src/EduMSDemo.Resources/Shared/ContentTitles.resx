@@ -567,4 +567,22 @@
   <data name="AdministrationRoles" xml:space="preserve">
     <value>Roles</value>
   </data>
+  <data name="StudentSubjectRegister" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="StudentSubjectRegisterIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="TeacherTeaching" xml:space="preserve">
+    <value>Teaching</value>
+  </data>
+  <data name="TeacherTeachingIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
 </root>

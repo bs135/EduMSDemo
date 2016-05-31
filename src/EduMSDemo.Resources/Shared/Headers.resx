@@ -261,4 +261,22 @@
   <data name="ManageStaffsIndex" xml:space="preserve">
     <value>Staffs</value>
   </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+  <data name="StudentSubjectRegister" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="StudentSubjectRegisterIndex" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="TeacherTeaching" xml:space="preserve">
+    <value>Teaching</value>
+  </data>
+  <data name="TeacherTeachingIndex" xml:space="preserve">
+    <value>Class</value>
+  </data>
 </root>
