@@ -37,7 +37,7 @@ namespace EduMSDemo.Objects
         //[ForeignKey("Account")]
         public Int32 AccountId { get; set; }
         public virtual Account Account { get; set; }
-        public virtual String AccountUsername { get; set; }
+        //public virtual String AccountUsername { get; set; }
         public virtual String AccountEmail { get; set; }
 
         // [ForeignKey("StudentClass")]

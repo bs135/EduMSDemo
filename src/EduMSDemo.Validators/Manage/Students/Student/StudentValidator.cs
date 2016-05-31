@@ -22,12 +22,16 @@ namespace EduMSDemo.Validators
         public Boolean CanCreate(StudentCreateView view)
         {
             AccountCreateView accView = UnitOfWork.To<AccountCreateView>(view);
+            if (accView != null)
+                accView.Username = view.Code;
+
             Boolean isValid = AAccountValidator.CanCreate(accView);
-            foreach (var item in AAccountValidator.ModelState)
+            foreach (var err in AAccountValidator.ModelState)
             {
-                ModelState.Add(item);
+                ModelState.Add(err);
             }
 
+            isValid &= IsUniqueUsername(view.AccountId, view.Code);
             isValid &= IsUniqueCode(view.Id, view.Code);
             isValid &= ModelState.IsValid;
 
@@ -36,13 +40,17 @@ namespace EduMSDemo.Validators
         public Boolean CanEdit(StudentEditView view)
         {
             AccountEditView accView = UnitOfWork.To<AccountEditView>(view);
+            if (accView != null)
+                accView.Username = view.Code;
+
             Boolean isValid = AAccountValidator.CanEdit(accView);
             foreach (var item in AAccountValidator.ModelState)
             {
                 ModelState.Add(item);
             }
 
-            isValid = IsUniqueCode(view.Id, view.Code);
+            isValid &= IsUniqueUsername(view.AccountId, view.Code);
+            isValid &= IsUniqueCode(view.Id, view.Code);
             isValid &= ModelState.IsValid;
 
             return isValid;
@@ -58,6 +66,19 @@ namespace EduMSDemo.Validators
 
             if (!isUnique)
                 ModelState.AddModelError<StudentView>(Student => Student.Code, Validations.UniqueCode);
+
+            return isUnique;
+        }
+        private Boolean IsUniqueUsername(Int32 accountId, String username)
+        {
+            Boolean isUnique = !UnitOfWork
+                .Select<Account>()
+                .Any(account =>
+                    account.Id != accountId &&
+                    account.Username.ToLower() == username.ToLower());
+
+            if (!isUnique)
+                ModelState.AddModelError<StaffView>(Staff => Staff.Code, Validations.UniqueCode);
 
             return isUnique;
         }

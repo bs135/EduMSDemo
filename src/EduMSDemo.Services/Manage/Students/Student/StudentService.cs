@@ -34,7 +34,7 @@ namespace EduMSDemo.Services
 
                 if (accView != null)
                 {
-                    view.Username = accView.Username;
+                    //view.Username = accView.Username;
                     view.Email = accView.Email;
                     view.IsLocked = accView.IsLocked;
                 }
@@ -67,6 +67,7 @@ namespace EduMSDemo.Services
         public void Create(StudentCreateView view)
         {
             AccountCreateView accView = UnitOfWork.To<AccountCreateView>(view);
+            accView.Username = view.Code;
             Student student = UnitOfWork.To<Student>(view);
 
             AAccountService.Create(accView);
@@ -87,7 +88,7 @@ namespace EduMSDemo.Services
             Student student = UnitOfWork.Get<Student>(view.Id);
             if (student != null)
             {
-                student.Code = view.Code;
+                //student.Code = view.Code;
                 student.Name = view.Name;
                 student.DateOfBirth = view.DateOfBirth;
                 student.PlaceOfBirth = view.PlaceOfBirth;

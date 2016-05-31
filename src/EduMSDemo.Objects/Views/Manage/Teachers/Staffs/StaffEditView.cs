@@ -8,9 +8,9 @@ namespace EduMSDemo.Objects
 {
     public class StaffEditView : BaseView
     {
-        [Required]
-        [Editable(false)]
-        public String Username { get; set; }
+        //[Required]
+        //[Editable(false)]
+        //public String Username { get; set; }
 
         [Required]
         [Editable(false)]
@@ -21,6 +21,7 @@ namespace EduMSDemo.Objects
         //######################################################
 
         [Required]
+        [Editable(false)]
         [StringLength(32)]
         //[Index(IsUnique = true)]
         public String Code { get; set; }

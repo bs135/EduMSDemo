@@ -9,9 +9,9 @@ namespace EduMSDemo.Objects
 {
     public class StaffCreateView : BaseView
     {
-        [Required]
-        [StringLength(32)]
-        public String Username { get; set; }
+        //[Required]
+        //[StringLength(32)]
+        //public String Username { get; set; }
 
         [Required]
         [NotTrimmed]

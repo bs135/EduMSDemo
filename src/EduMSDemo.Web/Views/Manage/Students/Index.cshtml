@@ -22,10 +22,10 @@
                     columns.AddActionLink("Edit", "fa fa-pencil");
                     columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageStudentDeleteConfirmMessage);
 
-                    columns.AddProperty(model => model.Name);
                     columns.AddProperty(model => model.Code);
+                    columns.AddProperty(model => model.Name);
                     columns.AddProperty(model => model.StudentClassName);
-                    columns.AddProperty(model => model.AccountUsername);
+                    //columns.AddProperty(model => model.AccountUsername);
                     columns.AddProperty(model => model.AccountEmail);
                 })
                 .ApplyDefaults()
