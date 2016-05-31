@@ -191,7 +191,7 @@
 
         <siteMapNode menu="true" icon="fa fa-bar-chart" area="Student">
 
-          <!-- Buildings -->
+          <!-- SubjectRegister -->
           <siteMapNode menu="true" icon="fa fa-cubes" area="Student" controller="SubjectRegister">
 
             <siteMapNode  menu="true" icon="fa fa-square-o" area="Student" controller="SubjectRegister" action="Index">
@@ -201,8 +201,26 @@
             </siteMapNode>
 
           </siteMapNode>
-          <!-- End Buildings -->
+          <!-- End SubjectRegister -->
         </siteMapNode>
+
+
+        <siteMapNode menu="true" icon="fa fa-bar-chart" area="Teacher">
+
+          <!-- TeachingTeaching -->
+          <siteMapNode menu="true" icon="fa fa-cubes" area="Teacher" controller="Teaching">
+
+            <siteMapNode  menu="true" icon="fa fa-square-o" area="Teacher" controller="Teaching" action="Index">
+              <siteMapNode icon="fa fa-file-o" area="Teacher" controller="Teaching" action="Create" />
+              <siteMapNode icon="fa fa-pencil" area="Teacher" controller="Teaching" action="Edit" />
+              <siteMapNode icon="fa fa-times" area="Teacher" controller="Teaching" action="Delete" />
+            </siteMapNode>
+
+          </siteMapNode>
+          <!-- End Teaching -->
+        </siteMapNode>
+
+
     </siteMapNode>
 
 

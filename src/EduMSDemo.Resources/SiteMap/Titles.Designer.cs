@@ -1418,5 +1418,59 @@ namespace EduMSDemo.Resources.SiteMap {
                 return ResourceManager.GetString("ProfileEdit", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student.
+        /// </summary>
+        public static string Student {
+            get {
+                return ResourceManager.GetString("Student", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subjects.
+        /// </summary>
+        public static string StudentSubjectRegister {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string StudentSubjectRegisterIndex {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher.
+        /// </summary>
+        public static string Teacher {
+            get {
+                return ResourceManager.GetString("Teacher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teaching.
+        /// </summary>
+        public static string TeacherTeaching {
+            get {
+                return ResourceManager.GetString("TeacherTeaching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class.
+        /// </summary>
+        public static string TeacherTeachingIndex {
+            get {
+                return ResourceManager.GetString("TeacherTeachingIndex", resourceCulture);
+            }
+        }
     }
 }

@@ -202,8 +202,19 @@ namespace EduMSDemo.Data.Migrations
 
                 new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Index" },
 
-                #endregion Teachers
+                #endregion SubjectRegister
                 #endregion
+
+
+                #region Teacher
+
+                #region Teaching
+
+                new Permission { Id = i++, Area = "Teacher", Controller = "Teaching", Action = "Index" },
+
+                #endregion Teaching
+                #endregion
+
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();
@@ -309,6 +320,31 @@ namespace EduMSDemo.Data.Migrations
 
             UnitOfWork.Commit();
             #endregion
+
+            #region Sys_Teacher
+            if (!UnitOfWork.Select<Role>().Any(role => role.Title == "Sys_Teacher"))
+            {
+                UnitOfWork.Insert(new Role { Title = "Sys_Teacher" });
+                UnitOfWork.Commit();
+            }
+
+            Int32 teacherRoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Teacher").Id;
+            RolePermission[] teacherPermissions = UnitOfWork
+                .Select<RolePermission>()
+                .Where(rolePermission => rolePermission.RoleId == teacherRoleId)
+                .ToArray();
+
+            foreach (Permission permission in UnitOfWork.Select<Permission>().Where(p => p.Area == "Teacher"))
+                if (!teacherPermissions.Any(rolePermission => rolePermission.PermissionId == permission.Id))
+                    UnitOfWork.Insert(new RolePermission
+                    {
+                        RoleId = teacherRoleId,
+                        PermissionId = permission.Id
+                    });
+
+            UnitOfWork.Commit();
+            #endregion
+
         }
 
         private void SeedAccounts()

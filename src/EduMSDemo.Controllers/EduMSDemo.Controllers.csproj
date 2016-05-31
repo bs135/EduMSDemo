@@ -85,6 +85,8 @@
     <Compile Include="Profile\ProfileController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteConfig.cs" />
+    <Compile Include="Teacher\TeacherAreaRegistration.cs" />
+    <Compile Include="Teacher\Teaching\TeachingController.cs" />
     <Compile Include="Student\StudentAreaRegistration.cs" />
     <Compile Include="Student\SubjectRegister\SubjectRegisterController.cs" />
     <Compile Include="ValidatedController.cs" />
