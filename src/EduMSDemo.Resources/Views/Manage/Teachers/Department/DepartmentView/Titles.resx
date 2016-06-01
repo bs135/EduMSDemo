@@ -138,4 +138,7 @@
   <data name="FacultyName" xml:space="preserve">
     <value>Faculty</value>
   </data>
+  <data name="FaxNumber" xml:space="preserve">
+    <value>Fax</value>
+  </data>
 </root>

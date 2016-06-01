@@ -54,7 +54,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logging\AuditLogger.cs" />
@@ -77,10 +81,28 @@
     <Compile Include="Migrations\201605251542376_remove_schoolyear.Designer.cs">
       <DependentUpon>201605251542376_remove_schoolyear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606010310151_Initial1.cs" />
+    <Compile Include="Migrations\201606010310151_Initial1.Designer.cs">
+      <DependentUpon>201606010310151_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606010323009_Initial2.cs" />
+    <Compile Include="Migrations\201606010323009_Initial2.Designer.cs">
+      <DependentUpon>201606010323009_Initial2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Context.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Context.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="Migrations\Context.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Context.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +121,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605251542376_remove_schoolyear.resx">
       <DependentUpon>201605251542376_remove_schoolyear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606010310151_Initial1.resx">
+      <DependentUpon>201606010310151_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606010323009_Initial2.resx">
+      <DependentUpon>201606010323009_Initial2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

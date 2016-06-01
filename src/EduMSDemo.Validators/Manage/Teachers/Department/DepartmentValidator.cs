@@ -18,7 +18,6 @@ namespace EduMSDemo.Validators
         public Boolean CanCreate(DepartmentView view)
         {
             Boolean isValid = IsUniqueName(view.Id, view.Name);
-            isValid &= IsUniqueAbbreviation(view.Id, view.Abbreviation);
             isValid &= ModelState.IsValid;
 
             return isValid;
@@ -26,7 +25,6 @@ namespace EduMSDemo.Validators
         public Boolean CanEdit(DepartmentView view)
         {
             Boolean isValid = IsUniqueName(view.Id, view.Name);
-            isValid &= IsUniqueAbbreviation(view.Id, view.Abbreviation);
             isValid &= ModelState.IsValid;
 
             return isValid;
@@ -42,19 +40,6 @@ namespace EduMSDemo.Validators
 
             if (!isUnique)
                 ModelState.AddModelError<DepartmentView>(model => model.Name, Validations.UniqueName);
-
-            return isUnique;
-        }
-        private Boolean IsUniqueAbbreviation(Int32 id, String code)
-        {
-            Boolean isUnique = !UnitOfWork
-                .Select<Department>()
-                .Any(Department =>
-                    Department.Id != id &&
-                    Department.Abbreviation.ToString().ToLower() == code.ToLower());
-
-            if (!isUnique)
-                ModelState.AddModelError<DepartmentView>(Department => Department.Abbreviation, Validations.UniqueAbbreviation);
 
             return isUnique;
         }

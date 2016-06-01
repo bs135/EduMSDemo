@@ -135,4 +135,7 @@
   <data name="PhoneNumber" xml:space="preserve">
     <value>Sồ điện thoại</value>
   </data>
+  <data name="FaxNumber" xml:space="preserve">
+    <value>Fax</value>
+  </data>
 </root>

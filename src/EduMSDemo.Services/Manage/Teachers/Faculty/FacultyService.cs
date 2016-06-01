@@ -43,6 +43,7 @@ namespace EduMSDemo.Services
             o.Address = view.Address;
             o.Email = view.Email;
             o.PhoneNumber = view.PhoneNumber;
+            o.FaxNumber = view.FaxNumber;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();

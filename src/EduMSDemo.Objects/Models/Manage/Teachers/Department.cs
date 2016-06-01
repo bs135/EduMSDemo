@@ -8,11 +8,6 @@ namespace EduMSDemo.Objects
     public class Department : BaseModel
     {
         [Required]
-        [StringLength(32)]
-        [Index(IsUnique = true)]
-        public String Abbreviation { get; set; }
-
-        [Required]
         [StringLength(128)]
         [Index(IsUnique = true)]
         public String Name { get; set; }
@@ -25,8 +20,12 @@ namespace EduMSDemo.Objects
         public String Email { get; set; }
 
         [StringLength(256)]
-        [Phone]
+        //[Phone]
         public String PhoneNumber { get; set; }
+
+        [StringLength(256)]
+        //[Phone]
+        public String FaxNumber { get; set; }
 
         // [ForeignKey("Faculty")]
         public Int32 FacultyId { get; set; }

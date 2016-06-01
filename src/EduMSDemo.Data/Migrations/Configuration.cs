@@ -29,6 +29,7 @@ namespace EduMSDemo.Data.Migrations
             SeedAccounts();
 
             SeedBuildings();
+            SeedTeachers();
         }
 
         #region Administration
@@ -204,7 +205,6 @@ namespace EduMSDemo.Data.Migrations
 
                 #endregion SubjectRegister
                 #endregion
-
 
                 #region Teacher
 
@@ -382,7 +382,7 @@ namespace EduMSDemo.Data.Migrations
 
         #endregion
 
-        #region Buildings
+        #region Manage
 
         private void SeedBuildings()
         {
@@ -434,6 +434,160 @@ namespace EduMSDemo.Data.Migrations
             #endregion
         }
 
+        private void SeedTeachers()
+        {
+            #region Faculty
+            int fi = 0;
+            Faculty[] faculties =
+            {
+                new Faculty {
+                    Id = fi++,
+                    Abbreviation = "KH&KTMT",
+                    Name = "Khoa học và Kỹ thuật máy tính",
+                    Email = "welcome@cse.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8.647.256 - Ext: 5847",
+                    FaxNumber = "(84.8) 8.645.137",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM" },
+                new Faculty {
+                    Id = fi++,
+                    Abbreviation = "ĐĐT",
+                    Name = "Điện - Điện tử",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM" },
+            };
+
+            foreach (Faculty faculty in faculties)
+            {
+                Faculty dbfaculty = UnitOfWork.Select<Faculty>().FirstOrDefault(model => model.Name == faculty.Name);
+                if (dbfaculty == null)
+                {
+                    UnitOfWork.Insert(faculty);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region Department
+            int di = 0;
+            Department[] departments =
+            {
+                new Department {
+                    Id = di++,
+                    Name = "Khoa học máy tính",
+                    Email = "welcome@cse.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8.647.256 - Ext: 5847",
+                    FaxNumber = "(84.8) 8.645.137",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 1 },
+                new Department {
+                    Id = di++,
+                    Name = "Kỹ thuật Máy tính",
+                    Email = "welcome@cse.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8.647.256 - Ext: 5847",
+                    FaxNumber = "(84.8) 8.645.137",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 1 },
+                new Department {
+                    Id = di++,
+                    Name = "Hệ thống Thông tin",
+                    Email = "welcome@cse.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8.647.256 - Ext: 5847",
+                    FaxNumber = "(84.8) 8.645.137",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 1 },
+                new Department {
+                    Id = di++,
+                    Name = "Công nghệ Phần mềm",
+                    Email = "welcome@cse.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8.647.256 - Ext: 5847",
+                    FaxNumber = "(84.8) 8.645.137",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 1 },
+                new Department {
+                    Id = di++,
+                    Name = "Hệ thống và Mạng Máy tính",
+                    Email = "welcome@cse.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8.647.256 - Ext: 5847",
+                    FaxNumber = "(84.8) 8.645.137",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 1 },
+
+
+                new Department {
+                    Id = di++,
+                    Name = "Cơ sở kỹ thuật Điện",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+                new Department {
+                    Id = di++,
+                    Name = "Điện tử",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+                new Department {
+                    Id = di++,
+                    Name = "Viễn thông",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+                new Department {
+                    Id = di++,
+                    Name = "Điều khiển tự động",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+                new Department {
+                    Id = di++,
+                    Name = "Thiết bị điện",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+                new Department {
+                    Id = di++,
+                    Name = "Hệ thống điện",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+                new Department {
+                    Id = di++,
+                    Name = "Cung cấp điện",
+                    Email = "vpk@dee.hcmut.edu.vn",
+                    PhoneNumber = "(84.8) 8 657 296 – Ext: 5746",
+                    FaxNumber = "(84.8) 8 645 796",
+                    Address = "A3 – 268 Lý Thường Kiệt, Q. 10, TP. HCM",
+                    FacultyId = 2 },
+            };
+
+            foreach (Department department in departments)
+            {
+                Department dbdepartment = UnitOfWork.Select<Department>().FirstOrDefault(model => model.Name == department.Name);
+                if (dbdepartment == null)
+                {
+                    UnitOfWork.Insert(department);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+
+        }
         #endregion
 
         public void Dispose()

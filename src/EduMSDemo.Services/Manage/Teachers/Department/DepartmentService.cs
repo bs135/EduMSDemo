@@ -45,10 +45,10 @@ namespace EduMSDemo.Services
         public void Edit(DepartmentView view)
         {
             Department o = UnitOfWork.Get<Department>(view.Id);
-            o.Abbreviation = view.Abbreviation;
             o.Address = view.Address;
             o.Email = view.Email;
             o.PhoneNumber = view.PhoneNumber;
+            o.FaxNumber = view.FaxNumber;
             o.FacultyId = view.FacultyId;
 
             UnitOfWork.Update(o);

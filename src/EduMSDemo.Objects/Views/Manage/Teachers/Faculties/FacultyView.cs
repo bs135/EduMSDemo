@@ -26,8 +26,12 @@ namespace EduMSDemo.Objects
         public String Email { get; set; }
 
         [StringLength(256)]
-        [Phone]
+        //[Phone]
         public String PhoneNumber { get; set; }
+
+        [StringLength(256)]
+        //[Phone]
+        public String FaxNumber { get; set; }
 
         // List Department
         //public virtual IList<Department> Departments { get; set; }

@@ -88,6 +88,15 @@ namespace EduMSDemo.Resources.Views.Manage.Teachers.Faculty.FacultyView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fax.
+        /// </summary>
+        public static string FaxNumber {
+            get {
+                return ResourceManager.GetString("FaxNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Faculty.
         /// </summary>
         public static string Id {
