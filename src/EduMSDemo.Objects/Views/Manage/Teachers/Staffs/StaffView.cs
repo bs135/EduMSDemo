@@ -44,6 +44,7 @@ namespace EduMSDemo.Objects
         public Int32 DepartmentId { get; set; }
         public virtual Department Department { get; set; }
         public String DepartmentName { get; set; }
+        public String DepartmentFacultyName { get; set; }
 
         // List DEAN
         //[InverseProperty("Dean")]

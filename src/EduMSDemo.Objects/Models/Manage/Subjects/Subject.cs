@@ -17,9 +17,26 @@ namespace EduMSDemo.Objects
         [Index(IsUnique = true)]
         public String Name { get; set; }
 
-        public Int32 Credits { get; set; }
+        /// <summary>
+        /// Tên tiếng Anh
+        /// </summary>
+        [Required]
+        [StringLength(128)]
+        //[Index(IsUnique = true)]
+        public String NameEn { get; set; }
 
-        public Int32 AcademicCredits { get; set; }
+
+        /// <summary>
+        /// Số tiết học
+        /// </summary>
+        public Int32 NumberOfPeriods { get; set; }
+
+        /// <summary>
+        /// Số tín chỉ
+        /// </summary>
+        public Int32 NumberOfCredits { get; set; }
+
+        //public Int32 AcademicCredits { get; set; }
 
         //[ForeignKey("Department")]
         public Int32 DepartmentId { get; set; }

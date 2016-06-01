@@ -121,18 +121,24 @@
     <value>Subject</value>
   </data>
   <data name="Code" xml:space="preserve">
-    <value>Subject Code</value>
+    <value>Code</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Subject Name</value>
+    <value>Name</value>
   </data>
-  <data name="Credits" xml:space="preserve">
-    <value>Credits</value>
+  <data name="NumberOfCredits" xml:space="preserve">
+    <value>Number of Credits</value>
   </data>
   <data name="AcademicCredits" xml:space="preserve">
     <value>AcademicCredits</value>
   </data>
   <data name="DepartmentName" xml:space="preserve">
     <value>Department</value>
+  </data>
+  <data name="NameEn" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="NumberOfPeriods" xml:space="preserve">
+    <value>Number of Periods</value>
   </data>
 </root>

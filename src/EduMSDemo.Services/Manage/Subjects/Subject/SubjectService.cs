@@ -46,10 +46,12 @@ namespace EduMSDemo.Services
         public void Edit(SubjectView view)
         {
             Subject o = UnitOfWork.Get<Subject>(view.Id);
-            o.Name = view.Name;
             o.Code = view.Code;
-            o.Credits = view.Credits;
-            o.AcademicCredits = view.AcademicCredits;
+            o.Name = view.Name;
+            o.NameEn = view.NameEn;
+            o.NumberOfCredits = view.NumberOfCredits;
+            o.NumberOfPeriods = view.NumberOfPeriods;
+            //o.AcademicCredits = view.AcademicCredits;
             o.DepartmentId = view.DepartmentId;
 
             UnitOfWork.Update(o);

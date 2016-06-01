@@ -70,20 +70,11 @@ namespace EduMSDemo.Resources.Views.Manage.Subjects.Subject.SubjectView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Subject Code.
+        ///   Looks up a localized string similar to Code.
         /// </summary>
         public static string Code {
             get {
                 return ResourceManager.GetString("Code", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Credits.
-        /// </summary>
-        public static string Credits {
-            get {
-                return ResourceManager.GetString("Credits", resourceCulture);
             }
         }
         
@@ -106,11 +97,38 @@ namespace EduMSDemo.Resources.Views.Manage.Subjects.Subject.SubjectView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Subject Name.
+        ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English Name.
+        /// </summary>
+        public static string NameEn {
+            get {
+                return ResourceManager.GetString("NameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of Credits.
+        /// </summary>
+        public static string NumberOfCredits {
+            get {
+                return ResourceManager.GetString("NumberOfCredits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of Periods.
+        /// </summary>
+        public static string NumberOfPeriods {
+            get {
+                return ResourceManager.GetString("NumberOfPeriods", resourceCulture);
             }
         }
     }

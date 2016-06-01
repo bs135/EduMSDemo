@@ -22,11 +22,13 @@
                     columns.AddActionLink("Edit", "fa fa-pencil");
                     columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageSubjectDeleteConfirmMessage);
 
-                    columns.AddProperty(model => model.Name);
                     columns.AddProperty(model => model.Code);
-                    columns.AddProperty(model => model.Credits);
-                    columns.AddProperty(model => model.AcademicCredits);
+                    columns.AddProperty(model => model.Name);
+                    columns.AddProperty(model => model.NameEn);
+                    columns.AddProperty(model => model.NumberOfCredits);
+                    columns.AddProperty(model => model.NumberOfPeriods);
                     columns.AddProperty(model => model.DepartmentName);
+                    columns.AddProperty(model => model.DepartmentFacultyName);
                 })
                 .ApplyDefaults()
             )

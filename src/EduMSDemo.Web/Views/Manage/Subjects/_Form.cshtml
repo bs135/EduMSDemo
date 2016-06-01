@@ -12,17 +12,6 @@
     @Html.AntiForgeryToken()
     <div class="form-group">
         <div class="control-label col-sm-12 col-md-3 col-lg-2">
-            @Html.FormLabelFor(model => model.Name)
-        </div>
-        <div class="control-content col-sm-12 col-md-9 col-lg-5">
-            @Html.FormTextBoxFor(model => model.Name)
-        </div>
-        <div class="control-validation col-sm-12 col-lg-5">
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="control-label col-sm-12 col-md-3 col-lg-2">
             @Html.FormLabelFor(model => model.Code)
         </div>
         <div class="control-content col-sm-12 col-md-9 col-lg-5">
@@ -34,24 +23,46 @@
     </div>
     <div class="form-group">
         <div class="control-label col-sm-12 col-md-3 col-lg-2">
-            @Html.FormLabelFor(model => model.Credits)
+            @Html.FormLabelFor(model => model.Name)
         </div>
         <div class="control-content col-sm-12 col-md-9 col-lg-5">
-            @Html.FormTextBoxFor(model => model.Credits)
+            @Html.FormTextBoxFor(model => model.Name)
         </div>
         <div class="control-validation col-sm-12 col-lg-5">
-            @Html.ValidationMessageFor(model => model.Credits)
+            @Html.ValidationMessageFor(model => model.Name)
         </div>
     </div>
     <div class="form-group">
         <div class="control-label col-sm-12 col-md-3 col-lg-2">
-            @Html.FormLabelFor(model => model.AcademicCredits)
+            @Html.FormLabelFor(model => model.NameEn)
         </div>
         <div class="control-content col-sm-12 col-md-9 col-lg-5">
-            @Html.FormTextBoxFor(model => model.AcademicCredits)
+            @Html.FormTextBoxFor(model => model.NameEn)
         </div>
         <div class="control-validation col-sm-12 col-lg-5">
-            @Html.ValidationMessageFor(model => model.AcademicCredits)
+            @Html.ValidationMessageFor(model => model.NameEn)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.NumberOfCredits)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.FormTextBoxFor(model => model.NumberOfCredits)
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.NumberOfCredits)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-sm-12 col-md-3 col-lg-2">
+            @Html.FormLabelFor(model => model.NumberOfPeriods)
+        </div>
+        <div class="control-content col-sm-12 col-md-9 col-lg-5">
+            @Html.FormTextBoxFor(model => model.NumberOfPeriods)
+        </div>
+        <div class="control-validation col-sm-12 col-lg-5">
+            @Html.ValidationMessageFor(model => model.NumberOfPeriods)
         </div>
     </div>
     <div class="form-group">
