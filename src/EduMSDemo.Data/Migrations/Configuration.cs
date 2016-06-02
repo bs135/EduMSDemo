@@ -31,6 +31,7 @@ namespace EduMSDemo.Data.Migrations
             SeedBuildings();
             SeedTeachers();
             SeedSubjects();
+            SeedStudents();
         }
 
         #region Administration
@@ -1013,6 +1014,267 @@ namespace EduMSDemo.Data.Migrations
             UnitOfWork.Commit();
             #endregion
 
+            #region PreSubject
+
+            #endregion
+        }
+
+        private void SeedStudents()
+        {
+            #region Course
+            Course[] courses =
+            {
+                new Course { Code = "MCS2013", Name = "Cao học Khoa học máy tính K2013", StartDate = new DateTime(2014, 9, 1), EndDate = new DateTime(2017, 9, 1) , FacultyId = UnitOfWork.Select<Faculty>().Single(dep => dep.Abbreviation == "KH&KTMT").Id },
+                new Course { Code = "MCS2014", Name = "Cao học Khoa học máy tính K2014", StartDate = new DateTime(2014, 9, 1), EndDate = new DateTime(2017, 9, 1) , FacultyId = UnitOfWork.Select<Faculty>().Single(dep => dep.Abbreviation == "KH&KTMT").Id },
+                new Course { Code = "MCS2015", Name = "Cao học Khoa học máy tính K2015", StartDate = new DateTime(2015, 9, 1), EndDate = new DateTime(2018, 9, 1) , FacultyId = UnitOfWork.Select<Faculty>().Single(dep => dep.Abbreviation == "KH&KTMT").Id },
+                new Course { Code = "MIS2014", Name = "Cao học Hệ thống thông tin K2014", StartDate = new DateTime(2014, 9, 1), EndDate = new DateTime(2017, 9, 1) , FacultyId = UnitOfWork.Select<Faculty>().Single(dep => dep.Abbreviation == "KH&KTMT").Id },
+                new Course { Code = "MIS2015", Name = "Cao học Hệ thống thông tin K2015", StartDate = new DateTime(2015, 9, 1), EndDate = new DateTime(2018, 9, 1) , FacultyId = UnitOfWork.Select<Faculty>().Single(dep => dep.Abbreviation == "KH&KTMT").Id },
+            };
+
+            foreach (Course course in courses)
+            {
+                Course dbcourse = UnitOfWork.Select<Course>().FirstOrDefault(model => model.Code == course.Code);
+                if (dbcourse == null)
+                {
+                    UnitOfWork.Insert(course);
+                }
+                else
+                {
+                    dbcourse.Name = course.Name;
+                    dbcourse.StartDate = course.StartDate;
+                    dbcourse.EndDate = course.EndDate;
+                    dbcourse.FacultyId = course.FacultyId;
+                    UnitOfWork.Update(dbcourse);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region StudentClass
+            StudentClass[] studentClasses =
+            {
+                new StudentClass { Abbreviation = "MCS2013/1", Name = "Cao học Khoa học máy tính K2013 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2013").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "00529").Id },
+                new StudentClass { Abbreviation = "MCS2013/2", Name = "Cao học Khoa học máy tính K2013 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2013").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01995").Id },
+                new StudentClass { Abbreviation = "MCS2014/1", Name = "Cao học Khoa học máy tính K2014 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "00163").Id },
+                new StudentClass { Abbreviation = "MCS2014/2", Name = "Cao học Khoa học máy tính K2014 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01616").Id },
+                new StudentClass { Abbreviation = "MCS2015/1", Name = "Cao học Khoa học máy tính K2015 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01733").Id },
+                new StudentClass { Abbreviation = "MCS2015/2", Name = "Cao học Khoa học máy tính K2015 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13045").Id },
+                new StudentClass { Abbreviation = "MIS2014/1", Name = "Cao học Hệ thống thông tin K2014 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "02109").Id },
+                new StudentClass { Abbreviation = "MIS2014/2", Name = "Cao học Hệ thống thông tin K2014 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13282").Id },
+                new StudentClass { Abbreviation = "MIS2015/1", Name = "Cao học Hệ thống thông tin K2015 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13444").Id },
+                new StudentClass { Abbreviation = "MIS2015/2", Name = "Cao học Hệ thống thông tin K2015 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "12920").Id },
+            };
+
+            foreach (StudentClass studentClass in studentClasses)
+            {
+                StudentClass dbstudentClass = UnitOfWork.Select<StudentClass>().FirstOrDefault(model => model.Abbreviation == studentClass.Abbreviation);
+                if (dbstudentClass == null)
+                {
+                    UnitOfWork.Insert(studentClass);
+                }
+                else
+                {
+                    dbstudentClass.Name = studentClass.Name;
+                    dbstudentClass.CourseId = studentClass.CourseId;
+                    dbstudentClass.StaffId = studentClass.StaffId;
+                    UnitOfWork.Update(dbstudentClass);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region StudentAccount
+            Account[] accounts =
+            {
+                new Account { Username = "13073035", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "tranthesi@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+
+                new Account { Username = "1570010", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenngocphien@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570202", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "lamtuananh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570203", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "ngodinhdung@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570204", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "thaibinhduong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570205", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "huynhanhduy@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570208", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "quachdinhhoang@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570209", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "diephung@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570210", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "dangdanhhuu@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570212", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "tranvinhkhai@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570213", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "phamminhkhue@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570214", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvankien@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570215", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenchauky@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570216", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenkimlanh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570217", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvanlinh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570220", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvanluan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570222", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenngocphuong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570223", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenthanhphuong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570225", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "luuhuuquyet@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570233", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "daothithutrang@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570234", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "phamthanhtri@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570235", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "lucminhtuan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570236", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "trannhattuan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570613", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenanhhuy@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570733", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "lamtruongan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570734", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenhaivinhcuong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570735", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "phamhoangduyduc@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570737", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvohuyhoang@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570738", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "vokhanhhuy@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570739", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "tranthikimkhanh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570740", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenhoangminh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570741", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenlequangnhat@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570742", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "phanthanhnhuan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570743", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "buithanhphong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570744", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenminhquan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570745", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "trinhbaoquan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570746", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "vonguyenthanh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570747", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "tranhungthuan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570748", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenngoctien@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570749", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvantien@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570750", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyentrantoan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570751", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenxuantrai@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570752", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenminhtriet@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "1570753", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyendanghoangtuan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+
+                new Account { Username = "7140020", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "huynhvang@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140225", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvanduong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140226", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "lenguyenkhanhduy@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140230", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenthanhhai@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140231", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "buiduchieu@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140235", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "bienleanhhung@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140237", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "dangquochuynh@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140240", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "vominhkhai@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140258", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "phamminhthien@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140265", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "vothaituyen@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140820", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "aumauduong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140821", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "doanxuanduy@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140822", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenvietdang@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140824", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "lethanhhoa@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140831", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "trancaonguyen@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140832", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "luunguyenhoangquan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140839", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenkhactrung@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140844", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "trannguyenvo@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140845", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "dangngocvu@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7140846", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "hoangvannhatvu@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7141161", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "nguyenngoctuyen@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7141248", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "trannamphong@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+                new Account { Username = "7141249", Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS" /* 123456 */, Email = "levan@gmail.com", IsLocked = false, RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Student").Id },
+            };
+
+            foreach (Account account in accounts)
+            {
+                Account dbAccount = UnitOfWork.Select<Account>().FirstOrDefault(model => model.Username == account.Username);
+                if (dbAccount == null)
+                {
+                    UnitOfWork.Insert(account);
+                }
+                else
+                {
+                    dbAccount.IsLocked = account.IsLocked;
+                    dbAccount.Passhash = account.Passhash;
+                    dbAccount.Email = account.Email;
+                    UnitOfWork.Update(dbAccount);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region Student
+            Student[] students =
+            {
+                new Student { Code = "13073035", Name = "Trần Thế Sĩ", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01213073035" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "13073035").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2013/2").Id },
+
+                new Student { Code = "1570010", Name = "Nguyễn Ngọc Phiên", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570010" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570010").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570202", Name = "Lâm Tuấn Anh", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570202" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570202").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570203", Name = "Ngô Đình Dũng", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570203" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570203").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570204", Name = "Thái Bình Dương", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570204" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570204").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570205", Name = "Huỳnh Anh Duy", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570205" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570205").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570208", Name = "Quách Đình Hoàng", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570208" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570208").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570209", Name = "DIỆP HƯNG", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570209" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570209").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570210", Name = "Đặng Danh Hữu", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570210" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570210").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570212", Name = "Trần Vinh Khải", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570212" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570212").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570213", Name = "Phạm Minh Khuê", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570213" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570213").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570214", Name = "Nguyễn Văn Kiên", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570214" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570214").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570215", Name = "Nguyễn Châu Kỳ", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570215" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570215").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570216", Name = "Nguyễn Kim Lanh", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570216" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570216").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570217", Name = "Nguyễn Văn Linh", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570217" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570217").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570220", Name = "Nguyễn Văn Luân", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570220" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570220").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570222", Name = "Nguyễn Ngọc Phương", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570222" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570222").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570223", Name = "Nguyễn Thành Phương", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570223" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570223").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570225", Name = "Lưu Hữu Quyết", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570225" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570225").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570233", Name = "Đào Thị Thu Trang", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nữ", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570233" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570233").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570234", Name = "Phạm Thành Trí", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570234" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570234").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570235", Name = "LỤC MINH TUẤN", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570235" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570235").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570236", Name = "Trần Nhật Tuấn", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570236" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570236").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570613", Name = "Nguyễn Anh Huy", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570613" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570613").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570733", Name = "Lâm Trường An", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570733" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570733").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570734", Name = "Nguyễn Hải Vĩnh Cường", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570734" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570734").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570735", Name = "Phạm Hoàng Duy Đức", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570735" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570735").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570737", Name = "Nguyễn Võ Huy Hoàng", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570737" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570737").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570738", Name = "Võ Khánh Huy", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570738" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570738").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570739", Name = "Trần Thị Kim Khánh", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nữ", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570739" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570739").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570740", Name = "Nguyễn Hoàng Minh", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570740" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570740").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570741", Name = "Nguyễn Lê Quang Nhật", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570741" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570741").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570742", Name = "Phan Thanh Nhuần", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570742" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570742").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570743", Name = "Bùi Thanh Phong", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570743" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570743").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570744", Name = "Nguyễn Minh Quân", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570744" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570744").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570745", Name = "Trịnh Bảo Quân", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570745" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570745").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570746", Name = "Võ Nguyên Thành", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570746" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570746").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570747", Name = "Trần Hưng Thuận", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570747" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570747").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570748", Name = "Nguyễn Ngọc Tiến", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570748" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570748").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570749", Name = "Nguyễn Văn Tiền", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570749" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570749").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570750", Name = "Nguyễn Trần Toàn", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570750" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570750").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570751", Name = "Nguyễn Xuân Trãi", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570751" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570751").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570752", Name = "Nguyễn Minh Triết", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570752" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570752").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+                new Student { Code = "1570753", Name = "Nguyễn Đặng Hoàng Tuấn", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01231570753" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "1570753").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2015/1").Id },
+
+                new Student { Code = "7140020", Name = "Huỳnh Vang", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140020" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140020").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140225", Name = "Nguyễn Văn Dương", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140225" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140225").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140226", Name = "Lê Nguyễn Khánh Duy", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140226" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140226").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140230", Name = "Nguyễn Thanh Hải", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140230" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140230").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140231", Name = "Bùi Đức Hiếu", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140231" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140231").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140235", Name = "Biện Lê Anh Hưng", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140235" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140235").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140237", Name = "Đặng Quốc Huỳnh", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140237" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140237").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140240", Name = "Võ Minh Khải", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140240" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140240").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140258", Name = "Phạm Minh Thiện", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140258" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140258").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140265", Name = "Võ Thái Tuyến", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140265" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140265").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140820", Name = "Âu Mậu Dương", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140820" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140820").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140821", Name = "Đoàn Xuân Duy", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140821" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140821").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140822", Name = "Nguyễn Viết Đáng", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140822" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140822").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140824", Name = "Lê Thanh Hòa", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140824" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140824").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140831", Name = "Trần Cao Nguyên", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140831" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140831").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140832", Name = "Lưu Nguyễn Hoàng Quân", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140832" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140832").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140839", Name = "Nguyễn Khắc Trung", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140839" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140839").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140844", Name = "Trần Nguyên Võ", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140844" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140844").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140845", Name = "Đặng Ngọc Vũ", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140845" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140845").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7140846", Name = "Hoàng Văn Nhật Vũ", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237140846" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7140846").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7141161", Name = "Nguyễn Ngọc Tuyển", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237141161" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7141161").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7141248", Name = "Trần Nam Phong", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237141248" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7141248").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+                new Student { Code = "7141249", Name = "Lê Văn", DateOfBirth = new DateTime(1990, 9, 1), PlaceOfBirth = "Bách Khoa", Gender = "Nam", Address = "268 Lý Thường Kiệt, P.14, Q.10, TPHCM", PhoneNumber = "01237141249" , AccountId = UnitOfWork.Select<Account>().Single(acc => acc.Username == "7141249").Id, StudentClassId = UnitOfWork.Select<StudentClass>().Single(stu => stu.Abbreviation == "MCS2014/1").Id },
+            };
+
+            foreach (Student student in students)
+            {
+                Student dbstudent = UnitOfWork.Select<Student>().FirstOrDefault(model => model.Code == student.Code);
+                if (dbstudent == null)
+                {
+                    UnitOfWork.Insert(student);
+                }
+                else
+                {
+                    dbstudent.Name = student.Name;
+                    dbstudent.DateOfBirth = student.DateOfBirth;
+                    dbstudent.PlaceOfBirth = student.PlaceOfBirth;
+                    dbstudent.Gender = student.Gender;
+                    dbstudent.Address = student.Address;
+                    dbstudent.AccountId = student.AccountId;
+                    dbstudent.StudentClassId = student.StudentClassId;
+                    UnitOfWork.Update(dbstudent);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
         }
 
 
@@ -1024,64 +1286,5 @@ namespace EduMSDemo.Data.Migrations
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
