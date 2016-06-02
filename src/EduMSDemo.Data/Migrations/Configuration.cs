@@ -32,12 +32,14 @@ namespace EduMSDemo.Data.Migrations
             SeedTeachers();
             SeedSubjects();
             SeedStudents();
+            SeedStudies();
         }
 
         #region Administration
 
         private void SeedPermissions()
         {
+            #region Permission
             int i = 0;
             Permission[] permissions =
             {
@@ -247,6 +249,8 @@ namespace EduMSDemo.Data.Migrations
             }
 
             UnitOfWork.Commit();
+
+            #endregion
         }
 
         private void SeedRoles()
@@ -351,6 +355,7 @@ namespace EduMSDemo.Data.Migrations
 
         private void SeedAccounts()
         {
+            #region Account
             Account[] accounts =
             {
                 new Account
@@ -380,6 +385,8 @@ namespace EduMSDemo.Data.Migrations
             }
 
             UnitOfWork.Commit();
+
+            #endregion
         }
 
         #endregion
@@ -1274,6 +1281,89 @@ namespace EduMSDemo.Data.Migrations
 
             UnitOfWork.Commit();
             #endregion
+
+        }
+
+        private void SeedStudies()
+        {
+            #region Semester
+            Semester[] semesters =
+            {
+                new Semester { Name = "HK 1/2013-2014", StartDate = new DateTime(2013,8,1), EndDate = new DateTime(2013,12,31) },
+                new Semester { Name = "HK 2/2013-2014", StartDate = new DateTime(2014,1,1), EndDate = new DateTime(2014,6,1) },
+                new Semester { Name = "HK 1/2014-2015", StartDate = new DateTime(2014,8,1), EndDate = new DateTime(2014,12,31) },
+                new Semester { Name = "HK 2/2014-2015", StartDate = new DateTime(2015,1,1), EndDate = new DateTime(2015,6,1) },
+                new Semester { Name = "HK 1/2015-2016", StartDate = new DateTime(2015,8,1), EndDate = new DateTime(2015,12,31) },
+                new Semester { Name = "HK 2/2015-2016", StartDate = new DateTime(2016,1,1), EndDate = new DateTime(2016,6,1) },
+                new Semester { Name = "HK 1/2016-2017", StartDate = new DateTime(2016,8,1), EndDate = new DateTime(2016,12,31) },
+                new Semester { Name = "HK 2/2016-2017", StartDate = new DateTime(2017,1,1), EndDate = new DateTime(2017,6,1) },
+            };
+
+            foreach (Semester semester in semesters)
+            {
+                Semester dbsemester = UnitOfWork.Select<Semester>().FirstOrDefault(model => model.Name == semester.Name);
+                if (dbsemester == null)
+                {
+                    UnitOfWork.Insert(semester);
+                }
+                else
+                {
+                    dbsemester.StartDate = semester.StartDate;
+                    dbsemester.EndDate = semester.EndDate;
+                    UnitOfWork.Update(dbsemester);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region SubjectClass
+            SubjectClass[] subjectClasses =
+            {
+                /* Lập trình nâng cao*/
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055068").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Xử lý ảnh số và Video nâng cao */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055009").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Phương pháp nghiên cứu khoa học */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505904").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Triết học */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "125900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Nhận dạng mẫu và học máy */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055069").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Đồ họa máy tính nâng cao */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055017").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "12715").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Xử lý ngôn ngữ tự nhiên */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055016").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00163").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Hệ hỗ trợ quyết định */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055012").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Cơ sở tri thức */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055006").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01616").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Lập trình logic và ràng buộc */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055008").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Giải thuật nâng cao */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055001").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "13045").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+            };
+
+            foreach (SubjectClass subjectClass in subjectClasses)
+            {
+                SubjectClass dbsubjectClass = UnitOfWork.Select<SubjectClass>().FirstOrDefault(model => model.SubjectId == subjectClass.SubjectId && model.SemesterId == subjectClass.SemesterId);
+                if (dbsubjectClass == null)
+                {
+                    UnitOfWork.Insert(subjectClass);
+                }
+                else
+                {
+                    dbsubjectClass.RoomOfClassId = subjectClass.RoomOfClassId;
+                    dbsubjectClass.RoomOfMidtermExamId = subjectClass.RoomOfMidtermExamId;
+                    dbsubjectClass.RoomOfTermExamId = subjectClass.RoomOfTermExamId;
+                    UnitOfWork.Update(dbsubjectClass);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+
 
         }
 

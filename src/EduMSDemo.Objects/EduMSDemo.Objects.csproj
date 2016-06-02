@@ -74,7 +74,6 @@
     <Compile Include="Models\Manage\Students\Student.cs" />
     <Compile Include="Models\Manage\Studies\Semester.cs" />
     <Compile Include="Models\Manage\Studies\SubjectClass.cs" />
-    <Compile Include="Models\Manage\Studies\SubjectClassTeacher.cs" />
     <Compile Include="Models\Manage\Subjects\PreSubject.cs" />
     <Compile Include="Models\Manage\Subjects\Subject.cs" />
     <Compile Include="Models\Manage\Teachers\Department.cs" />
@@ -111,7 +110,6 @@
     <Compile Include="Views\Manage\Students\StudentClasses\StudentClassView.cs" />
     <Compile Include="Views\Manage\Studies\Semesters\SemesterView.cs" />
     <Compile Include="Views\Manage\Studies\SubjectClasses\SubjectClassView.cs" />
-    <Compile Include="Views\Manage\Studies\SubjectClassTeachers\SubjectClassTeacherView.cs" />
     <Compile Include="Views\Manage\Subjects\PreSubjects\PreSubjectView.cs" />
     <Compile Include="Views\Manage\Subjects\Subjects\SubjectView.cs" />
     <Compile Include="Views\Manage\Teachers\Departments\DepartmentView.cs" />

@@ -132,12 +132,6 @@
               <siteMapNode icon="fa fa-times" area="Manage" controller="SubjectClasses" action="Delete" />
             </siteMapNode>
 
-            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="SubjectClassTeachers" action="Index">
-              <siteMapNode icon="fa fa-file-o" area="Manage" controller="SubjectClassTeachers" action="Create" />
-              <siteMapNode icon="fa fa-pencil" area="Manage" controller="SubjectClassTeachers" action="Edit" />
-              <siteMapNode icon="fa fa-times" area="Manage" controller="SubjectClassTeachers" action="Delete" />
-            </siteMapNode>
-
           </siteMapNode>
           <!-- End Studies -->
           <!-- Subjects -->

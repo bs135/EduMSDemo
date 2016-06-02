@@ -81,6 +81,15 @@ namespace EduMSDemo.Resources.Views.Manage.Studies.SubjectClass.SubjectClassView
         /// <summary>
         ///   Looks up a localized string similar to Class Room.
         /// </summary>
+        public static string RoomOfClassCode {
+            get {
+                return ResourceManager.GetString("RoomOfClassCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class Room.
+        /// </summary>
         public static string RoomOfClassName {
             get {
                 return ResourceManager.GetString("RoomOfClassName", resourceCulture);
@@ -90,9 +99,27 @@ namespace EduMSDemo.Resources.Views.Manage.Studies.SubjectClass.SubjectClassView
         /// <summary>
         ///   Looks up a localized string similar to Midterm Exam Room.
         /// </summary>
+        public static string RoomOfMidtermExamCode {
+            get {
+                return ResourceManager.GetString("RoomOfMidtermExamCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Midterm Exam Room.
+        /// </summary>
         public static string RoomOfMidtermExamName {
             get {
                 return ResourceManager.GetString("RoomOfMidtermExamName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Term Exam Room.
+        /// </summary>
+        public static string RoomOfTermExamCode {
+            get {
+                return ResourceManager.GetString("RoomOfTermExamCode", resourceCulture);
             }
         }
         

@@ -135,4 +135,13 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="RoomOfMidtermExamCode" xml:space="preserve">
+    <value>Midterm Exam Room</value>
+  </data>
+  <data name="RoomOfTermExamCode" xml:space="preserve">
+    <value>Term Exam Room</value>
+  </data>
+  <data name="RoomOfClassCode" xml:space="preserve">
+    <value>Class Room</value>
+  </data>
 </root>

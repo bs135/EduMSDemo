@@ -135,4 +135,13 @@
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
+  <data name="RoomOfMidtermExamCode" xml:space="preserve">
+    <value>Phòng kiểm tra</value>
+  </data>
+  <data name="RoomOfTermExamCode" xml:space="preserve">
+    <value>Phòng thi</value>
+  </data>
+  <data name="RoomOfClassCode" xml:space="preserve">
+    <value>Phòng học</value>
+  </data>
 </root>

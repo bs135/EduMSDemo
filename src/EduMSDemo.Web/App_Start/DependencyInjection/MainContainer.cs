@@ -73,7 +73,6 @@ namespace EduMSDemo.Web.DependencyInjection
             #region Studies service
             Register<ISemesterService, SemesterService>();
             Register<ISubjectClassService, SubjectClassService>();
-            Register<ISubjectClassTeacherService, SubjectClassTeacherService>();
             #endregion
 
             #region Subjects service
@@ -122,7 +121,6 @@ namespace EduMSDemo.Web.DependencyInjection
             #region Studies validator
             Register<ISemesterValidator, SemesterValidator>();
             Register<ISubjectClassValidator, SubjectClassValidator>();
-            Register<ISubjectClassTeacherValidator, SubjectClassTeacherValidator>();
             #endregion
 
             #region Subjects validator

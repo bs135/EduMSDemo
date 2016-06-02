@@ -246,10 +246,6 @@
     <Content Include="Views\Manage\SubjectClasses\Create.cshtml" />
     <Content Include="Views\Manage\SubjectClasses\Edit.cshtml" />
     <Content Include="Views\Manage\SubjectClasses\Index.cshtml" />
-    <Content Include="Views\Manage\SubjectClassTeachers\_Form.cshtml" />
-    <Content Include="Views\Manage\SubjectClassTeachers\Create.cshtml" />
-    <Content Include="Views\Manage\SubjectClassTeachers\Edit.cshtml" />
-    <Content Include="Views\Manage\SubjectClassTeachers\Index.cshtml" />
     <Content Include="Views\Manage\Subjects\_Form.cshtml" />
     <Content Include="Views\Manage\Subjects\Create.cshtml" />
     <Content Include="Views\Manage\Subjects\Edit.cshtml" />

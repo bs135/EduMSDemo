@@ -73,8 +73,6 @@
     <Compile Include="Manage\Students\Student\IStudentValidator.cs" />
     <Compile Include="Manage\Students\Course\CourseValidator.cs" />
     <Compile Include="Manage\Students\Course\ICourseValidator.cs" />
-    <Compile Include="Manage\Studies\SubjectClassTeacher\ISubjectClassTeacherValidator.cs" />
-    <Compile Include="Manage\Studies\SubjectClassTeacher\SubjectClassTeacherValidator.cs" />
     <Compile Include="Manage\Studies\SubjectClass\SubjectClassValidator.cs" />
     <Compile Include="Manage\Studies\SubjectClass\ISubjectClassValidator.cs" />
     <Compile Include="Manage\Studies\Semester\SemesterValidator.cs" />

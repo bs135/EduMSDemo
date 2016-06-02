@@ -129,8 +129,6 @@ namespace EduMSDemo.Data.Mapping
             Configuration.CreateMap<SubjectClass, SubjectClassView>();
             Configuration.CreateMap<SubjectClassView, SubjectClass>();
 
-            Configuration.CreateMap<SubjectClassTeacher, SubjectClassTeacherView>();
-            Configuration.CreateMap<SubjectClassTeacherView, SubjectClassTeacher>();
         }
         #endregion
 

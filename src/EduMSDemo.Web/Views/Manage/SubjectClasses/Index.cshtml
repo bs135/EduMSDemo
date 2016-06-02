@@ -24,9 +24,10 @@
 
                     columns.AddProperty(model => model.SubjectName);
                     columns.AddProperty(model => model.SemesterName);
-                    columns.AddProperty(model => model.RoomOfMidtermExamName);
-                    columns.AddProperty(model => model.RoomOfTermExamName);
-                    columns.AddProperty(model => model.RoomOfClassName);
+                    columns.AddProperty(model => model.StaffName);
+                    columns.AddProperty(model => model.RoomOfClassCode);
+                    columns.AddProperty(model => model.RoomOfMidtermExamCode);
+                    columns.AddProperty(model => model.RoomOfTermExamCode);
                 })
                 .ApplyDefaults()
             )

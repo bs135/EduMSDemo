@@ -17,20 +17,28 @@ namespace EduMSDemo.Objects
         public virtual Subject Subject { get; set; }
         public virtual String SubjectName { get; set; }
 
+        //[ForeignKey("Staff")]
+        public Int32 StaffId { get; set; }
+        public virtual Staff Staff { get; set; }
+        public virtual String StaffName { get; set; }
+
         //[ForeignKey("RoomOfMidtermExam")]
         public Int32 RoomOfMidtermExamId { get; set; }
         public virtual ClassRoom RoomOfMidtermExam { get; set; }
         public String RoomOfMidtermExamName { get; set; }
+        public String RoomOfMidtermExamCode { get; set; }
 
         //[ForeignKey("RoomOfTermExam")]
         public Int32 RoomOfTermExamId { get; set; }
         public virtual ClassRoom RoomOfTermExam { get; set; }
         public String RoomOfTermExamName { get; set; }
+        public String RoomOfTermExamCode { get; set; }
 
         //[ForeignKey("RoomOfClass")]
         public Int32 RoomOfClassId { get; set; }
         public virtual ClassRoom RoomOfClass { get; set; }
         public String RoomOfClassName { get; set; }
+        public String RoomOfClassCode { get; set; }
 
         //[ForeignKey("Semester")]
         public Int32 SemesterId { get; set; }

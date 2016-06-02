@@ -15,6 +15,10 @@ namespace EduMSDemo.Objects
         public Int32 SubjectId { get; set; }
         public virtual Subject Subject { get; set; }
 
+        //[ForeignKey("Staff")]
+        public Int32 StaffId { get; set; }
+        public virtual Staff Staff { get; set; }
+
         [ForeignKey("RoomOfMidtermExam")]
         public Int32 RoomOfMidtermExamId { get; set; }
         public virtual ClassRoom RoomOfMidtermExam { get; set; }
@@ -30,9 +34,6 @@ namespace EduMSDemo.Objects
         //[ForeignKey("Semester")]
         public Int32 SemesterId { get; set; }
         public virtual Semester Semester { get; set; }
-
-        // List SubjectClassTeacher
-        public virtual IList<SubjectClassTeacher> SubjectClassTeachers { get; set; }
 
         // List ScoreRecord
         public virtual IList<ScoreRecord> ScoreRecords { get; set; }

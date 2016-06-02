@@ -73,7 +73,6 @@
     <Compile Include="Manage\Students\StudentClass\StudentClassesController.cs" />
     <Compile Include="Manage\Students\Student\StudentsController.cs" />
     <Compile Include="Manage\Students\Course\CoursesController.cs" />
-    <Compile Include="Manage\Studies\SubjectClassTeacher\SubjectClassTeachersController.cs" />
     <Compile Include="Manage\Studies\SubjectClass\SubjectClassesController.cs" />
     <Compile Include="Manage\Studies\Semester\SemestersController.cs" />
     <Compile Include="Manage\Subjects\PreSubject\PreSubjectsController.cs" />

@@ -59,8 +59,6 @@
     <Compile Include="Manage\Subjects\Subject\ISubjectService.cs" />
     <Compile Include="Manage\Studies\Semester\SemesterService.cs" />
     <Compile Include="Manage\Studies\Semester\ISemesterService.cs" />
-    <Compile Include="Manage\Studies\SubjectClassTeacher\ISubjectClassTeacherService.cs" />
-    <Compile Include="Manage\Studies\SubjectClassTeacher\SubjectClassTeacherService.cs" />
     <Compile Include="Manage\Studies\SubjectClass\ISubjectClassService.cs" />
     <Compile Include="Manage\Studies\SubjectClass\SubjectClassService.cs" />
     <Compile Include="Manage\Students\Course\CourseService.cs" />

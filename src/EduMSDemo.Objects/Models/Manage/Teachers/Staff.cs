@@ -53,11 +53,11 @@ namespace EduMSDemo.Objects
         [InverseProperty("ViceDean2")]
         public virtual IList<FacultyManageBoard> ViceDean2s { get; set; }
 
-        // List SubjectClassTeacher
-        public virtual IList<SubjectClassTeacher> SubjectClassTeachers { get; set; }
-
         // List StudentClass
         public virtual IList<StudentClass> StudentClasses { get; set; }
+
+        // List SubjectClass
+        public virtual IList<SubjectClass> SubjectClasses { get; set; }
     }
 }
 

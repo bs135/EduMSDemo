@@ -589,26 +589,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.Designer.cs">
-      <DependentUpon>Titles.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.vi.Designer.cs">
-      <DependentUpon>Titles.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.Designer.cs">
-      <DependentUpon>Validations.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.vi.Designer.cs">
-      <DependentUpon>Validations.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Views\Manage\Studies\SubjectClass\SubjectClassView\Titles.Designer.cs">
       <DependentUpon>Titles.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1262,22 +1242,6 @@
       <LastGenOutput>Validations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Manage\Studies\Semester\SemesterView\Validations.vi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Titles.vi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Titles.vi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage\Studies\SubjectClassTeacher\SubjectClassTeacherView\Validations.vi.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Validations.vi.Designer.cs</LastGenOutput>
     </EmbeddedResource>

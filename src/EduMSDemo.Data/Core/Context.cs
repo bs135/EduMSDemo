@@ -50,7 +50,6 @@ namespace EduMSDemo.Data.Core
         #region Studies
         protected DbSet<Semester> Semesters { get; set; }
         protected DbSet<SubjectClass> SubjectClasses { get; set; }
-        protected DbSet<SubjectClassTeacher> SubjectClassTeachers { get; set; }
         #endregion
 
         #region Subjects

@@ -93,6 +93,10 @@
     <Compile Include="Migrations\201606011132154_Initial3.Designer.cs">
       <DependentUpon>201606011132154_Initial3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606020937055_Initial4.cs" />
+    <Compile Include="Migrations\201606020937055_Initial4.Designer.cs">
+      <DependentUpon>201606020937055_Initial4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Context.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -134,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606011132154_Initial3.resx">
       <DependentUpon>201606011132154_Initial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606020937055_Initial4.resx">
+      <DependentUpon>201606020937055_Initial4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
