@@ -1121,5 +1121,23 @@ namespace EduMSDemo.Resources.Permission.Action {
                 return ResourceManager.GetString("ManageTeachersIndex", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubjectRegister.
+        /// </summary>
+        public static string StudentSubjectRegisterIndex {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teaching Class.
+        /// </summary>
+        public static string TeacherTeachingIndex {
+            get {
+                return ResourceManager.GetString("TeacherTeachingIndex", resourceCulture);
+            }
+        }
     }
 }

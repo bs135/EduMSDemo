@@ -195,4 +195,10 @@
   <data name="ManageStudies" xml:space="preserve">
     <value>Studies</value>
   </data>
+  <data name="StudentSubjectRegister" xml:space="preserve">
+    <value>Subjects</value>
+  </data>
+  <data name="TeacherTeaching" xml:space="preserve">
+    <value>Teaching</value>
+  </data>
 </root>

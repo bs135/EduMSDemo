@@ -20,8 +20,16 @@ namespace EduMSDemo.Services
             return UnitOfWork.GetAs<CurriculumDetail, TView>(id);
         }
 
-        public IQueryable<CurriculumDetailView> GetViews()
+        public IQueryable<CurriculumDetailView> GetViews(int curriculumId = 0)
         {
+            if (curriculumId != 0)
+            {
+                return UnitOfWork
+                    .Select<CurriculumDetail>()
+                    .To<CurriculumDetailView>()
+                    .Where(o=>o.CurriculumId == curriculumId)
+                    .OrderByDescending(o => o.Id);
+            }
             return UnitOfWork
                 .Select<CurriculumDetail>()
                 .To<CurriculumDetailView>()

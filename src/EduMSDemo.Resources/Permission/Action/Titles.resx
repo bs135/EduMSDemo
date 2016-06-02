@@ -471,4 +471,10 @@
   <data name="ManageStudiesIndex" xml:space="preserve">
     <value>Index</value>
   </data>
+  <data name="StudentSubjectRegisterIndex" xml:space="preserve">
+    <value>SubjectRegister</value>
+  </data>
+  <data name="TeacherTeachingIndex" xml:space="preserve">
+    <value>Teaching Class</value>
+  </data>
 </root>

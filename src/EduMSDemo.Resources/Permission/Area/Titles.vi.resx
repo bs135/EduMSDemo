@@ -123,4 +123,10 @@
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
   </data>
+  <data name="Student" xml:space="preserve">
+    <value>Sinh viên</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Giáo viên</value>
+  </data>
 </root>

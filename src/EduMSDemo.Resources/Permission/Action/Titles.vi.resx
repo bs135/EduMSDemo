@@ -471,4 +471,10 @@
   <data name="ManageStudiesIndex" xml:space="preserve">
     <value>Danh sách</value>
   </data>
+  <data name="StudentSubjectRegisterIndex" xml:space="preserve">
+    <value>Đăng ký môn học</value>
+  </data>
+  <data name="TeacherTeachingIndex" xml:space="preserve">
+    <value>Lớp giảng dạy</value>
+  </data>
 </root>

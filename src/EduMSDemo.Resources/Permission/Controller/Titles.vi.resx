@@ -195,4 +195,10 @@
   <data name="ManageStudies" xml:space="preserve">
     <value>Học hành</value>
   </data>
+  <data name="StudentSubjectRegister" xml:space="preserve">
+    <value>Môn học</value>
+  </data>
+  <data name="TeacherTeaching" xml:space="preserve">
+    <value>Lớp giảng dạy</value>
+  </data>
 </root>

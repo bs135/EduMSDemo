@@ -8,7 +8,7 @@ namespace EduMSDemo.Services
     public interface ICurriculumDetailService : IService
     {
         TView Get<TView>(Int32 id) where TView : BaseView;
-        IQueryable<CurriculumDetailView> GetViews();
+        IQueryable<CurriculumDetailView> GetViews(int curriculumId = 0);
 
         IQueryable<CurriculumView> GetCurriculumViews();
         IQueryable<SubjectView> GetSubjectViews();

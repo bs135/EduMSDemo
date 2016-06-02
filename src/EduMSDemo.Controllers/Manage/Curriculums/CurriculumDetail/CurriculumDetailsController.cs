@@ -4,6 +4,7 @@ using EduMSDemo.Services;
 using EduMSDemo.Validators;
 using System;
 using System.Web.Mvc;
+using System.Linq;
 
 namespace EduMSDemo.Controllers.Manage
 {
@@ -16,9 +17,13 @@ namespace EduMSDemo.Controllers.Manage
         }
 
         [HttpGet]
-        public ViewResult Index()
+        public ViewResult Index(int curriculumId = 0)
         {
-            return View(Service.GetViews());
+            ViewBag.CurriculumName = "--All--";
+            CurriculumView curr = Service.GetCurriculumViews().FirstOrDefault(o => o.Id == curriculumId);
+            if (curr != null)
+                ViewBag.CurriculumName = curr.Name;
+            return View(Service.GetViews(curriculumId));
         }
 
         [HttpGet]

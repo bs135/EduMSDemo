@@ -22,6 +22,12 @@ namespace EduMSDemo.Controllers.Manage
         }
 
         [HttpGet]
+        public ActionResult Details(Int32 id)
+        {
+            return RedirectToAction("Index", "CurriculumDetails", new { curriculumId = id });
+        }
+
+        [HttpGet]
         public ViewResult Create()
         {
             ViewBag.FacultyId = new SelectList(Service.GetFacultyViews(), "Id", "Name");

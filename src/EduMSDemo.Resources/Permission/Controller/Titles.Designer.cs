@@ -293,5 +293,23 @@ namespace EduMSDemo.Resources.Permission.Controller {
                 return ResourceManager.GetString("ManageTeachers", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subjects.
+        /// </summary>
+        public static string StudentSubjectRegister {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teaching.
+        /// </summary>
+        public static string TeacherTeaching {
+            get {
+                return ResourceManager.GetString("TeacherTeaching", resourceCulture);
+            }
+        }
     }
 }
