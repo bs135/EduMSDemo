@@ -73,29 +73,9 @@
     <Compile Include="Core\UnitOfWork.cs" />
     <Content Include="Migrations\Configuration.txt" />
     <Content Include="Migrations\cmd.txt" />
-    <Compile Include="Migrations\201605251528181_Initial.cs" />
-    <Compile Include="Migrations\201605251528181_Initial.Designer.cs">
-      <DependentUpon>201605251528181_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605251542376_remove_schoolyear.cs" />
-    <Compile Include="Migrations\201605251542376_remove_schoolyear.Designer.cs">
-      <DependentUpon>201605251542376_remove_schoolyear.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606010310151_Initial1.cs" />
-    <Compile Include="Migrations\201606010310151_Initial1.Designer.cs">
-      <DependentUpon>201606010310151_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606010323009_Initial2.cs" />
-    <Compile Include="Migrations\201606010323009_Initial2.Designer.cs">
-      <DependentUpon>201606010323009_Initial2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606011132154_Initial3.cs" />
-    <Compile Include="Migrations\201606011132154_Initial3.Designer.cs">
-      <DependentUpon>201606011132154_Initial3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606020937055_Initial4.cs" />
-    <Compile Include="Migrations\201606020937055_Initial4.Designer.cs">
-      <DependentUpon>201606020937055_Initial4.cs</DependentUpon>
+    <Compile Include="Migrations\201606020942487_Initial.cs" />
+    <Compile Include="Migrations\201606020942487_Initial.Designer.cs">
+      <DependentUpon>201606020942487_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Context.Designer.cs">
@@ -124,23 +104,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605251528181_Initial.resx">
-      <DependentUpon>201605251528181_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605251542376_remove_schoolyear.resx">
-      <DependentUpon>201605251542376_remove_schoolyear.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606010310151_Initial1.resx">
-      <DependentUpon>201606010310151_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606010323009_Initial2.resx">
-      <DependentUpon>201606010323009_Initial2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606011132154_Initial3.resx">
-      <DependentUpon>201606011132154_Initial3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606020937055_Initial4.resx">
-      <DependentUpon>201606020937055_Initial4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606020942487_Initial.resx">
+      <DependentUpon>201606020942487_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

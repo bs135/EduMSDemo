@@ -113,17 +113,16 @@ namespace EduMSDemo.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Abbreviation = c.String(nullable: false, maxLength: 32),
                         Name = c.String(nullable: false, maxLength: 128),
                         Address = c.String(maxLength: 512),
                         Email = c.String(maxLength: 256),
                         PhoneNumber = c.String(maxLength: 256),
+                        FaxNumber = c.String(maxLength: 256),
                         FacultyId = c.Int(nullable: false),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Faculty", t => t.FacultyId)
-                .Index(t => t.Abbreviation, unique: true)
                 .Index(t => t.Name, unique: true)
                 .Index(t => t.FacultyId);
             
@@ -137,6 +136,7 @@ namespace EduMSDemo.Data.Migrations
                         Address = c.String(maxLength: 512),
                         Email = c.String(maxLength: 256),
                         PhoneNumber = c.String(maxLength: 256),
+                        FaxNumber = c.String(maxLength: 256),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.Id)
@@ -214,8 +214,9 @@ namespace EduMSDemo.Data.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Code = c.String(nullable: false, maxLength: 32),
                         Name = c.String(nullable: false, maxLength: 128),
-                        Credits = c.Int(nullable: false),
-                        AcademicCredits = c.Int(nullable: false),
+                        NameEn = c.String(nullable: false, maxLength: 128),
+                        NumberOfPeriods = c.Int(nullable: false),
+                        NumberOfCredits = c.Int(nullable: false),
                         DepartmentId = c.Int(nullable: false),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
@@ -337,6 +338,7 @@ namespace EduMSDemo.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         SubjectId = c.Int(nullable: false),
+                        StaffId = c.Int(nullable: false),
                         RoomOfMidtermExamId = c.Int(nullable: false),
                         RoomOfTermExamId = c.Int(nullable: false),
                         RoomOfClassId = c.Int(nullable: false),
@@ -348,8 +350,10 @@ namespace EduMSDemo.Data.Migrations
                 .ForeignKey("dbo.ClassRoom", t => t.RoomOfMidtermExamId)
                 .ForeignKey("dbo.ClassRoom", t => t.RoomOfTermExamId)
                 .ForeignKey("dbo.Semester", t => t.SemesterId)
+                .ForeignKey("dbo.Staff", t => t.StaffId)
                 .ForeignKey("dbo.Subject", t => t.SubjectId)
                 .Index(t => t.SubjectId)
+                .Index(t => t.StaffId)
                 .Index(t => t.RoomOfMidtermExamId)
                 .Index(t => t.RoomOfTermExamId)
                 .Index(t => t.RoomOfClassId)
@@ -392,29 +396,12 @@ namespace EduMSDemo.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 128),
-                        SchoolYear = c.String(nullable: false, maxLength: 32),
                         StartDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         EndDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true);
-            
-            CreateTable(
-                "dbo.SubjectClassTeacher",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Accountability = c.String(maxLength: 128),
-                        StaffId = c.Int(nullable: false),
-                        SubjectClassId = c.Int(nullable: false),
-                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Staff", t => t.StaffId)
-                .ForeignKey("dbo.SubjectClass", t => t.SubjectClassId)
-                .Index(t => t.StaffId)
-                .Index(t => t.SubjectClassId);
             
             CreateTable(
                 "dbo.AuditLog",
@@ -454,9 +441,8 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.Course", "FacultyId", "dbo.Faculty");
             DropForeignKey("dbo.Curriculum", "FacultyId", "dbo.Faculty");
             DropForeignKey("dbo.PreSubject", "SubjectOfPreId", "dbo.Subject");
-            DropForeignKey("dbo.SubjectClassTeacher", "SubjectClassId", "dbo.SubjectClass");
-            DropForeignKey("dbo.SubjectClassTeacher", "StaffId", "dbo.Staff");
             DropForeignKey("dbo.SubjectClass", "SubjectId", "dbo.Subject");
+            DropForeignKey("dbo.SubjectClass", "StaffId", "dbo.Staff");
             DropForeignKey("dbo.SubjectClass", "SemesterId", "dbo.Semester");
             DropForeignKey("dbo.ScoreRecord", "SubjectClassId", "dbo.SubjectClass");
             DropForeignKey("dbo.SubjectClass", "RoomOfTermExamId", "dbo.ClassRoom");
@@ -483,8 +469,6 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.RolePermission", "RoleId", "dbo.Role");
             DropForeignKey("dbo.RolePermission", "PermissionId", "dbo.Permission");
             DropIndex("dbo.SystemSetting", new[] { "Key" });
-            DropIndex("dbo.SubjectClassTeacher", new[] { "SubjectClassId" });
-            DropIndex("dbo.SubjectClassTeacher", new[] { "StaffId" });
             DropIndex("dbo.Semester", new[] { "Name" });
             DropIndex("dbo.Building", new[] { "Name" });
             DropIndex("dbo.Building", new[] { "Code" });
@@ -495,6 +479,7 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.SubjectClass", new[] { "RoomOfClassId" });
             DropIndex("dbo.SubjectClass", new[] { "RoomOfTermExamId" });
             DropIndex("dbo.SubjectClass", new[] { "RoomOfMidtermExamId" });
+            DropIndex("dbo.SubjectClass", new[] { "StaffId" });
             DropIndex("dbo.SubjectClass", new[] { "SubjectId" });
             DropIndex("dbo.StudentClass", new[] { "StaffId" });
             DropIndex("dbo.StudentClass", new[] { "CourseId" });
@@ -527,7 +512,6 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.Faculty", new[] { "Abbreviation" });
             DropIndex("dbo.Department", new[] { "FacultyId" });
             DropIndex("dbo.Department", new[] { "Name" });
-            DropIndex("dbo.Department", new[] { "Abbreviation" });
             DropIndex("dbo.FacultyManageBoard", new[] { "ViceDean2Id" });
             DropIndex("dbo.FacultyManageBoard", new[] { "ViceDean1Id" });
             DropIndex("dbo.FacultyManageBoard", new[] { "DeanId" });
@@ -542,7 +526,6 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.Account", new[] { "Username" });
             DropTable("dbo.SystemSetting");
             DropTable("dbo.AuditLog");
-            DropTable("dbo.SubjectClassTeacher");
             DropTable("dbo.Semester");
             DropTable("dbo.Building");
             DropTable("dbo.ClassRoom");
