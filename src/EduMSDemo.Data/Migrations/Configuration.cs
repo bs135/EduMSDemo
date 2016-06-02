@@ -235,7 +235,6 @@ namespace EduMSDemo.Data.Migrations
 
             foreach (Permission permission in permissions)
             {
-                UnitOfWork.Insert(permission);
                 Permission currentPermission = currentPermissions.SingleOrDefault(perm => perm.Id == permission.Id);
                 if (currentPermission == null)
                 {
