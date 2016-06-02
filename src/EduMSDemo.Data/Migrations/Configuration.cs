@@ -41,163 +41,164 @@ namespace EduMSDemo.Data.Migrations
         private void SeedPermissions()
         {
             #region Permission
+            int i = 0;
             Permission[] permissions =
             {
                 #region Administration
 
-                new Permission { Area = "Administration", Controller = "Accounts", Action = "Index" },
-                new Permission { Area = "Administration", Controller = "Accounts", Action = "Create" },
-                new Permission { Area = "Administration", Controller = "Accounts", Action = "Details" },
-                new Permission { Area = "Administration", Controller = "Accounts", Action = "Edit" },
-                new Permission { Area = "Administration", Controller = "Accounts", Action = "Delete" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Accounts", Action = "Index" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Accounts", Action = "Create" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Accounts", Action = "Details" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Accounts", Action = "Edit" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Accounts", Action = "Delete" },
 
-                new Permission { Area = "Administration", Controller = "Roles", Action = "Index" },
-                new Permission { Area = "Administration", Controller = "Roles", Action = "Create" },
-                new Permission { Area = "Administration", Controller = "Roles", Action = "Details" },
-                new Permission { Area = "Administration", Controller = "Roles", Action = "Edit" },
-                new Permission { Area = "Administration", Controller = "Roles", Action = "Delete" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Roles", Action = "Index" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Roles", Action = "Create" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Roles", Action = "Details" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Roles", Action = "Edit" },
+                new Permission { Id = i++, Area = "Administration", Controller = "Roles", Action = "Delete" },
 
-                new Permission { Area = "Administration", Controller = "SystemSettings", Action = "Index" },
-                new Permission { Area = "Administration", Controller = "SystemSettings", Action = "Create" },
-                new Permission { Area = "Administration", Controller = "SystemSettings", Action = "Details" },
-                new Permission { Area = "Administration", Controller = "SystemSettings", Action = "Edit" },
-                new Permission { Area = "Administration", Controller = "SystemSettings", Action = "Delete" },
+                new Permission { Id = i++, Area = "Administration", Controller = "SystemSettings", Action = "Index" },
+                new Permission { Id = i++, Area = "Administration", Controller = "SystemSettings", Action = "Create" },
+                new Permission { Id = i++, Area = "Administration", Controller = "SystemSettings", Action = "Details" },
+                new Permission { Id = i++, Area = "Administration", Controller = "SystemSettings", Action = "Edit" },
+                new Permission { Id = i++, Area = "Administration", Controller = "SystemSettings", Action = "Delete" },
 
                 #endregion Administration
 
                 #region Manage
                 #region Buildings
 
-                new Permission { Area = "Manage", Controller = "Buildings", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Buildings", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Buildings", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Buildings", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Buildings", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Buildings", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Buildings", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Buildings", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "ClassRooms", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "ClassRooms", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "ClassRooms", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "ClassRooms", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ClassRooms", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ClassRooms", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ClassRooms", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ClassRooms", Action = "Delete" },
 
                 #endregion Buildings
 
                 #region Curriculums
 
-                new Permission { Area = "Manage", Controller = "Curriculums", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Curriculums", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Curriculums", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Curriculums", Action = "Delete" },
-                new Permission { Area = "Manage", Controller = "Curriculums", Action = "Details" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Curriculums", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Curriculums", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Curriculums", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Curriculums", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Curriculums", Action = "Details" },
 
-                new Permission { Area = "Manage", Controller = "CurriculumDetails", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "CurriculumDetails", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "CurriculumDetails", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "CurriculumDetails", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumDetails", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumDetails", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumDetails", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumDetails", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "CurriculumTypes", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "CurriculumTypes", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "CurriculumTypes", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "CurriculumTypes", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumTypes", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumTypes", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumTypes", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "CurriculumTypes", Action = "Delete" },
 
                 #endregion Curriculums
 
                 #region Scores
 
-                new Permission { Area = "Manage", Controller = "Scores", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Scores", Action = "Index" },
 
-                new Permission { Area = "Manage", Controller = "BonusScores", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "BonusScores", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "BonusScores", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "BonusScores", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "BonusScores", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "BonusScores", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "BonusScores", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "BonusScores", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "ScoreRecords", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "ScoreRecords", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "ScoreRecords", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "ScoreRecords", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecords", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecords", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecords", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecords", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "ScoreRecordDetails", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "ScoreRecordDetails", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "ScoreRecordDetails", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "ScoreRecordDetails", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecordDetails", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecordDetails", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecordDetails", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "ScoreRecordDetails", Action = "Delete" },
 
                 #endregion Scores
 
                 #region Students
 
-                new Permission { Area = "Manage", Controller = "Students", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Students", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Students", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Students", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Students", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Students", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Students", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Students", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "Courses", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Courses", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Courses", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Courses", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Courses", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Courses", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Courses", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Courses", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "StudentClasses", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "StudentClasses", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "StudentClasses", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "StudentClasses", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "StudentClasses", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "StudentClasses", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "StudentClasses", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "StudentClasses", Action = "Delete" },
 
                 #endregion Students
 
                 #region Studies
 
-                new Permission { Area = "Manage", Controller = "Studies", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Studies", Action = "Index" },
 
-                new Permission { Area = "Manage", Controller = "Semesters", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Semesters", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Semesters", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Semesters", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Semesters", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Semesters", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Semesters", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Semesters", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "SubjectClasses", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "SubjectClasses", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "SubjectClasses", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "SubjectClasses", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClasses", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClasses", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClasses", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClasses", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "SubjectClassTeachers", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "SubjectClassTeachers", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "SubjectClassTeachers", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "SubjectClassTeachers", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClassTeachers", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClassTeachers", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClassTeachers", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "SubjectClassTeachers", Action = "Delete" },
 
                 #endregion Studies
 
                 #region Subjects
 
-                new Permission { Area = "Manage", Controller = "Subjects", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Subjects", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Subjects", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Subjects", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Subjects", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Subjects", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Subjects", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Subjects", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "PreSubjects", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "PreSubjects", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "PreSubjects", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "PreSubjects", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "PreSubjects", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "PreSubjects", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "PreSubjects", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "PreSubjects", Action = "Delete" },
 
                 #endregion Subjects
 
                 #region Teachers
 
-                new Permission { Area = "Manage", Controller = "Teachers", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Teachers", Action = "Index" },
 
-                new Permission { Area = "Manage", Controller = "Departments", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Departments", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Departments", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Departments", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Departments", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Departments", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Departments", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Departments", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "Faculties", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Faculties", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Faculties", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Faculties", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Faculties", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Faculties", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Faculties", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Faculties", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "FacultyManageBoards", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "FacultyManageBoards", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "FacultyManageBoards", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "FacultyManageBoards", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "FacultyManageBoards", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "FacultyManageBoards", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "FacultyManageBoards", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "FacultyManageBoards", Action = "Delete" },
 
-                new Permission { Area = "Manage", Controller = "Staffs", Action = "Index" },
-                new Permission { Area = "Manage", Controller = "Staffs", Action = "Create" },
-                new Permission { Area = "Manage", Controller = "Staffs", Action = "Edit" },
-                new Permission { Area = "Manage", Controller = "Staffs", Action = "Delete" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Staffs", Action = "Index" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Staffs", Action = "Create" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Staffs", Action = "Edit" },
+                new Permission { Id = i++, Area = "Manage", Controller = "Staffs", Action = "Delete" },
 
                 #endregion Teachers
                 #endregion
@@ -206,7 +207,7 @@ namespace EduMSDemo.Data.Migrations
 
                 #region SubjectRegister
 
-                new Permission { Area = "Student", Controller = "SubjectRegister", Action = "Index" },
+                new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Index" },
 
                 #endregion SubjectRegister
                 #endregion
@@ -215,7 +216,7 @@ namespace EduMSDemo.Data.Migrations
 
                 #region Teaching
 
-                new Permission { Area = "Teacher", Controller = "Teaching", Action = "Index" },
+                new Permission { Id = i++, Area = "Teacher", Controller = "Teaching", Action = "Index" },
 
                 #endregion Teaching
                 #endregion
@@ -234,6 +235,7 @@ namespace EduMSDemo.Data.Migrations
 
             foreach (Permission permission in permissions)
             {
+                UnitOfWork.Insert(permission);
                 Permission currentPermission = currentPermissions.SingleOrDefault(perm => perm.Id == permission.Id);
                 if (currentPermission == null)
                 {
@@ -362,12 +364,23 @@ namespace EduMSDemo.Data.Migrations
                 new Account
                 {
                     Username = "admin",
-                    Passhash = "$2a$13$yTgLCqGqgH.oHmfboFCjyuVUy5SJ2nlyckPFEZRJQrMTZWN.f1Afq", // Admin123?
+                    //Passhash = "$2a$13$yTgLCqGqgH.oHmfboFCjyuVUy5SJ2nlyckPFEZRJQrMTZWN.f1Afq", // Admin123?
+                    Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS", // 123456
                     Email = "admin@admins.com",
                     IsLocked = false,
 
                     RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Admin").Id
-                }
+                },
+                new Account
+                {
+                    Username = "manage",
+                    //Passhash = "$2a$13$yTgLCqGqgH.oHmfboFCjyuVUy5SJ2nlyckPFEZRJQrMTZWN.f1Afq", // Admin123?
+                    Passhash = "$2a$13$MMRvGGPtpS4/5h6DmL6JxueP0.JHI87eZPoRR0UwzrP50AMCqCBRS", // 123456
+                    Email = "manage@manages.com",
+                    IsLocked = false,
+
+                    RoleId = UnitOfWork.Select<Role>().Single(role => role.Title == "Sys_Manage").Id
+                },
             };
 
             foreach (Account account in accounts)
