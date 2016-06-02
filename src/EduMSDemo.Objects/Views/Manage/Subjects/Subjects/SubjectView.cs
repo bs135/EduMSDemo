@@ -15,7 +15,6 @@ namespace EduMSDemo.Objects
 
         [Required]
         [StringLength(128)]
-        //[Index(IsUnique = true)]
         public String Name { get; set; }
 
         /// <summary>
@@ -23,7 +22,6 @@ namespace EduMSDemo.Objects
         /// </summary>
         [Required]
         [StringLength(128)]
-        //[Index(IsUnique = true)]
         public String NameEn { get; set; }
 
 

@@ -33,6 +33,7 @@ namespace EduMSDemo.Data.Migrations
             SeedSubjects();
             SeedStudents();
             SeedStudies();
+            SeedCurriculums();
         }
 
         #region Administration
@@ -998,6 +999,7 @@ namespace EduMSDemo.Data.Migrations
                 new Subject { Code = "125900", Name = "Triết học", NameEn = "Philosophy", NumberOfCredits = 3, NumberOfPeriods = 45, DepartmentId = UnitOfWork.Select<Department>().Single(dep => dep.Name == "Khoa học máy tính").Id },
                 new Subject { Code = "155900", Name = "Anh văn", NameEn = "English", NumberOfCredits = 0, NumberOfPeriods = 100, DepartmentId = UnitOfWork.Select<Department>().Single(dep => dep.Name == "Khoa học máy tính").Id },
                 new Subject { Code = "505904", Name = "Phương pháp nghiên cứu khoa học", NameEn = "Methodology of Scientific Research", NumberOfCredits = 2, NumberOfPeriods = 30, DepartmentId = UnitOfWork.Select<Department>().Single(dep => dep.Name == "Khoa học máy tính").Id },
+                new Subject { Code = "505900", Name = "Phương pháp nghiên cứu khoa học", NameEn = "Methodology of Scientific Research", NumberOfCredits = 2, NumberOfPeriods = 30, DepartmentId = UnitOfWork.Select<Department>().Single(dep => dep.Name == "Khoa học máy tính").Id },
             };
 
             foreach (Subject subject in subjects)
@@ -1326,6 +1328,8 @@ namespace EduMSDemo.Data.Migrations
                 new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055009").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
                 /* Phương pháp nghiên cứu khoa học */
                 new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505904").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                /* Phương pháp nghiên cứu khoa học */
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
                 /* Triết học */
                 new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "125900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
                 /* Nhận dạng mẫu và học máy */
@@ -1363,7 +1367,156 @@ namespace EduMSDemo.Data.Migrations
             UnitOfWork.Commit();
             #endregion
 
+        }
 
+        private void SeedCurriculums()
+        {
+            #region CurriculumType
+            CurriculumType[] curriculumTypes =
+            {
+                new CurriculumType { Name = "Bổ sung" },
+                new CurriculumType { Name = "Bắt buộc" },
+                new CurriculumType { Name = "Tự chọn" },
+            };
+
+            foreach (CurriculumType curriculumType in curriculumTypes)
+            {
+                CurriculumType dbcurriculumType = UnitOfWork.Select<CurriculumType>().FirstOrDefault(model => model.Name == curriculumType.Name);
+                if (dbcurriculumType == null)
+                {
+                    UnitOfWork.Insert(curriculumType);
+                }
+                else
+                {
+                    UnitOfWork.Update(dbcurriculumType);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region Curriculum
+            Curriculum[] curriculums =
+            {
+                new Curriculum { Name = "MCS 2014 By Course", CourseId = UnitOfWork.Select<Course>().Single(acc => acc.Code == "MCS2014").Id, FacultyId = UnitOfWork.Select<Faculty>().Single(acc => acc.Abbreviation == "KH&KTMT").Id },
+                new Curriculum { Name = "MCS 2014 By Research", CourseId = UnitOfWork.Select<Course>().Single(acc => acc.Code == "MCS2014").Id, FacultyId = UnitOfWork.Select<Faculty>().Single(acc => acc.Abbreviation == "KH&KTMT").Id },
+            };
+
+            foreach (Curriculum curriculum in curriculums)
+            {
+                Curriculum dbcurriculum = UnitOfWork.Select<Curriculum>().FirstOrDefault(model => model.Name == curriculum.Name);
+                if (dbcurriculum == null)
+                {
+                    UnitOfWork.Insert(curriculum);
+                }
+                else
+                {
+                    dbcurriculum.CourseId = curriculum.CourseId;
+                    dbcurriculum.FacultyId = curriculum.FacultyId;
+
+                    UnitOfWork.Update(dbcurriculum);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
+
+            #region CurriculumDetail
+            CurriculumDetail[] curriculumDetails =
+            {
+                /* Trí tuệ nhân tạo */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054001").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+                /* Mạng máy tính 1 */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054002").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+                /* Nguyên lý Ngôn ngữ lập trình */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054003").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+                /* Phân tích thiết kế giải thuật */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054004").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+
+                /* Triết học */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "125900").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Phương pháp nghiên cứu khoa học */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505904").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Lập trình nâng cao*/
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055068").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Giải thuật nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055001").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Kiến trúc máy tính nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055003").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Hệ cơ sở dữ liệu nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055002").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Luận văn thạc sĩ */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "056001").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+
+                /* Xử lý ảnh số và Video nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055009").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Nhận dạng mẫu và học máy */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055069").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Cơ sở tri thức */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055006").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Lập trình logic và ràng buộc */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055008").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Hệ phân bố */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055024").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Bảo mật cơ sở dữ liệu */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Course").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055042").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+
+
+                /********************************************************/
+                /* Trí tuệ nhân tạo */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054001").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+                /* Mạng máy tính 1 */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054002").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+                /* Nguyên lý Ngôn ngữ lập trình */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054003").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+                /* Phân tích thiết kế giải thuật */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "054004").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bổ sung").Id },
+
+                /* Triết học */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "125900").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Phương pháp nghiên cứu khoa học */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505900").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+                /* Lập trình nâng cao*/
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055068").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Giải thuật nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055001").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Kiến trúc máy tính nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055003").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Hệ cơ sở dữ liệu nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055002").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Luận văn thạc sĩ */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "056001").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Bắt buộc").Id },
+
+                /* Xử lý ảnh số và Video nâng cao */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055009").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Nhận dạng mẫu và học máy */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055069").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Cơ sở tri thức */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055006").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Lập trình logic và ràng buộc */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055008").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Hệ phân bố */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055024").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+                /* Bảo mật cơ sở dữ liệu */
+                new CurriculumDetail { CurriculumId = UnitOfWork.Select<Curriculum>().Single(acc => acc.Name == "MCS 2014 By Research").Id, SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055042").Id, CurriculumTypeId = UnitOfWork.Select<CurriculumType>().Single(acc => acc.Name == "Tự chọn").Id },
+            };
+
+            foreach (CurriculumDetail curriculumDetail in curriculumDetails)
+            {
+                CurriculumDetail dbcurriculumDetail = UnitOfWork.Select<CurriculumDetail>().FirstOrDefault(model => model.SubjectId == curriculumDetail.SubjectId && model.CurriculumId == curriculumDetail.CurriculumId);
+                if (dbcurriculumDetail == null)
+                {
+                    UnitOfWork.Insert(curriculumDetail);
+                }
+                else
+                {
+                    dbcurriculumDetail.CurriculumTypeId = curriculumDetail.CurriculumTypeId;
+                    UnitOfWork.Update(dbcurriculumDetail);
+                }
+            }
+
+            UnitOfWork.Commit();
+            #endregion
 
         }
 
