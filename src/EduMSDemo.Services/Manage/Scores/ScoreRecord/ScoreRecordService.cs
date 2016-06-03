@@ -64,7 +64,7 @@ namespace EduMSDemo.Services
             ScoreRecord o = UnitOfWork.Get<ScoreRecord>(view.Id);
             o.RegigterDate = view.RegigterDate;
             o.StudentId = view.StudentId;
-            o.SubjectId = view.SubjectId;
+            //o.SubjectId = view.SubjectId;
             o.SubjectClassId = view.SubjectClassId;
 
             UnitOfWork.Update(o);

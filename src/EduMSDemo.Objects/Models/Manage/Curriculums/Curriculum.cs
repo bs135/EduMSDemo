@@ -17,12 +17,15 @@ namespace EduMSDemo.Objects
         public Int32 FacultyId { get; set; }
         public virtual Faculty Faculty { get; set; }
 
-        // [ForeignKey("Course")]
-        public Int32 CourseId { get; set; }
-        public virtual Course Course { get; set; }
+        //// [ForeignKey("Course")]
+        //public Int32 CourseId { get; set; }
+        //public virtual Course Course { get; set; }
 
         // List CurriculumDetail
         public virtual IList<CurriculumDetail> CurriculumDetails { get; set; }
+
+        // List Student
+        public virtual IList<StudentClass> StudentClasses { get; set; }
 
     }
 }

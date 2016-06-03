@@ -162,21 +162,40 @@ namespace EduMSDemo.Data.Migrations
                 .Index(t => t.FacultyId);
             
             CreateTable(
+                "dbo.StudentClass",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Abbreviation = c.String(nullable: false, maxLength: 32),
+                        Name = c.String(nullable: false, maxLength: 128),
+                        CourseId = c.Int(nullable: false),
+                        StaffId = c.Int(nullable: false),
+                        CurriculumId = c.Int(nullable: false),
+                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Course", t => t.CourseId)
+                .ForeignKey("dbo.Curriculum", t => t.CurriculumId)
+                .ForeignKey("dbo.Staff", t => t.StaffId)
+                .Index(t => t.Abbreviation, unique: true)
+                .Index(t => t.Name, unique: true)
+                .Index(t => t.CourseId)
+                .Index(t => t.StaffId)
+                .Index(t => t.CurriculumId);
+            
+            CreateTable(
                 "dbo.Curriculum",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 256),
                         FacultyId = c.Int(nullable: false),
-                        CourseId = c.Int(nullable: false),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Course", t => t.CourseId)
                 .ForeignKey("dbo.Faculty", t => t.FacultyId)
                 .Index(t => t.Name, unique: true)
-                .Index(t => t.FacultyId)
-                .Index(t => t.CourseId);
+                .Index(t => t.FacultyId);
             
             CreateTable(
                 "dbo.CurriculumDetail",
@@ -223,7 +242,6 @@ namespace EduMSDemo.Data.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Department", t => t.DepartmentId)
                 .Index(t => t.Code, unique: true)
-                .Index(t => t.Name, unique: true)
                 .Index(t => t.DepartmentId);
             
             CreateTable(
@@ -314,25 +332,6 @@ namespace EduMSDemo.Data.Migrations
                 .Index(t => t.StudentId);
             
             CreateTable(
-                "dbo.StudentClass",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Abbreviation = c.String(nullable: false, maxLength: 32),
-                        Name = c.String(nullable: false, maxLength: 128),
-                        CourseId = c.Int(nullable: false),
-                        StaffId = c.Int(nullable: false),
-                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Course", t => t.CourseId)
-                .ForeignKey("dbo.Staff", t => t.StaffId)
-                .Index(t => t.Abbreviation, unique: true)
-                .Index(t => t.Name, unique: true)
-                .Index(t => t.CourseId)
-                .Index(t => t.StaffId);
-            
-            CreateTable(
                 "dbo.SubjectClass",
                 c => new
                     {
@@ -398,6 +397,7 @@ namespace EduMSDemo.Data.Migrations
                         Name = c.String(nullable: false, maxLength: 128),
                         StartDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         EndDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        IsCurrentSemester = c.Boolean(nullable: false),
                         CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                     })
                 .PrimaryKey(t => t.Id)
@@ -438,7 +438,8 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.FacultyManageBoard", "ViceDean1Id", "dbo.Staff");
             DropForeignKey("dbo.Staff", "DepartmentId", "dbo.Department");
             DropForeignKey("dbo.Department", "FacultyId", "dbo.Faculty");
-            DropForeignKey("dbo.Course", "FacultyId", "dbo.Faculty");
+            DropForeignKey("dbo.StudentClass", "StaffId", "dbo.Staff");
+            DropForeignKey("dbo.StudentClass", "CurriculumId", "dbo.Curriculum");
             DropForeignKey("dbo.Curriculum", "FacultyId", "dbo.Faculty");
             DropForeignKey("dbo.PreSubject", "SubjectOfPreId", "dbo.Subject");
             DropForeignKey("dbo.SubjectClass", "SubjectId", "dbo.Subject");
@@ -451,8 +452,6 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.ClassRoom", "BuildingId", "dbo.Building");
             DropForeignKey("dbo.ScoreRecord", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.Student", "StudentClassId", "dbo.StudentClass");
-            DropForeignKey("dbo.StudentClass", "StaffId", "dbo.Staff");
-            DropForeignKey("dbo.StudentClass", "CourseId", "dbo.Course");
             DropForeignKey("dbo.ScoreRecord", "StudentId", "dbo.Student");
             DropForeignKey("dbo.BonusScore", "StudentId", "dbo.Student");
             DropForeignKey("dbo.Student", "AccountId", "dbo.Account");
@@ -462,7 +461,8 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.CurriculumDetail", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.CurriculumDetail", "CurriculumTypeId", "dbo.CurriculumType");
             DropForeignKey("dbo.CurriculumDetail", "CurriculumId", "dbo.Curriculum");
-            DropForeignKey("dbo.Curriculum", "CourseId", "dbo.Course");
+            DropForeignKey("dbo.StudentClass", "CourseId", "dbo.Course");
+            DropForeignKey("dbo.Course", "FacultyId", "dbo.Faculty");
             DropForeignKey("dbo.FacultyManageBoard", "DeanId", "dbo.Staff");
             DropForeignKey("dbo.Staff", "AccountId", "dbo.Account");
             DropForeignKey("dbo.Account", "RoleId", "dbo.Role");
@@ -481,10 +481,6 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.SubjectClass", new[] { "RoomOfMidtermExamId" });
             DropIndex("dbo.SubjectClass", new[] { "StaffId" });
             DropIndex("dbo.SubjectClass", new[] { "SubjectId" });
-            DropIndex("dbo.StudentClass", new[] { "StaffId" });
-            DropIndex("dbo.StudentClass", new[] { "CourseId" });
-            DropIndex("dbo.StudentClass", new[] { "Name" });
-            DropIndex("dbo.StudentClass", new[] { "Abbreviation" });
             DropIndex("dbo.BonusScore", new[] { "StudentId" });
             DropIndex("dbo.Student", new[] { "StudentClassId" });
             DropIndex("dbo.Student", new[] { "AccountId" });
@@ -496,15 +492,18 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.PreSubject", new[] { "SubjectOfPreId" });
             DropIndex("dbo.PreSubject", new[] { "PreOfSubjectId" });
             DropIndex("dbo.Subject", new[] { "DepartmentId" });
-            DropIndex("dbo.Subject", new[] { "Name" });
             DropIndex("dbo.Subject", new[] { "Code" });
             DropIndex("dbo.CurriculumType", new[] { "Name" });
             DropIndex("dbo.CurriculumDetail", new[] { "CurriculumTypeId" });
             DropIndex("dbo.CurriculumDetail", new[] { "SubjectId" });
             DropIndex("dbo.CurriculumDetail", new[] { "CurriculumId" });
-            DropIndex("dbo.Curriculum", new[] { "CourseId" });
             DropIndex("dbo.Curriculum", new[] { "FacultyId" });
             DropIndex("dbo.Curriculum", new[] { "Name" });
+            DropIndex("dbo.StudentClass", new[] { "CurriculumId" });
+            DropIndex("dbo.StudentClass", new[] { "StaffId" });
+            DropIndex("dbo.StudentClass", new[] { "CourseId" });
+            DropIndex("dbo.StudentClass", new[] { "Name" });
+            DropIndex("dbo.StudentClass", new[] { "Abbreviation" });
             DropIndex("dbo.Course", new[] { "FacultyId" });
             DropIndex("dbo.Course", new[] { "Name" });
             DropIndex("dbo.Course", new[] { "Code" });
@@ -530,7 +529,6 @@ namespace EduMSDemo.Data.Migrations
             DropTable("dbo.Building");
             DropTable("dbo.ClassRoom");
             DropTable("dbo.SubjectClass");
-            DropTable("dbo.StudentClass");
             DropTable("dbo.BonusScore");
             DropTable("dbo.Student");
             DropTable("dbo.ScoreRecordDetail");
@@ -540,6 +538,7 @@ namespace EduMSDemo.Data.Migrations
             DropTable("dbo.CurriculumType");
             DropTable("dbo.CurriculumDetail");
             DropTable("dbo.Curriculum");
+            DropTable("dbo.StudentClass");
             DropTable("dbo.Course");
             DropTable("dbo.Faculty");
             DropTable("dbo.Department");

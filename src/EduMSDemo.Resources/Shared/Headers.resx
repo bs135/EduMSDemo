@@ -271,7 +271,7 @@
     <value>Subject</value>
   </data>
   <data name="StudentSubjectRegisterIndex" xml:space="preserve">
-    <value>Register</value>
+    <value>Subject</value>
   </data>
   <data name="TeacherTeaching" xml:space="preserve">
     <value>Teaching</value>

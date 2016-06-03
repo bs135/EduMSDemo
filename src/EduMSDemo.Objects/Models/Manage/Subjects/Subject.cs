@@ -52,7 +52,7 @@ namespace EduMSDemo.Objects
         public virtual IList<PreSubject> SubjectOfPres { get; set; }
 
         // List PreSubject
-        public virtual IList<ScoreRecord> ScoreRecords { get; set; }
+        //public virtual IList<ScoreRecord> ScoreRecords { get; set; }
 
     }
 }

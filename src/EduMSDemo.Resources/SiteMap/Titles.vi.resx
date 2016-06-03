@@ -577,7 +577,7 @@
     <value>Môn học</value>
   </data>
   <data name="StudentSubjectRegisterIndex" xml:space="preserve">
-    <value>Đăng ký</value>
+    <value>Môn học</value>
   </data>
   <data name="Teacher" xml:space="preserve">
     <value>Giáo viên</value>
@@ -587,5 +587,8 @@
   </data>
   <data name="TeacherTeachingIndex" xml:space="preserve">
     <value>Lớp</value>
+  </data>
+  <data name="StudentSubjectRegisterRegister" xml:space="preserve">
+    <value>Đăng ký</value>
   </data>
 </root>

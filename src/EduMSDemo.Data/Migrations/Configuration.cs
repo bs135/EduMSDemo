@@ -31,9 +31,9 @@ namespace EduMSDemo.Data.Migrations
             SeedBuildings();
             SeedTeachers();
             SeedSubjects();
+            SeedCurriculums();
             SeedStudents();
             SeedStudies();
-            SeedCurriculums();
         }
 
         #region Administration
@@ -208,6 +208,8 @@ namespace EduMSDemo.Data.Migrations
                 #region SubjectRegister
 
                 new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Index" },
+                new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Register" },
+                new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Delete" },
 
                 #endregion SubjectRegister
                 #endregion
@@ -232,6 +234,7 @@ namespace EduMSDemo.Data.Migrations
                     UnitOfWork.Delete(permission);
                 }
             }
+            UnitOfWork.Commit();
 
             foreach (Permission permission in permissions)
             {
@@ -270,7 +273,7 @@ namespace EduMSDemo.Data.Migrations
                 .Where(rolePermission => rolePermission.RoleId == adminRoleId)
                 .ToArray();
 
-            foreach (Permission permission in UnitOfWork.Select<Permission>())
+            foreach (Permission permission in UnitOfWork.Select<Permission>().Where(p => p.Area == "Administration" || p.Area == "Manage"))
                 if (!adminPermissions.Any(rolePermission => rolePermission.PermissionId == permission.Id))
                     UnitOfWork.Insert(new RolePermission
                     {
@@ -1075,16 +1078,16 @@ namespace EduMSDemo.Data.Migrations
             #region StudentClass
             StudentClass[] studentClasses =
             {
-                new StudentClass { Abbreviation = "MCS2013/1", Name = "Cao học Khoa học máy tính K2013 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2013").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "00529").Id },
-                new StudentClass { Abbreviation = "MCS2013/2", Name = "Cao học Khoa học máy tính K2013 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2013").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01995").Id },
-                new StudentClass { Abbreviation = "MCS2014/1", Name = "Cao học Khoa học máy tính K2014 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "00163").Id },
-                new StudentClass { Abbreviation = "MCS2014/2", Name = "Cao học Khoa học máy tính K2014 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01616").Id },
-                new StudentClass { Abbreviation = "MCS2015/1", Name = "Cao học Khoa học máy tính K2015 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01733").Id },
-                new StudentClass { Abbreviation = "MCS2015/2", Name = "Cao học Khoa học máy tính K2015 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13045").Id },
-                new StudentClass { Abbreviation = "MIS2014/1", Name = "Cao học Hệ thống thông tin K2014 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "02109").Id },
-                new StudentClass { Abbreviation = "MIS2014/2", Name = "Cao học Hệ thống thông tin K2014 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13282").Id },
-                new StudentClass { Abbreviation = "MIS2015/1", Name = "Cao học Hệ thống thông tin K2015 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13444").Id },
-                new StudentClass { Abbreviation = "MIS2015/2", Name = "Cao học Hệ thống thông tin K2015 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "12920").Id },
+                new StudentClass { Abbreviation = "MCS2013/1", Name = "Cao học Khoa học máy tính K2013 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2013").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "00529").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MCS2013/2", Name = "Cao học Khoa học máy tính K2013 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2013").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01995").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MCS2014/1", Name = "Cao học Khoa học máy tính K2014 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "00163").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MCS2014/2", Name = "Cao học Khoa học máy tính K2014 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01616").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MCS2015/1", Name = "Cao học Khoa học máy tính K2015 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "01733").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MCS2015/2", Name = "Cao học Khoa học máy tính K2015 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MCS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13045").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MIS2014/1", Name = "Cao học Hệ thống thông tin K2014 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "02109").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MIS2014/2", Name = "Cao học Hệ thống thông tin K2014 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2014").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13282").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MIS2015/1", Name = "Cao học Hệ thống thông tin K2015 Đợt 1", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "13444").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
+                new StudentClass { Abbreviation = "MIS2015/2", Name = "Cao học Hệ thống thông tin K2015 Đợt 2", CourseId = UnitOfWork.Select<Course>().Single(c => c.Code == "MIS2015").Id, StaffId = UnitOfWork.Select<Staff>().Single(c => c.Code == "12920").Id, CurriculumId = UnitOfWork.Select<Curriculum>().Single(c => c.Name == "MCS 2014 By Course").Id },
             };
 
             foreach (StudentClass studentClass in studentClasses)
@@ -1303,14 +1306,14 @@ namespace EduMSDemo.Data.Migrations
             #region Semester
             Semester[] semesters =
             {
-                new Semester { Name = "HK 1/2013-2014", StartDate = new DateTime(2013,8,1), EndDate = new DateTime(2013,12,31) },
-                new Semester { Name = "HK 2/2013-2014", StartDate = new DateTime(2014,1,1), EndDate = new DateTime(2014,6,1) },
-                new Semester { Name = "HK 1/2014-2015", StartDate = new DateTime(2014,8,1), EndDate = new DateTime(2014,12,31) },
-                new Semester { Name = "HK 2/2014-2015", StartDate = new DateTime(2015,1,1), EndDate = new DateTime(2015,6,1) },
-                new Semester { Name = "HK 1/2015-2016", StartDate = new DateTime(2015,8,1), EndDate = new DateTime(2015,12,31) },
-                new Semester { Name = "HK 2/2015-2016", StartDate = new DateTime(2016,1,1), EndDate = new DateTime(2016,6,1) },
-                new Semester { Name = "HK 1/2016-2017", StartDate = new DateTime(2016,8,1), EndDate = new DateTime(2016,12,31) },
-                new Semester { Name = "HK 2/2016-2017", StartDate = new DateTime(2017,1,1), EndDate = new DateTime(2017,6,1) },
+                new Semester { Name = "HK 1/2013-2014", StartDate = new DateTime(2013,8,1), EndDate = new DateTime(2013,12,31), IsCurrentSemester = false },
+                new Semester { Name = "HK 2/2013-2014", StartDate = new DateTime(2014,1,1), EndDate = new DateTime(2014,6,1), IsCurrentSemester = false },
+                new Semester { Name = "HK 1/2014-2015", StartDate = new DateTime(2014,8,1), EndDate = new DateTime(2014,12,31), IsCurrentSemester = false },
+                new Semester { Name = "HK 2/2014-2015", StartDate = new DateTime(2015,1,1), EndDate = new DateTime(2015,6,1), IsCurrentSemester = false },
+                new Semester { Name = "HK 1/2015-2016", StartDate = new DateTime(2015,8,1), EndDate = new DateTime(2015,12,31), IsCurrentSemester = false },
+                new Semester { Name = "HK 2/2015-2016", StartDate = new DateTime(2016,1,1), EndDate = new DateTime(2016,6,1), IsCurrentSemester = false },
+                new Semester { Name = "HK 1/2016-2017", StartDate = new DateTime(2016,8,1), EndDate = new DateTime(2016,12,31), IsCurrentSemester = true },
+                new Semester { Name = "HK 2/2016-2017", StartDate = new DateTime(2017,1,1), EndDate = new DateTime(2017,6,1), IsCurrentSemester = false },
             };
 
             foreach (Semester semester in semesters)
@@ -1324,6 +1327,7 @@ namespace EduMSDemo.Data.Migrations
                 {
                     dbsemester.StartDate = semester.StartDate;
                     dbsemester.EndDate = semester.EndDate;
+                    dbsemester.IsCurrentSemester = semester.IsCurrentSemester;
                     UnitOfWork.Update(dbsemester);
                 }
             }
@@ -1335,29 +1339,29 @@ namespace EduMSDemo.Data.Migrations
             SubjectClass[] subjectClasses =
             {
                 /* Lập trình nâng cao*/
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055068").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055068").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "501B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "401C6").Id },
                 /* Xử lý ảnh số và Video nâng cao */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055009").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055009").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01995").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "505B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
                 /* Phương pháp nghiên cứu khoa học */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505904").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505904").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "501B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "503B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "403C6").Id },
                 /* Phương pháp nghiên cứu khoa học */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "505900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "306B1").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "504B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "404C6").Id },
                 /* Triết học */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "125900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "125900").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "02109").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "306B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "505B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "405C6").Id },
                 /* Nhận dạng mẫu và học máy */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055069").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055069").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "303B1").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "406C6").Id },
                 /* Đồ họa máy tính nâng cao */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055017").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "12715").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055017").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "12715").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "305B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "401B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "501C6").Id },
                 /* Xử lý ngôn ngữ tự nhiên */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055016").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00163").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055016").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00163").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "302B1").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502C6").Id },
                 /* Hệ hỗ trợ quyết định */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055012").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055012").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "301B1").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "403B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "503C6").Id },
                 /* Cơ sở tri thức */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055006").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01616").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055006").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "01616").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506C6").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "404B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "504C6").Id },
                 /* Lập trình logic và ràng buộc */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055008").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055008").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "00529").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "406B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "405B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "505C6").Id },
                 /* Giải thuật nâng cao */
-                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055001").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "13045").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "502B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "402C6").Id },
+                new SubjectClass { SubjectId = UnitOfWork.Select<Subject>().Single(acc => acc.Code == "055001").Id, StaffId = UnitOfWork.Select<Staff>().Single(acc => acc.Code == "13045").Id, SemesterId = UnitOfWork.Select<Semester>().Single(acc => acc.Name == "HK 1/2016-2017").Id, RoomOfClassId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506B4").Id, RoomOfMidtermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "406B4").Id, RoomOfTermExamId = UnitOfWork.Select<ClassRoom>().Single(acc => acc.Code == "506C6").Id },
             };
 
             foreach (SubjectClass subjectClass in subjectClasses)
@@ -1410,8 +1414,8 @@ namespace EduMSDemo.Data.Migrations
             #region Curriculum
             Curriculum[] curriculums =
             {
-                new Curriculum { Name = "MCS 2014 By Course", CourseId = UnitOfWork.Select<Course>().Single(acc => acc.Code == "MCS2014").Id, FacultyId = UnitOfWork.Select<Faculty>().Single(acc => acc.Abbreviation == "KH&KTMT").Id },
-                new Curriculum { Name = "MCS 2014 By Research", CourseId = UnitOfWork.Select<Course>().Single(acc => acc.Code == "MCS2014").Id, FacultyId = UnitOfWork.Select<Faculty>().Single(acc => acc.Abbreviation == "KH&KTMT").Id },
+                new Curriculum { Name = "MCS 2014 By Course", FacultyId = UnitOfWork.Select<Faculty>().Single(acc => acc.Abbreviation == "KH&KTMT").Id },
+                new Curriculum { Name = "MCS 2014 By Research", FacultyId = UnitOfWork.Select<Faculty>().Single(acc => acc.Abbreviation == "KH&KTMT").Id },
             };
 
             foreach (Curriculum curriculum in curriculums)
@@ -1423,7 +1427,6 @@ namespace EduMSDemo.Data.Migrations
                 }
                 else
                 {
-                    dbcurriculum.CourseId = curriculum.CourseId;
                     dbcurriculum.FacultyId = curriculum.FacultyId;
 
                     UnitOfWork.Update(dbcurriculum);

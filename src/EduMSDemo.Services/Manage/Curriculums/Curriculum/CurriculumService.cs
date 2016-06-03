@@ -56,7 +56,6 @@ namespace EduMSDemo.Services
             Curriculum o = UnitOfWork.Get<Curriculum>(view.Id);
             o.Name = view.Name;
             o.FacultyId = view.FacultyId;
-            o.CourseId = view.CourseId;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();

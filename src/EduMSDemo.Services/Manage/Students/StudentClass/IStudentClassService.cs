@@ -11,6 +11,7 @@ namespace EduMSDemo.Services
         IQueryable<StudentClassView> GetViews();
         IQueryable<CourseView> GetCourseViews();
         IQueryable<StaffView> GetStaffViews();
+        IQueryable<CurriculumView> GetCurriculumViews();
 
         void Create(StudentClassView view);
         void Edit(StudentClassView view);

@@ -118,6 +118,7 @@
     <Compile Include="Views\Manage\Teachers\Staffs\StaffCreateView.cs" />
     <Compile Include="Views\Manage\Teachers\Staffs\StaffEditView.cs" />
     <Compile Include="Views\Manage\Teachers\Staffs\StaffView.cs" />
+    <Compile Include="Views\Student\SubjectRegister\SubjectRegisterCreateView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EduMSDemo.Components\EduMSDemo.Components.csproj">

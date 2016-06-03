@@ -25,6 +25,10 @@ namespace EduMSDemo.Objects
         public Int32 StaffId { get; set; }
         public virtual Staff Staff { get; set; }
 
+        //[ForeignKey("Curriculum")]
+        public Int32 CurriculumId { get; set; }
+        public virtual Curriculum Curriculum { get; set; }
+
         // List Student
         public virtual IList<Student> Students { get; set; }
 

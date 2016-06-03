@@ -472,9 +472,15 @@
     <value>Danh sách</value>
   </data>
   <data name="StudentSubjectRegisterIndex" xml:space="preserve">
-    <value>Đăng ký môn học</value>
+    <value>Môn học</value>
   </data>
   <data name="TeacherTeachingIndex" xml:space="preserve">
     <value>Lớp giảng dạy</value>
+  </data>
+  <data name="StudentSubjectRegisterRegister" xml:space="preserve">
+    <value>Đăng ký</value>
+  </data>
+  <data name="StudentSubjectRegisterDelete" xml:space="preserve">
+    <value>Hủy đăng ký</value>
   </data>
 </root>

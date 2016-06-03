@@ -28,7 +28,7 @@ namespace EduMSDemo.Controllers.Manage
         public ViewResult Create()
         {
             ViewBag.SubjectClassId = new SelectList(Service.GetStudentViews(), "Id", "Name");
-            ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name");
+            //ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name");
             ViewBag.StudentId = new SelectList(Service.GetStudentViews(), "Id", "Name");
             return View();
         }
@@ -40,7 +40,7 @@ namespace EduMSDemo.Controllers.Manage
             if (!Validator.CanCreate(model))
             {
                 ViewBag.SubjectClassId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.SubjectClassId);
-                ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.SubjectId);
+                //ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.SubjectId);
                 ViewBag.StudentId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.StudentId);
                 return View(model);
             }
@@ -55,7 +55,7 @@ namespace EduMSDemo.Controllers.Manage
         {
             ScoreRecordView view = Service.Get<ScoreRecordView>(id);
             ViewBag.SubjectClassId = new SelectList(Service.GetStudentViews(), "Id", "Name", view.SubjectClassId);
-            ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name", view.SubjectId);
+            //ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name", view.SubjectId);
             ViewBag.StudentId = new SelectList(Service.GetStudentViews(), "Id", "Name", view.StudentId);
             return NotEmptyView(view);
         }
@@ -67,7 +67,7 @@ namespace EduMSDemo.Controllers.Manage
             if (!Validator.CanEdit(model))
             {
                 ViewBag.SubjectClassId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.SubjectClassId);
-                ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.SubjectId);
+                //ViewBag.SubjectId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.SubjectId);
                 ViewBag.StudentId = new SelectList(Service.GetStudentViews(), "Id", "Name", model.StudentId);
                 return View(model);
             }

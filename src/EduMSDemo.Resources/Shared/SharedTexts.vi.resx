@@ -126,4 +126,7 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Bạn không có quyền truy cập trang này</value>
   </data>
+  <data name="HomePageWelcome" xml:space="preserve">
+    <value>Chào mừng đến EduMSDemo!</value>
+  </data>
 </root>

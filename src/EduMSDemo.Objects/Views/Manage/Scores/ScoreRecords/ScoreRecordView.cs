@@ -19,12 +19,15 @@ namespace EduMSDemo.Objects
         // [ForeignKey("SubjectClass")]
         public Int32 SubjectClassId { get; set; }
         public virtual SubjectClass SubjectClass { get; set; }
-        public String SubjectClassName { get; set; }
+        public String SubjectClassStaffName { get; set; }
+        public String SubjectClassSubjectName { get; set; }
+        public String SubjectClassSubjectNumberOfPeriods { get; set; }
+        public String SubjectClassSubjectNumberOfCredits { get; set; }
 
         // [ForeignKey("Subject")]
-        public Int32 SubjectId { get; set; }
-        public virtual Subject Subject { get; set; }
-        public String SubjectName { get; set; }
+        //public Int32 SubjectId { get; set; }
+        //public virtual Subject Subject { get; set; }
+        //public String SubjectName { get; set; }
 
         // List ScoreRecordDetail
         //public virtual IList<ScoreRecordDetail> ScoreRecordDetails { get; set; }

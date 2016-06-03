@@ -25,8 +25,8 @@ namespace EduMSDemo.Objects
         public Int32 FacultyId { get; set; }
         public virtual Faculty Faculty { get; set; }
 
-        // List Curriculum
-        public virtual IList<Curriculum> Curriculums { get; set; }
+        //// List Curriculum
+        //public virtual IList<Curriculum> Curriculums { get; set; }
 
         // List StudentClass
         public virtual IList<StudentClass> StudentClasses { get; set; }

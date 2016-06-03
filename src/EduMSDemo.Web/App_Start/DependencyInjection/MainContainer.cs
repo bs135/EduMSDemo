@@ -87,6 +87,10 @@ namespace EduMSDemo.Web.DependencyInjection
             Register<IStaffService, StaffService>();
             #endregion
 
+            #region Student service
+            Register<ISubjectRegisterService, SubjectRegisterService>();
+            #endregion
+
             // Validator
 
             #region Admin validator
@@ -134,6 +138,11 @@ namespace EduMSDemo.Web.DependencyInjection
             Register<IFacultyManageBoardValidator, FacultyManageBoardValidator>();
             Register<IStaffValidator, StaffValidator>();
             #endregion
+
+            #region Teachers validator
+            Register<ISubjectRegisterValidator, SubjectRegisterValidator>();
+            #endregion
+
         }
     }
 }

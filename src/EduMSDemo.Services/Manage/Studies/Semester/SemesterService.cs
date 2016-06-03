@@ -30,6 +30,21 @@ namespace EduMSDemo.Services
 
         public void Create(SemesterView view)
         {
+            if (view.IsCurrentSemester)
+            {
+                Semester[] currentSemesters = UnitOfWork.Select<Semester>().ToArray();
+                foreach (Semester semester in currentSemesters)
+                {
+                    Semester dbSemester = UnitOfWork.Select<Semester>().FirstOrDefault(s => s.Id == semester.Id);
+                    if (dbSemester!= null)
+                    {
+                        dbSemester.IsCurrentSemester = false;
+                        UnitOfWork.Update(dbSemester);
+                    }
+                }
+
+            }
+
             Semester o = UnitOfWork.To<Semester>(view);
             UnitOfWork.Insert(o);
             UnitOfWork.Commit();
@@ -37,11 +52,36 @@ namespace EduMSDemo.Services
 
         public void Edit(SemesterView view)
         {
+            if (view.IsCurrentSemester)
+            {
+                Semester[] currentSemesters = UnitOfWork.Select<Semester>().ToArray();
+                foreach (Semester semester in currentSemesters)
+                {
+                    Semester dbSemester = UnitOfWork.Select<Semester>().FirstOrDefault(s => s.Id == semester.Id);
+                    if (dbSemester != null)
+                    {
+                        dbSemester.IsCurrentSemester = false;
+                        UnitOfWork.Update(dbSemester);
+                    }
+                }
+
+            }
+            else
+            {
+                Semester dbSemester = UnitOfWork.Select<Semester>().FirstOrDefault(s => s.IsCurrentSemester && s.Id != view.Id);
+                if (dbSemester == null)
+                {
+                    view.IsCurrentSemester = true;
+                }
+            }
+            UnitOfWork.Commit();
+
             Semester o = UnitOfWork.Get<Semester>(view.Id);
             //student.SchoolYear = view.SchoolYear;
             o.Name = view.Name;
             o.StartDate = view.StartDate;
             o.EndDate = view.EndDate;
+            o.IsCurrentSemester = view.IsCurrentSemester;
 
             UnitOfWork.Update(o);
             UnitOfWork.Commit();

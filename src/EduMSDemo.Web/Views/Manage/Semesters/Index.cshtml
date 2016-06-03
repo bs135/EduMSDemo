@@ -24,8 +24,9 @@
 
                     columns.AddProperty(model => model.Name);
                     //columns.AddProperty(model => model.SchoolYear);
-                    columns.AddProperty(model => model.StartDate);
-                    columns.AddProperty(model => model.EndDate);
+                    columns.AddProperty(model => model.StartDate).Formatted("{0: dd/MM/yyyy}");
+                    columns.AddProperty(model => model.EndDate).Formatted("{0: dd/MM/yyyy}");
+                    columns.AddProperty(model => model.IsCurrentSemester).RenderedAs(model => model.IsCurrentSemester == true ? "x" : "");
                 })
                 .ApplyDefaults()
             )

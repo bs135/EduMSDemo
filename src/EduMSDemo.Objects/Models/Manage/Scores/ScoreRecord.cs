@@ -17,9 +17,9 @@ namespace EduMSDemo.Objects
         public Int32 SubjectClassId { get; set; }
         public virtual SubjectClass SubjectClass { get; set; }
 
-        // [ForeignKey("Subject")]
-        public Int32 SubjectId { get; set; }
-        public virtual Subject Subject { get; set; }
+        //// [ForeignKey("Subject")]
+        //public Int32 SubjectId { get; set; }
+        //public virtual Subject Subject { get; set; }
 
         // List ScoreRecordDetail
         public virtual IList<ScoreRecordDetail> ScoreRecordDetails { get; set; }

@@ -26,6 +26,7 @@ namespace EduMSDemo.Controllers.Manage
         {
             ViewBag.CourseId = new SelectList(Service.GetCourseViews(), "Id", "Name");
             ViewBag.StaffId = new SelectList(Service.GetStaffViews(), "Id", "Name");
+            ViewBag.CurriculumId = new SelectList(Service.GetCurriculumViews(), "Id", "Name");
             return View();
         }
 
@@ -37,6 +38,7 @@ namespace EduMSDemo.Controllers.Manage
             {
                 ViewBag.CourseId = new SelectList(Service.GetCourseViews(), "Id", "Name", model.CourseId);
                 ViewBag.StaffId = new SelectList(Service.GetStaffViews(), "Id", "Name", model.StaffId);
+                ViewBag.CurriculumId = new SelectList(Service.GetCurriculumViews(), "Id", "Name", model.CurriculumId);
                 return View(model);
             }
 
@@ -51,6 +53,7 @@ namespace EduMSDemo.Controllers.Manage
             StudentClassView view = Service.Get<StudentClassView>(id);
             ViewBag.CourseId = new SelectList(Service.GetCourseViews(), "Id", "Name", view.CourseId);
             ViewBag.StaffId = new SelectList(Service.GetStaffViews(), "Id", "Name", view.StaffId);
+            ViewBag.CurriculumId = new SelectList(Service.GetCurriculumViews(), "Id", "Name", view.CurriculumId);
             return NotEmptyView(view);
         }
 
@@ -62,6 +65,7 @@ namespace EduMSDemo.Controllers.Manage
             {
                 ViewBag.CourseId = new SelectList(Service.GetCourseViews(), "Id", "Name", model.CourseId);
                 ViewBag.StaffId = new SelectList(Service.GetStaffViews(), "Id", "Name", model.StaffId);
+                ViewBag.CurriculumId = new SelectList(Service.GetCurriculumViews(), "Id", "Name", model.CurriculumId);
                 return View(model);
             }
 

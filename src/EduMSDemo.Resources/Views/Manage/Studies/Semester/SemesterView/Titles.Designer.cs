@@ -79,6 +79,15 @@ namespace EduMSDemo.Resources.Views.Manage.Studies.Semester.SemesterView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Current Semester.
+        /// </summary>
+        public static string IsCurrentSemester {
+            get {
+                return ResourceManager.GetString("IsCurrentSemester", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string Name {

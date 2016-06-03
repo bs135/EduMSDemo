@@ -132,4 +132,7 @@
   <data name="EndDate" xml:space="preserve">
     <value>End Date</value>
   </data>
+  <data name="IsCurrentSemester" xml:space="preserve">
+    <value>Is Current Semester</value>
+  </data>
 </root>

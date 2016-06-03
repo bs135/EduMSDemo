@@ -1123,11 +1123,29 @@ namespace EduMSDemo.Resources.Permission.Action {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SubjectRegister.
+        ///   Looks up a localized string similar to Unregister.
+        /// </summary>
+        public static string StudentSubjectRegisterDelete {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subjects List.
         /// </summary>
         public static string StudentSubjectRegisterIndex {
             get {
                 return ResourceManager.GetString("StudentSubjectRegisterIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string StudentSubjectRegisterRegister {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterRegister", resourceCulture);
             }
         }
         

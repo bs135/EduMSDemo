@@ -42,6 +42,14 @@ namespace EduMSDemo.Services
                 .OrderByDescending(o => o.Id);
         }
 
+        public IQueryable<CurriculumView> GetCurriculumViews()
+        {
+            return UnitOfWork
+                .Select<Curriculum>()
+                .To<CurriculumView>()
+                .OrderByDescending(o => o.Id);
+        }
+
         public void Create(StudentClassView view)
         {
             StudentClass o = UnitOfWork.To<StudentClass>(view);

@@ -21,6 +21,8 @@ namespace EduMSDemo.Objects
 
         public DateTime EndDate { get; set; }
 
+        public Boolean IsCurrentSemester { get; set; }
+
         // List SubjectClass
         //public virtual IList<SubjectClass> SubjectClasses { get; set; }
     }

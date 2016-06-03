@@ -61,6 +61,15 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Welcome to EduMSDemo!.
+        /// </summary>
+        public static string HomePageWelcome {
+            get {
+                return ResourceManager.GetString("HomePageWelcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The page you are looking for does not exist.
         /// </summary>
         public static string PageNotFound {

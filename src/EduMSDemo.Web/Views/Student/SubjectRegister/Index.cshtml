@@ -1,19 +1,36 @@
-﻿<div class="col-xs-12">
+﻿@model IQueryable<ScoreRecordView>
+
+<div class="col-xs-12">
     <div class="widget-box">
         <div class="widget-title">
             <span class="widget-title-icon fa fa-th"></span>
             <h5>@Headers.StudentSubjectRegisterIndex</h5>
             <div class="widget-title-buttons">
-                @*@if (Html.IsAuthorizedFor("Index"))
+                @if (Html.IsAuthorizedFor("Register"))
                 {
-                    <a class="btn" href="@Url.Action("Index")">
-                        <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                    <a class="btn" href="@Url.Action("Register")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Register</span>
                     </a>
-                }*@
+                }
             </div>
         </div>
         <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    //columns.AddActionLink("Edit", "fa fa-pencil");
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageSubjectClassDeleteConfirmMessage);
 
+                    columns.AddProperty(model => model.SubjectClassSubjectName);
+                    columns.AddProperty(model => model.SubjectClassSubjectNumberOfCredits);
+                    columns.AddProperty(model => model.SubjectClassSubjectNumberOfPeriods);
+                    columns.AddProperty(model => model.SubjectClassStaffName);
+                    columns.AddProperty(model => model.RegigterDate).Formatted("{0: dd/MM/yyyy}");
+
+                })
+                .ApplyDefaults()
+            )
         </div>
     </div>
 </div>

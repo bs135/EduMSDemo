@@ -1438,11 +1438,20 @@ namespace EduMSDemo.Resources.SiteMap {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register.
+        ///   Looks up a localized string similar to Subject.
         /// </summary>
         public static string StudentSubjectRegisterIndex {
             get {
                 return ResourceManager.GetString("StudentSubjectRegisterIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string StudentSubjectRegisterRegister {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterRegister", resourceCulture);
             }
         }
         

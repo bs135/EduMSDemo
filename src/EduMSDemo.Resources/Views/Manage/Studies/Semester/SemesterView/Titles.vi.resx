@@ -132,4 +132,7 @@
   <data name="EndDate" xml:space="preserve">
     <value>Ngày kết thúc</value>
   </data>
+  <data name="IsCurrentSemester" xml:space="preserve">
+    <value>Là học kỳ hiện tại</value>
+  </data>
 </root>

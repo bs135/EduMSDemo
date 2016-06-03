@@ -511,7 +511,7 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register.
+        ///   Looks up a localized string similar to Subject.
         /// </summary>
         public static string StudentSubjectRegisterIndex {
             get {

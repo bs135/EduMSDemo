@@ -86,6 +86,8 @@
     <Compile Include="Manage\Teachers\Staff\IStaffService.cs" />
     <Compile Include="Manage\Teachers\Staff\StaffService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\SubjectRegister\SubjectRegisterService.cs" />
+    <Compile Include="Student\SubjectRegister\ISubjectRegisterService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EduMSDemo.Components\EduMSDemo.Components.csproj">

@@ -1,0 +1,74 @@
+﻿@model SubjectRegisterCreateView
+
+
+@{
+    Semester currentSemester = ViewBag.CurrentSemester;
+    StudentView studentView = ViewBag.StudentView;
+}
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.StudentSubjectRegisterIndex</h5>
+            @*<div class="widget-title-buttons">
+                @if (Html.IsAuthorizedFor("Register"))
+                {
+                    <a class="btn" href="@Url.Action("Register")">
+                        <i class="fa fa-file-o"></i><span class="text">@Actions.Register</span>
+                    </a>
+                }
+            </div>*@
+        </div>
+        <div class="widget-content">
+            <div class="well well-sm">
+                <dl class="dl-horizontal">
+                    <dt>@EduMSDemo.Resources.Views.Student.SubjectRegister.Content.CurrentStudent</dt>
+                    <dd>@(studentView!=null ? studentView.Name : "")</dd>
+                    <dt>@EduMSDemo.Resources.Views.Student.SubjectRegister.Content.CurrentSemester</dt>
+                    <dd>@(currentSemester!=null ? currentSemester.Name : "")</dd>
+                </dl>
+            </div>
+            @using (Html.BeginForm("Register", "SubjectRegister", new { area = "Student" }, FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.AntiForgeryToken()
+                @*<div class="form-group">
+                    <div class="control-label col-sm-12 col-md-3 col-lg-2">
+                        @Html.FormLabelFor(model => model.FaxNumber)
+                    </div>
+                    <div class="control-content col-sm-12 col-md-9 col-lg-5">
+                        @Html.FormTextBoxFor(model => model.FaxNumber)
+                    </div>
+                    <div class="control-validation col-sm-12 col-lg-5">
+                        @Html.ValidationMessageFor(model => model.FaxNumber)
+                    </div>
+                </div>*@
+                <div class="form-group">
+                    <div class="control-label col-sm-12 col-md-3 col-lg-2">
+                        @Html.FormLabelFor(model => model.SubjectClassId)
+                    </div>
+                    <div class="control-content col-sm-12 col-md-9 col-lg-5">
+                        @Html.DropDownList("SubjectClassId", null, new { @class = "form-control" })
+                    </div>
+                    <div class="control-validation col-sm-12 col-lg-5">
+                        @Html.ValidationMessageFor(model => model.SubjectClassId)
+                    </div>
+                </div>
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <div class="form-actions col-sm-12 col-lg-7">
+                        <button type="button" class="btn btn-default" onclick="window.history.back();">
+                            <i class="fa fa-chevron-left"></i>
+                            @Actions.Back
+                        </button>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-save"></i>
+                            @Actions.Submit
+                        </button>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

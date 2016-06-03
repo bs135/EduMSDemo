@@ -169,7 +169,7 @@
     <value>Không tìm thấy</value>
   </data>
   <data name="HomeUnauthorized" xml:space="preserve">
-    <value>Không được phép truy cập</value>
+    <value>Không được phép</value>
   </data>
   <data name="ProfileDelete" xml:space="preserve">
     <value>Hồ sơ</value>
@@ -571,7 +571,7 @@
     <value>Môn học</value>
   </data>
   <data name="StudentSubjectRegisterIndex" xml:space="preserve">
-    <value>Đăng ký</value>
+    <value>Môn học</value>
   </data>
   <data name="TeacherTeaching" xml:space="preserve">
     <value>Giảng dạy</value>
@@ -584,5 +584,8 @@
   </data>
   <data name="Teacher" xml:space="preserve">
     <value>Giáo viên</value>
+  </data>
+  <data name="StudentSubjectRegisterRegister" xml:space="preserve">
+    <value>Đăng ký</value>
   </data>
 </root>

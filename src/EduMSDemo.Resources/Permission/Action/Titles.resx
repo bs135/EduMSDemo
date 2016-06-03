@@ -472,9 +472,15 @@
     <value>Index</value>
   </data>
   <data name="StudentSubjectRegisterIndex" xml:space="preserve">
-    <value>SubjectRegister</value>
+    <value>Subjects List</value>
   </data>
   <data name="TeacherTeachingIndex" xml:space="preserve">
     <value>Teaching Class</value>
+  </data>
+  <data name="StudentSubjectRegisterRegister" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="StudentSubjectRegisterDelete" xml:space="preserve">
+    <value>Unregister</value>
   </data>
 </root>
