@@ -1465,6 +1465,15 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Student List.
+        /// </summary>
+        public static string TeacherTeachingDetails {
+            get {
+                return ResourceManager.GetString("TeacherTeachingDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Index.
         /// </summary>
         public static string TeacherTeachingIndex {

@@ -266,5 +266,14 @@ namespace EduMSDemo.Resources.Shared {
                 return ResourceManager.GetString("ManageSubjectDeleteConfirmMessage", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to unregister this subject?.
+        /// </summary>
+        public static string StudentSubjectUnregisterConfirmMessage {
+            get {
+                return ResourceManager.GetString("StudentSubjectUnregisterConfirmMessage", resourceCulture);
+            }
+        }
     }
 }

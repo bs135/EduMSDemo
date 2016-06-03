@@ -1150,6 +1150,15 @@ namespace EduMSDemo.Resources.Permission.Action {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string TeacherTeachingDetails {
+            get {
+                return ResourceManager.GetString("TeacherTeachingDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Teaching Class.
         /// </summary>
         public static string TeacherTeachingIndex {

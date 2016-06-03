@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
+namespace EduMSDemo.Resources.Views.Teacher.Teaching {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Titles {
+    public class Validations {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Titles() {
+        internal Validations() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView.Titles", typeof(Titles).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EduMSDemo.Resources.Views.Teacher.Teaching.Validations", typeof(Validations).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,20 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ScoreRecord.
+        ///   Looks up a localized string similar to Abbreviation is already existed..
         /// </summary>
-        public static string Id {
+        public static string UniqueAbbreviation {
             get {
-                return ResourceManager.GetString("Id", resourceCulture);
+                return ResourceManager.GetString("UniqueAbbreviation", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register Date.
+        ///   Looks up a localized string similar to Name is already existed..
         /// </summary>
-        public static string RegigterDate {
+        public static string UniqueName {
             get {
-                return ResourceManager.GetString("RegigterDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Student Code.
-        /// </summary>
-        public static string StudentCode {
-            get {
-                return ResourceManager.GetString("StudentCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Student Name.
-        /// </summary>
-        public static string StudentName {
-            get {
-                return ResourceManager.GetString("StudentName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Subject.
-        /// </summary>
-        public static string SubjectName {
-            get {
-                return ResourceManager.GetString("SubjectName", resourceCulture);
+                return ResourceManager.GetString("UniqueName", resourceCulture);
             }
         }
     }

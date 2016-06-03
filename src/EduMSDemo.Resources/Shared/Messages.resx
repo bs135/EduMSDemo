@@ -186,4 +186,7 @@
   <data name="ManageStaffDeleteConfirmMessage" xml:space="preserve">
     <value>Are you sure to delete this Staff?</value>
   </data>
+  <data name="StudentSubjectUnregisterConfirmMessage" xml:space="preserve">
+    <value>Are you sure to unregister this subject?</value>
+  </data>
 </root>

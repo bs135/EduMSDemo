@@ -588,4 +588,7 @@
   <data name="StudentSubjectRegisterRegister" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="TeacherTeachingDetails" xml:space="preserve">
+    <value>Student List</value>
+  </data>
 </root>

@@ -483,4 +483,7 @@
   <data name="StudentSubjectRegisterDelete" xml:space="preserve">
     <value>Unregister</value>
   </data>
+  <data name="TeacherTeachingDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
 </root>

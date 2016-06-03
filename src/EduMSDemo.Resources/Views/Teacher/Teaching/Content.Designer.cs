@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
+namespace EduMSDemo.Resources.Views.Teacher.Teaching {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Titles {
+    public class Content {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Titles() {
+        internal Content() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView.Titles", typeof(Titles).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EduMSDemo.Resources.Views.Teacher.Teaching.Content", typeof(Content).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,43 +61,52 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ScoreRecord.
+        ///   Looks up a localized string similar to Semester.
         /// </summary>
-        public static string Id {
+        public static string CurrentSemester {
             get {
-                return ResourceManager.GetString("Id", resourceCulture);
+                return ResourceManager.GetString("CurrentSemester", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register Date.
+        ///   Looks up a localized string similar to Student.
         /// </summary>
-        public static string RegigterDate {
+        public static string CurrentStudent {
             get {
-                return ResourceManager.GetString("RegigterDate", resourceCulture);
+                return ResourceManager.GetString("CurrentStudent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Student Code.
+        ///   Looks up a localized string similar to Room.
         /// </summary>
-        public static string StudentCode {
+        public static string RoomOfClassCode {
             get {
-                return ResourceManager.GetString("StudentCode", resourceCulture);
+                return ResourceManager.GetString("RoomOfClassCode", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Student Name.
+        ///   Looks up a localized string similar to Teacher Name.
         /// </summary>
-        public static string StudentName {
+        public static string StaffName {
             get {
-                return ResourceManager.GetString("StudentName", resourceCulture);
+                return ResourceManager.GetString("StaffName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Subject.
+        ///   Looks up a localized string similar to Student List.
+        /// </summary>
+        public static string StudentList {
+            get {
+                return ResourceManager.GetString("StudentList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject Name.
         /// </summary>
         public static string SubjectName {
             get {

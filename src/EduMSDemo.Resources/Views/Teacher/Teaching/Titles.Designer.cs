@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
+namespace EduMSDemo.Resources.Views.Teacher.Teaching {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView.Titles", typeof(Titles).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EduMSDemo.Resources.Views.Teacher.Teaching.Titles", typeof(Titles).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,52 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ScoreRecord.
+        ///   Looks up a localized string similar to Abbreviation.
+        /// </summary>
+        public static string Abbreviation {
+            get {
+                return ResourceManager.GetString("Abbreviation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faculty.
+        /// </summary>
+        public static string FacultyName {
+            get {
+                return ResourceManager.GetString("FacultyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fax.
+        /// </summary>
+        public static string FaxNumber {
+            get {
+                return ResourceManager.GetString("FaxNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department.
         /// </summary>
         public static string Id {
             get {
@@ -70,38 +115,20 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register Date.
+        ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string RegigterDate {
+        public static string Name {
             get {
-                return ResourceManager.GetString("RegigterDate", resourceCulture);
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Student Code.
+        ///   Looks up a localized string similar to Phone Number.
         /// </summary>
-        public static string StudentCode {
+        public static string PhoneNumber {
             get {
-                return ResourceManager.GetString("StudentCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Student Name.
-        /// </summary>
-        public static string StudentName {
-            get {
-                return ResourceManager.GetString("StudentName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Subject.
-        /// </summary>
-        public static string SubjectName {
-            get {
-                return ResourceManager.GetString("SubjectName", resourceCulture);
+                return ResourceManager.GetString("PhoneNumber", resourceCulture);
             }
         }
     }

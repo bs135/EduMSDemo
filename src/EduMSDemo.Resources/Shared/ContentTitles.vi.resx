@@ -588,4 +588,7 @@
   <data name="StudentSubjectRegisterRegister" xml:space="preserve">
     <value>Đăng ký</value>
   </data>
+  <data name="TeacherTeachingDetails" xml:space="preserve">
+    <value>Danh sách lớp</value>
+  </data>
 </root>

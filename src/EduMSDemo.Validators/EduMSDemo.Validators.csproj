@@ -90,6 +90,8 @@
     <Compile Include="Manage\Teachers\Staff\IStaffValidator.cs" />
     <Compile Include="Manage\Teachers\Staff\StaffValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teacher\Teaching\ITeachingValidator.cs" />
+    <Compile Include="Teacher\Teaching\TeachingValidator.cs" />
     <Compile Include="Student\SubjectRegister\SubjectRegisterValidator.cs" />
     <Compile Include="Student\SubjectRegister\ISubjectRegisterValidator.cs" />
   </ItemGroup>

@@ -483,4 +483,7 @@
   <data name="StudentSubjectRegisterDelete" xml:space="preserve">
     <value>Hủy đăng ký</value>
   </data>
+  <data name="TeacherTeachingDetails" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
 </root>

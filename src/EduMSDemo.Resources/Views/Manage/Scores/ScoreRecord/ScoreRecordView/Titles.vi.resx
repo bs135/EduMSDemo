@@ -129,4 +129,7 @@
   <data name="SubjectName" xml:space="preserve">
     <value>Môn học</value>
   </data>
+  <data name="RegigterDate" xml:space="preserve">
+    <value>Ngày đăng ký</value>
+  </data>
 </root>

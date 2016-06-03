@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Id" xml:space="preserve">
-    <value>ScoreRecord</value>
+  <data name="UniqueName" xml:space="preserve">
+    <value>Name is already existed.</value>
   </data>
-  <data name="StudentName" xml:space="preserve">
-    <value>Student Name</value>
-  </data>
-  <data name="StudentCode" xml:space="preserve">
-    <value>Student Code</value>
-  </data>
-  <data name="SubjectName" xml:space="preserve">
-    <value>Subject</value>
-  </data>
-  <data name="RegigterDate" xml:space="preserve">
-    <value>Register Date</value>
+  <data name="UniqueAbbreviation" xml:space="preserve">
+    <value>Abbreviation is already existed.</value>
   </data>
 </root>

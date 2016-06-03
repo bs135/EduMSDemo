@@ -186,4 +186,7 @@
   <data name="ManageStaffDeleteConfirmMessage" xml:space="preserve">
     <value>Bạn có chắc là muốn xóa cán bộ này?</value>
   </data>
+  <data name="StudentSubjectUnregisterConfirmMessage" xml:space="preserve">
+    <value>Bạn có chắc là muốn hủy đăng ký môn học này?</value>
+  </data>
 </root>

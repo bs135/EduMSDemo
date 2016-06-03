@@ -1,0 +1,75 @@
+﻿@model IQueryable<ScoreRecordView>
+
+@{
+    Semester currentSemester = ViewBag.CurrentSemester;
+    SubjectClassView subjectClassView = ViewBag.SubjectClassView;
+}
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-title">
+            <span class="widget-title-icon fa fa-th"></span>
+            <h5>@Headers.TeacherTeachingIndex</h5>
+            <div class="widget-title-buttons">
+                @*@if (Html.IsAuthorizedFor("Index"))
+                    {
+                        <a class="btn" href="@Url.Action("Index")">
+                            <i class="fa fa-file-o"></i><span class="text">@Actions.Create</span>
+                        </a>
+                    }*@
+            </div>
+        </div>
+        <div class="widget-content">
+            <div class="well well-sm">
+                <dl class="dl-horizontal">
+                    <dt>@EduMSDemo.Resources.Views.Teacher.Teaching.Content.SubjectName</dt>
+                    <dd>@(subjectClassView != null ? subjectClassView.SubjectName : "")</dd>
+                    <dt>@EduMSDemo.Resources.Views.Student.SubjectRegister.Content.CurrentSemester</dt>
+                    <dd>@(currentSemester != null ? currentSemester.Name : "")</dd>
+                    <dt>@EduMSDemo.Resources.Views.Teacher.Teaching.Content.StaffName</dt>
+                    <dd>@(subjectClassView != null ? subjectClassView.StaffName : "")</dd>
+                    <dt>@EduMSDemo.Resources.Views.Teacher.Teaching.Content.RoomOfClassCode</dt>
+                    <dd>@(subjectClassView != null ? subjectClassView.RoomOfClassCode : "")</dd>
+                </dl>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@EduMSDemo.Resources.Views.Teacher.Teaching.Content.StudentList</h3>
+                </div>
+                <div class="panel-body">
+                </div>
+                    @(Html
+                        .Grid(Model)
+                        .Build(columns =>
+                        {
+                            //columns.AddActionLink("Edit", "fa fa-pencil");
+                            //columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.StudentSubjectUnregisterConfirmMessage);
+                            //columns.AddActionLink("Details", "fa fa-info");
+
+                            columns.AddProperty(model => model.StudentCode);
+                            columns.AddProperty(model => model.StudentName);
+
+                        })
+                        .ApplyDefaults()
+                    )
+            </div>
+
+
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <div class="form-actions col-sm-12 col-lg-7">
+                        <button type="button" class="btn btn-default" onclick="window.history.back();">
+                            <i class="fa fa-chevron-left"></i>
+                            @Actions.Back
+                        </button>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

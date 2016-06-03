@@ -20,7 +20,7 @@
                 .Build(columns =>
                 {
                     //columns.AddActionLink("Edit", "fa fa-pencil");
-                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.ManageSubjectClassDeleteConfirmMessage);
+                    columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.StudentSubjectUnregisterConfirmMessage);
 
                     columns.AddProperty(model => model.SubjectClassSubjectName);
                     columns.AddProperty(model => model.SubjectClassSubjectNumberOfCredits);

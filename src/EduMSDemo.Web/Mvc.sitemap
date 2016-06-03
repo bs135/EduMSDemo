@@ -74,7 +74,7 @@
           <!-- Scores -->
           <siteMapNode menu="true" icon="fa fa-cubes" area="Manage" controller="Scores">
 
-            <siteMapNode  menu="true" icon="fa fa-square-o" area="Manage" controller="BonusScores" action="Index">
+            <siteMapNode  menu="false" icon="fa fa-square-o" area="Manage" controller="BonusScores" action="Index">
 				      <siteMapNode icon="fa fa-file-o" area="Manage" controller="BonusScores" action="Create" />
 				      <siteMapNode icon="fa fa-pencil" area="Manage" controller="BonusScores" action="Edit" />
 				      <siteMapNode icon="fa fa-times" area="Manage" controller="BonusScores" action="Delete" />
@@ -143,7 +143,7 @@
               <siteMapNode icon="fa fa-times" area="Manage" controller="Subjects" action="Delete" />
             </siteMapNode>
 
-            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="PreSubjects" action="Index">
+            <siteMapNode menu="false" icon="fa fa-square-o" area="Manage" controller="PreSubjects" action="Index">
               <siteMapNode icon="fa fa-file-o" area="Manage" controller="PreSubjects" action="Create" />
               <siteMapNode icon="fa fa-pencil" area="Manage" controller="PreSubjects" action="Edit" />
               <siteMapNode icon="fa fa-times" area="Manage" controller="PreSubjects" action="Delete" />
@@ -166,7 +166,7 @@
               <siteMapNode icon="fa fa-times" area="Manage" controller="Faculties" action="Delete" />
             </siteMapNode>
 
-            <siteMapNode menu="true" icon="fa fa-square-o" area="Manage" controller="FacultyManageBoards" action="Index">
+            <siteMapNode menu="false" icon="fa fa-square-o" area="Manage" controller="FacultyManageBoards" action="Index">
               <siteMapNode icon="fa fa-file-o" area="Manage" controller="FacultyManageBoards" action="Create" />
               <siteMapNode icon="fa fa-pencil" area="Manage" controller="FacultyManageBoards" action="Edit" />
               <siteMapNode icon="fa fa-times" area="Manage" controller="FacultyManageBoards" action="Delete" />
@@ -186,15 +186,12 @@
         <siteMapNode menu="true" icon="fa fa-user" area="Student">
 
           <!-- SubjectRegister -->
+          <siteMapNode  menu="true" icon="fa fa-square-o" area="Student" controller="SubjectRegister" action="Index" />
           <siteMapNode menu="true" icon="fa fa-cubes" area="Student" controller="SubjectRegister">
-
-            <siteMapNode  menu="true" icon="fa fa-square-o" area="Student" controller="SubjectRegister" action="Index">
               <siteMapNode icon="fa fa-file-o" area="Student" controller="SubjectRegister" action="Create" />
               <siteMapNode icon="fa fa-pencil" area="Student" controller="SubjectRegister" action="Edit" />
               <siteMapNode icon="fa fa-times" area="Student" controller="SubjectRegister" action="Delete" />
               <siteMapNode icon="fa fa-times" area="Student" controller="SubjectRegister" action="Register" />
-            </siteMapNode>
-
           </siteMapNode>
           <!-- End SubjectRegister -->
         </siteMapNode>
@@ -203,14 +200,12 @@
         <siteMapNode menu="true" icon="fa fa-user" area="Teacher">
 
           <!-- TeachingTeaching -->
+          <siteMapNode  menu="true" icon="fa fa-square-o" area="Teacher" controller="Teaching" action="Index" />
           <siteMapNode menu="true" icon="fa fa-cubes" area="Teacher" controller="Teaching">
-
-            <siteMapNode  menu="true" icon="fa fa-square-o" area="Teacher" controller="Teaching" action="Index">
               <siteMapNode icon="fa fa-file-o" area="Teacher" controller="Teaching" action="Create" />
               <siteMapNode icon="fa fa-pencil" area="Teacher" controller="Teaching" action="Edit" />
               <siteMapNode icon="fa fa-times" area="Teacher" controller="Teaching" action="Delete" />
-            </siteMapNode>
-
+            <siteMapNode icon="fa fa-times" area="Teacher" controller="Teaching" action="DEtails" />
           </siteMapNode>
           <!-- End Teaching -->
         </siteMapNode>

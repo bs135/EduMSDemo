@@ -1,4 +1,10 @@
-﻿<div class="col-xs-12">
+﻿@model IQueryable<SubjectClassView>
+
+@{
+    Semester currentSemester = ViewBag.CurrentSemester;
+    StaffView teacherView = ViewBag.StudentView;
+}
+<div class="col-xs-12">
     <div class="widget-box">
         <div class="widget-title">
             <span class="widget-title-icon fa fa-th"></span>
@@ -13,7 +19,20 @@
             </div>
         </div>
         <div class="widget-content">
+            @(Html
+                .Grid(Model)
+                .Build(columns =>
+                {
+                    //columns.AddActionLink("Edit", "fa fa-pencil");
+                    //columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.StudentSubjectUnregisterConfirmMessage);
+                    columns.AddActionLink("Details", "fa fa-info");
 
+                    columns.AddProperty(model => model.SubjectName);
+                    columns.AddProperty(model => model.RoomOfClassCode);
+
+                })
+                .ApplyDefaults()
+            )
         </div>
     </div>
 </div>
