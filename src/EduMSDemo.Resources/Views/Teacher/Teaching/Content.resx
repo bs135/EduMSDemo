@@ -135,4 +135,7 @@
   <data name="StudentList" xml:space="preserve">
     <value>Student List</value>
   </data>
+  <data name="UpdateScore" xml:space="preserve">
+    <value>Update Score</value>
+  </data>
 </root>

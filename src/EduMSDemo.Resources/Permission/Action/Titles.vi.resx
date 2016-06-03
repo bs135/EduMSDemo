@@ -486,4 +486,7 @@
   <data name="TeacherTeachingDetails" xml:space="preserve">
     <value>Chi tiết</value>
   </data>
+  <data name="TeacherTeachingUpdateScore" xml:space="preserve">
+    <value>Cập nhật điểm</value>
+  </data>
 </root>

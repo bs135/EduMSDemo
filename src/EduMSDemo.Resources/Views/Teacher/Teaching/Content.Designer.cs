@@ -113,5 +113,14 @@ namespace EduMSDemo.Resources.Views.Teacher.Teaching {
                 return ResourceManager.GetString("SubjectName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Score.
+        /// </summary>
+        public static string UpdateScore {
+            get {
+                return ResourceManager.GetString("UpdateScore", resourceCulture);
+            }
+        }
     }
 }

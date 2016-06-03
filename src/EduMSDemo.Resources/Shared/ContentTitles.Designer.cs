@@ -1481,5 +1481,14 @@ namespace EduMSDemo.Resources.Shared {
                 return ResourceManager.GetString("TeacherTeachingIndex", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Score.
+        /// </summary>
+        public static string TeacherTeachingUpdateScore {
+            get {
+                return ResourceManager.GetString("TeacherTeachingUpdateScore", resourceCulture);
+            }
+        }
     }
 }

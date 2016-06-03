@@ -40,5 +40,43 @@ namespace EduMSDemo.Controllers.Teacher
 
             return View(Service.GetScoreRecordViews(id));
         }
+
+        [HttpGet]
+        public ActionResult UpdateScore(Int32 id)
+        {
+
+            Semester currentSemester = Service.GetCurrentSemester();
+            ViewBag.CurrentSemester = currentSemester;
+
+            ScoreRecordView scoreRecordView = Service.GetScoreRecordView(id);
+            ViewBag.ScoreRecordView = scoreRecordView;
+
+            UpdateScoreView model = new UpdateScoreView();
+            model.MidTermScore = scoreRecordView.MidTermScore;
+            model.TermScore = scoreRecordView.TermScore;
+            model.FinalScore = scoreRecordView.FinalScore;
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateScore(UpdateScoreView model)
+        {
+
+            Semester currentSemester = Service.GetCurrentSemester();
+            ViewBag.CurrentSemester = currentSemester;
+
+            ScoreRecordView scoreRecordView = Service.GetScoreRecordView(model.Id);
+            ViewBag.ScoreRecordView = scoreRecordView;
+
+            if (ModelState.IsValid)
+            {
+                Service.UpdateScoreRecord(model);
+                return RedirectToAction("Details", new { id = Service.GetSubjectClassId(model) });
+            }
+
+            return View(model);
+        }
+
+
     }
 }

@@ -135,4 +135,7 @@
   <data name="StudentList" xml:space="preserve">
     <value>Danh sách lớp</value>
   </data>
+  <data name="UpdateScore" xml:space="preserve">
+    <value>Cập nhật điểm</value>
+  </data>
 </root>

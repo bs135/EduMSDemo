@@ -220,6 +220,7 @@ namespace EduMSDemo.Data.Migrations
 
                 new Permission { Id = i++, Area = "Teacher", Controller = "Teaching", Action = "Index" },
                 new Permission { Id = i++, Area = "Teacher", Controller = "Teaching", Action = "Details" },
+                new Permission { Id = i++, Area = "Teacher", Controller = "Teaching", Action = "UpdateScore" },
 
                 #endregion Teaching
                 #endregion

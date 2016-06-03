@@ -99,5 +99,35 @@ namespace EduMSDemo.Services
         {
             return UnitOfWork.Select<SubjectClass>().To<SubjectClassView>().FirstOrDefault(s => s.Id == subjectClassId);
         }
+
+        public ScoreRecordView GetScoreRecordView(Int32 scoreRecordViewId)
+        {
+            return UnitOfWork
+                .Select<ScoreRecord>()
+                .To<ScoreRecordView>()
+                .FirstOrDefault(s => s.Id == scoreRecordViewId);
+        }
+
+        public void UpdateScoreRecord(UpdateScoreView view)
+        {
+            ScoreRecord model = UnitOfWork.Select<ScoreRecord>().FirstOrDefault(s => s.Id == view.Id);
+
+            model.MidTermScore = view.MidTermScore;
+            model.TermScore = view.TermScore;
+            model.FinalScore = view.FinalScore;
+            model.DateOfScore = DateTime.Now;
+
+            UnitOfWork.Update(model);
+            UnitOfWork.Commit();
+        }
+
+        public Int32 GetSubjectClassId(UpdateScoreView view)
+        {
+            ScoreRecord model = UnitOfWork.Select<ScoreRecord>().FirstOrDefault(s => s.Id == view.Id);
+            if (model != null)
+                return model.SubjectClassId;
+
+            return 0;
+        }
     }
 }

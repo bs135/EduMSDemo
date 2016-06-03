@@ -61,11 +61,38 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DateOfScore.
+        /// </summary>
+        public static string DateOfScore {
+            get {
+                return ResourceManager.GetString("DateOfScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Final Score.
+        /// </summary>
+        public static string FinalScore {
+            get {
+                return ResourceManager.GetString("FinalScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ScoreRecord.
         /// </summary>
         public static string Id {
             get {
                 return ResourceManager.GetString("Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MidTerm Score.
+        /// </summary>
+        public static string MidTermScore {
+            get {
+                return ResourceManager.GetString("MidTermScore", resourceCulture);
             }
         }
         
@@ -102,6 +129,15 @@ namespace EduMSDemo.Resources.Views.Manage.Scores.ScoreRecord.ScoreRecordView {
         public static string SubjectName {
             get {
                 return ResourceManager.GetString("SubjectName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Term Score.
+        /// </summary>
+        public static string TermScore {
+            get {
+                return ResourceManager.GetString("TermScore", resourceCulture);
             }
         }
     }

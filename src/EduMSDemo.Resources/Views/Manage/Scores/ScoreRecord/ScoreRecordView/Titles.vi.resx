@@ -132,4 +132,16 @@
   <data name="RegigterDate" xml:space="preserve">
     <value>Ngày đăng ký</value>
   </data>
+  <data name="DateOfScore" xml:space="preserve">
+    <value>Ngày cập nhật điểm</value>
+  </data>
+  <data name="MidTermScore" xml:space="preserve">
+    <value>Điểm kiểm tra</value>
+  </data>
+  <data name="TermScore" xml:space="preserve">
+    <value>Điểm thi</value>
+  </data>
+  <data name="FinalScore" xml:space="preserve">
+    <value>Điểm tổng kết</value>
+  </data>
 </root>

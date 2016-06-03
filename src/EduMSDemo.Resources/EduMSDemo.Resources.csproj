@@ -309,6 +309,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Validations.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Titles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Titles.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Teacher\Teaching\Content.Designer.cs">
       <DependentUpon>Content.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -506,11 +511,6 @@
     </Compile>
     <Compile Include="Views\Manage\Scores\ScoreRecordDetail\ScoreRecordDetailView\Validations.vi.Designer.cs">
       <DependentUpon>Validations.vi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Views\Manage\Scores\ScoreRecord\ScoreRecordView\Titles.Designer.cs">
-      <DependentUpon>Titles.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>

@@ -279,4 +279,7 @@
   <data name="TeacherTeachingIndex" xml:space="preserve">
     <value>Class</value>
   </data>
+  <data name="TeacherTeachingUpdateScore" xml:space="preserve">
+    <value>Update Score</value>
+  </data>
 </root>

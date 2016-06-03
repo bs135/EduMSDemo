@@ -279,4 +279,7 @@
   <data name="TeacherTeachingIndex" xml:space="preserve">
     <value>Lớp</value>
   </data>
+  <data name="TeacherTeachingUpdateScore" xml:space="preserve">
+    <value>Cập nhật điểm</value>
+  </data>
 </root>

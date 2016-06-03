@@ -46,9 +46,16 @@
                             //columns.AddActionConfirmLink("Delete", "fa fa-times", @Messages.StudentSubjectUnregisterConfirmMessage);
                             //columns.AddActionLink("Details", "fa fa-info");
 
+
                             columns.AddProperty(model => model.StudentCode);
                             columns.AddProperty(model => model.StudentName);
 
+                            columns.AddProperty(model => model.MidTermScore);
+                            columns.AddProperty(model => model.TermScore);
+                            columns.AddProperty(model => model.FinalScore);
+                            columns.AddProperty(model => model.DateOfScore).Formatted("{0: dd/MM/yyyy}");
+
+                            columns.Add(model => model.Id).Titled("").Sortable(false).Filterable(false).Encoded(false).RenderedAs(model => Html.ActionLink(EduMSDemo.Resources.Views.Teacher.Teaching.Content.UpdateScore, "UpdateScore", new { id = model.Id }));
                         })
                         .ApplyDefaults()
                     )

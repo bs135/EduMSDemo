@@ -19,5 +19,8 @@ namespace EduMSDemo.Services
         IQueryable<SubjectClassView> GetSubjectClassViews(Int32 staffId, Int32 semesterId);
         IQueryable<ScoreRecordView> GetScoreRecordViews(Int32 subjectClassId);
         SubjectClassView GetSubjectClassView(Int32 subjectClassId);
+        ScoreRecordView GetScoreRecordView(Int32 scoreRecordViewId);
+        void UpdateScoreRecord(UpdateScoreView view);
+        Int32 GetSubjectClassId(UpdateScoreView view);
     }
 }

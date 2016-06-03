@@ -31,6 +31,13 @@ namespace EduMSDemo.Objects
 
         // List ScoreRecordDetail
         //public virtual IList<ScoreRecordDetail> ScoreRecordDetails { get; set; }
+
+
+        public Double? MidTermScore { get; set; }
+        public Double? TermScore { get; set; }
+        public Double? FinalScore { get; set; }
+        public DateTime? DateOfScore { get; set; }
+
     }
 }
 

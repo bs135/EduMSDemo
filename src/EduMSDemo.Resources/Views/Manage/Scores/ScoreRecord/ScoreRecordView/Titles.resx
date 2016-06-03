@@ -132,4 +132,16 @@
   <data name="RegigterDate" xml:space="preserve">
     <value>Register Date</value>
   </data>
+  <data name="MidTermScore" xml:space="preserve">
+    <value>MidTerm Score</value>
+  </data>
+  <data name="TermScore" xml:space="preserve">
+    <value>Term Score</value>
+  </data>
+  <data name="FinalScore" xml:space="preserve">
+    <value>Final Score</value>
+  </data>
+  <data name="DateOfScore" xml:space="preserve">
+    <value>DateOfScore</value>
+  </data>
 </root>
