@@ -24,9 +24,10 @@
 
                     columns.AddProperty(model => model.Code);
                     columns.AddProperty(model => model.Name);
-                    columns.AddProperty(model => model.StudentClassName);
-                    //columns.AddProperty(model => model.AccountUsername);
                     columns.AddProperty(model => model.AccountEmail);
+                    columns.AddProperty(model => model.StudentClassName);
+                    columns.AddProperty(model => model.StudentClassCurriculumName);
+                    //columns.AddProperty(model => model.AccountUsername);
                 })
                 .ApplyDefaults()
             )

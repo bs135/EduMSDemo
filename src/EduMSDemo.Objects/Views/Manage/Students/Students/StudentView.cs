@@ -44,6 +44,8 @@ namespace EduMSDemo.Objects
         public Int32 StudentClassId { get; set; }
         public virtual StudentClass StudentClass { get; set; }
         public String StudentClassName { get; set; }
+        public String StudentClassCurriculumName { get; set; }
+
 
         // List ScoreRecord
         //public virtual IList<ScoreRecord> ScoreRecords { get; set; }

@@ -276,7 +276,7 @@ namespace EduMSDemo.Data.Migrations
                 .Where(rolePermission => rolePermission.RoleId == adminRoleId)
                 .ToArray();
 
-            foreach (Permission permission in UnitOfWork.Select<Permission>().Where(p => p.Area == "Administration" || p.Area == "Manage"))
+            foreach (Permission permission in UnitOfWork.Select<Permission>().Where(p => p.Area == "Administration" /* || p.Area == "Manage" */ ))
                 if (!adminPermissions.Any(rolePermission => rolePermission.PermissionId == permission.Id))
                     UnitOfWork.Insert(new RolePermission
                     {
