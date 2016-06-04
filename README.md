@@ -27,5 +27,7 @@ EduMSDemo is my assignment at college.
 - [jsTree 3.1.1](http://jstree.com/)
 - [Mvc.Grid 2.3.2](https://github.com/NonFactors/MVC5.Grid)
 
-# Reference
+# Help & Reference
 - Based on [MVC5.Template](https://github.com/NonFactors/MVC5.Template)
+- [ASP.NET MVC.Template introduction](http://www.codeproject.com/Articles/820836/ASP-NET-MVC-Template-introduction)
+- [Reset Migrations guide](https://github.com/bs135/EduMSDemo/blob/master/src/EduMSDemo.Data/Migrations/cmd.txt)
