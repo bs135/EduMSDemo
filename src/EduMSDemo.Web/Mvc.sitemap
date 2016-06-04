@@ -187,6 +187,7 @@
 
           <!-- SubjectRegister -->
           <siteMapNode  menu="true" icon="fa fa-square-o" area="Student" controller="SubjectRegister" action="Index" />
+          <siteMapNode  menu="true" icon="fa fa-square-o" area="Student" controller="SubjectRegister" action="ScoreBoard" />
           <siteMapNode menu="true" icon="fa fa-cubes" area="Student" controller="SubjectRegister">
               <siteMapNode icon="fa fa-file-o" area="Student" controller="SubjectRegister" action="Create" />
               <siteMapNode icon="fa fa-pencil" area="Student" controller="SubjectRegister" action="Edit" />

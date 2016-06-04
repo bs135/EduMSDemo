@@ -260,41 +260,6 @@ namespace EduMSDemo.Data.Migrations
                 .Index(t => t.SubjectOfPreId);
             
             CreateTable(
-                "dbo.ScoreRecord",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        RegigterDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        StudentId = c.Int(nullable: false),
-                        SubjectClassId = c.Int(nullable: false),
-                        SubjectId = c.Int(nullable: false),
-                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Student", t => t.StudentId)
-                .ForeignKey("dbo.Subject", t => t.SubjectId)
-                .ForeignKey("dbo.SubjectClass", t => t.SubjectClassId)
-                .Index(t => t.StudentId)
-                .Index(t => t.SubjectClassId)
-                .Index(t => t.SubjectId);
-            
-            CreateTable(
-                "dbo.ScoreRecordDetail",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        MidTermScore = c.Double(nullable: false),
-                        TermScore = c.Double(nullable: false),
-                        FinalScore = c.Double(nullable: false),
-                        DateOfScore = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        ScoreRecordId = c.Int(nullable: false),
-                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ScoreRecord", t => t.ScoreRecordId)
-                .Index(t => t.ScoreRecordId);
-            
-            CreateTable(
                 "dbo.Student",
                 c => new
                     {
@@ -330,6 +295,42 @@ namespace EduMSDemo.Data.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Student", t => t.StudentId)
                 .Index(t => t.StudentId);
+            
+            CreateTable(
+                "dbo.ScoreRecord",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        RegigterDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        StudentId = c.Int(nullable: false),
+                        SubjectClassId = c.Int(nullable: false),
+                        MidTermScore = c.Double(),
+                        TermScore = c.Double(),
+                        FinalScore = c.Double(),
+                        DateOfScore = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Student", t => t.StudentId)
+                .ForeignKey("dbo.SubjectClass", t => t.SubjectClassId)
+                .Index(t => t.StudentId)
+                .Index(t => t.SubjectClassId);
+            
+            CreateTable(
+                "dbo.ScoreRecordDetail",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        MidTermScore = c.Double(nullable: false),
+                        TermScore = c.Double(nullable: false),
+                        FinalScore = c.Double(nullable: false),
+                        DateOfScore = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        ScoreRecordId = c.Int(nullable: false),
+                        CreationDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ScoreRecord", t => t.ScoreRecordId)
+                .Index(t => t.ScoreRecordId);
             
             CreateTable(
                 "dbo.SubjectClass",
@@ -438,10 +439,7 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.FacultyManageBoard", "ViceDean1Id", "dbo.Staff");
             DropForeignKey("dbo.Staff", "DepartmentId", "dbo.Department");
             DropForeignKey("dbo.Department", "FacultyId", "dbo.Faculty");
-            DropForeignKey("dbo.StudentClass", "StaffId", "dbo.Staff");
-            DropForeignKey("dbo.StudentClass", "CurriculumId", "dbo.Curriculum");
-            DropForeignKey("dbo.Curriculum", "FacultyId", "dbo.Faculty");
-            DropForeignKey("dbo.PreSubject", "SubjectOfPreId", "dbo.Subject");
+            DropForeignKey("dbo.Student", "StudentClassId", "dbo.StudentClass");
             DropForeignKey("dbo.SubjectClass", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.SubjectClass", "StaffId", "dbo.Staff");
             DropForeignKey("dbo.SubjectClass", "SemesterId", "dbo.Semester");
@@ -450,12 +448,14 @@ namespace EduMSDemo.Data.Migrations
             DropForeignKey("dbo.SubjectClass", "RoomOfMidtermExamId", "dbo.ClassRoom");
             DropForeignKey("dbo.SubjectClass", "RoomOfClassId", "dbo.ClassRoom");
             DropForeignKey("dbo.ClassRoom", "BuildingId", "dbo.Building");
-            DropForeignKey("dbo.ScoreRecord", "SubjectId", "dbo.Subject");
-            DropForeignKey("dbo.Student", "StudentClassId", "dbo.StudentClass");
             DropForeignKey("dbo.ScoreRecord", "StudentId", "dbo.Student");
+            DropForeignKey("dbo.ScoreRecordDetail", "ScoreRecordId", "dbo.ScoreRecord");
             DropForeignKey("dbo.BonusScore", "StudentId", "dbo.Student");
             DropForeignKey("dbo.Student", "AccountId", "dbo.Account");
-            DropForeignKey("dbo.ScoreRecordDetail", "ScoreRecordId", "dbo.ScoreRecord");
+            DropForeignKey("dbo.StudentClass", "StaffId", "dbo.Staff");
+            DropForeignKey("dbo.StudentClass", "CurriculumId", "dbo.Curriculum");
+            DropForeignKey("dbo.Curriculum", "FacultyId", "dbo.Faculty");
+            DropForeignKey("dbo.PreSubject", "SubjectOfPreId", "dbo.Subject");
             DropForeignKey("dbo.PreSubject", "PreOfSubjectId", "dbo.Subject");
             DropForeignKey("dbo.Subject", "DepartmentId", "dbo.Department");
             DropForeignKey("dbo.CurriculumDetail", "SubjectId", "dbo.Subject");
@@ -481,14 +481,13 @@ namespace EduMSDemo.Data.Migrations
             DropIndex("dbo.SubjectClass", new[] { "RoomOfMidtermExamId" });
             DropIndex("dbo.SubjectClass", new[] { "StaffId" });
             DropIndex("dbo.SubjectClass", new[] { "SubjectId" });
+            DropIndex("dbo.ScoreRecordDetail", new[] { "ScoreRecordId" });
+            DropIndex("dbo.ScoreRecord", new[] { "SubjectClassId" });
+            DropIndex("dbo.ScoreRecord", new[] { "StudentId" });
             DropIndex("dbo.BonusScore", new[] { "StudentId" });
             DropIndex("dbo.Student", new[] { "StudentClassId" });
             DropIndex("dbo.Student", new[] { "AccountId" });
             DropIndex("dbo.Student", new[] { "Code" });
-            DropIndex("dbo.ScoreRecordDetail", new[] { "ScoreRecordId" });
-            DropIndex("dbo.ScoreRecord", new[] { "SubjectId" });
-            DropIndex("dbo.ScoreRecord", new[] { "SubjectClassId" });
-            DropIndex("dbo.ScoreRecord", new[] { "StudentId" });
             DropIndex("dbo.PreSubject", new[] { "SubjectOfPreId" });
             DropIndex("dbo.PreSubject", new[] { "PreOfSubjectId" });
             DropIndex("dbo.Subject", new[] { "DepartmentId" });
@@ -529,10 +528,10 @@ namespace EduMSDemo.Data.Migrations
             DropTable("dbo.Building");
             DropTable("dbo.ClassRoom");
             DropTable("dbo.SubjectClass");
-            DropTable("dbo.BonusScore");
-            DropTable("dbo.Student");
             DropTable("dbo.ScoreRecordDetail");
             DropTable("dbo.ScoreRecord");
+            DropTable("dbo.BonusScore");
+            DropTable("dbo.Student");
             DropTable("dbo.PreSubject");
             DropTable("dbo.Subject");
             DropTable("dbo.CurriculumType");

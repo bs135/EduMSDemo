@@ -282,4 +282,7 @@
   <data name="TeacherTeachingUpdateScore" xml:space="preserve">
     <value>Cập nhật điểm</value>
   </data>
+  <data name="StudentSubjectRegisterScoreBoard" xml:space="preserve">
+    <value>Bảng điểm</value>
+  </data>
 </root>

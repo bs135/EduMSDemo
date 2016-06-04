@@ -594,4 +594,7 @@
   <data name="TeacherTeachingUpdateScore" xml:space="preserve">
     <value>Update Score</value>
   </data>
+  <data name="StudentSubjectRegisterScoreBoard" xml:space="preserve">
+    <value>Score Board</value>
+  </data>
 </root>

@@ -275,6 +275,7 @@
     <Content Include="Views\Student\SubjectRegister\Register.cshtml" />
     <Content Include="Views\Teacher\Teaching\Details.cshtml" />
     <Content Include="Views\Teacher\Teaching\UpdateScore.cshtml" />
+    <Content Include="Views\Student\SubjectRegister\ScoreBoard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Shared\Auth\auth.css">

@@ -20,5 +20,7 @@ namespace EduMSDemo.Services
         void AddSubject(SubjectRegisterCreateView view);
         IQueryable<ScoreRecordView> GetScoreRecordViews(Int32 studentId, Int32 semesterId);
         void Delete(Int32 id);
+        IQueryable<ScoreRecordView> GetScoreBoards(Int32 studentId);
+
     }
 }

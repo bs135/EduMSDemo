@@ -70,5 +70,19 @@ namespace EduMSDemo.Controllers.Student
             return RedirectIfAuthorized("Index");
         }
 
+
+        [HttpGet]
+        public ActionResult ScoreBoard()
+        {
+            //Semester currentSemester = Service.GetCurrentSemester();
+            StudentView studentView = Service.GetCurrentStudent(User);
+            //ViewBag.CurrentSemester = currentSemester;
+            ViewBag.StudentView = studentView;
+
+            if (studentView != null)
+                return View(Service.GetScoreBoards(studentView.Id));
+
+            return View();
+        }
     }
 }

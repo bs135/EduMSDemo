@@ -210,6 +210,7 @@ namespace EduMSDemo.Data.Migrations
                 new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Index" },
                 new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Register" },
                 new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "Delete" },
+                new Permission { Id = i++, Area = "Student", Controller = "SubjectRegister", Action = "ScoreBoard" },
 
                 #endregion SubjectRegister
                 #endregion
@@ -1546,4 +1547,3 @@ namespace EduMSDemo.Data.Migrations
         }
     }
 }
-

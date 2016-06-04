@@ -133,5 +133,12 @@ namespace EduMSDemo.Services
             UnitOfWork.Delete<ScoreRecord>(id);
             UnitOfWork.Commit();
         }
+
+
+        public IQueryable<ScoreRecordView> GetScoreBoards(Int32 studentId)
+        {
+            return UnitOfWork.Select<ScoreRecord>().To<ScoreRecordView>().Where(sc => sc.StudentId == studentId).OrderBy(sc => sc.SubjectClass.SemesterId);
+        }
+
     }
 }

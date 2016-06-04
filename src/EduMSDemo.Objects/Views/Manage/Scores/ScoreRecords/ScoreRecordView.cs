@@ -23,6 +23,7 @@ namespace EduMSDemo.Objects
         public String SubjectClassSubjectName { get; set; }
         public String SubjectClassSubjectNumberOfPeriods { get; set; }
         public String SubjectClassSubjectNumberOfCredits { get; set; }
+        public String SubjectClassSemesterName { get; set; }
 
         // [ForeignKey("Subject")]
         //public Int32 SubjectId { get; set; }

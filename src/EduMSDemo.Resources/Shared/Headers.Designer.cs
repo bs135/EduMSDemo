@@ -520,6 +520,15 @@ namespace EduMSDemo.Resources.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Score Board.
+        /// </summary>
+        public static string StudentSubjectRegisterScoreBoard {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterScoreBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Teacher.
         /// </summary>
         public static string Teacher {

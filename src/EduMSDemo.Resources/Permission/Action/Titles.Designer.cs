@@ -1150,6 +1150,15 @@ namespace EduMSDemo.Resources.Permission.Action {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Score Board.
+        /// </summary>
+        public static string StudentSubjectRegisterScoreBoard {
+            get {
+                return ResourceManager.GetString("StudentSubjectRegisterScoreBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         public static string TeacherTeachingDetails {
