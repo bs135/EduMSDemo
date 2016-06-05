@@ -27,6 +27,11 @@ EduMSDemo is my assignment at college.
 - [jsTree 3.1.1](http://jstree.com/)
 - [Mvc.Grid 2.3.2](https://github.com/NonFactors/MVC5.Grid)
 
+# Screenshot
+![](https://raw.githubusercontent.com/bs135/EduMSDemo/master/screenshot/Screenshot%202016-06-04%2002.16.48.png)
+
+![](https://raw.githubusercontent.com/bs135/EduMSDemo/master/screenshot/Screenshot%202016-06-05%2011.58.41.png)
+
 # Help & Reference
 - [Report](https://github.com/bs135/EduMSDemo/blob/master/report/AP_report.pdf)
 - Based on [MVC5.Template](https://github.com/NonFactors/MVC5.Template)
