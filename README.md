@@ -4,7 +4,7 @@
 EduMSDemo is my assignment at college.
 > Course: MCS, HCMUT <br />
 > Subject: Advanced Programming<br />
-> Instructor: LE Thanh Sach, Ph.D.
+> Instructor: [LE Thanh Sach, Ph.D.](http://cse.hcmut.edu.vn/~ltsach/)
 
 # Installation
 1. Install necessary if you don't have them already:
